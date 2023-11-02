@@ -3,27 +3,27 @@ layout: index
 title: Syllabus
 
 index:
-    title: Foundations of Data Science Part I
+    title: Social Network Analysis
     image: data-science.png
     subtitle: This course introduces students to the field of data science and its applications in the public and nonprofit sectors. Modern performance management and evaluation processes require strong data literacy and the ability to combine and analyze data from a variety of sources to inform managerial processes. We offer a practical, tools-based approach that is designed to build strong foundations for people that want to work as analysts, data-driven managers, or data-driven journalists. We will cover data programming fundamentals, visualization, text analysis, automated reporting, and dynamic reporting using dashboards. The course is analytically rigorous, but no prior programming experience is assumed.
 
 info:
  program_title: Program Evaluation and Data Analytics
  program_website: https://asuonline.asu.edu/online-degree-programs/graduate/program-evaluation-and-data-analytics-ms/
- course_title: Foundations of Data Science Part I
- course_number: CPP 526
+ course_title: Social Network Analysis
+ course_number: CRJ 507
  course_level: Graduate
  course_website: 'https://canvas.asu.edu/courses/92494'
  course_start_end_dates: August 19 - October 8, 2021
  course_prerequisites:  
  class_meets_when:  Asynchronous  
  class_meets_where:  Online
- discussion_board_url: 'https://watts-college.github.io/cpp-526-fall-2021/help/'
+ discussion_board_url: 'https://watts-college.github.io/crj-507-spring-2024/help/'
 
 instructor:
 -  name: YOUR NAME
    title: Instructor
-   email: EMAIL@asu.edu
+   email: CRJ507@asu.edu
    office_location:
    website_url:
    github_url:  
@@ -31,7 +31,7 @@ instructor:
    scholar_url:
    linked_in_url:
    office_hours_time: See Schedule
-   office_hours_app_url: 'https://calendly.com/jacobtnyoung/cpp-526-student-meeting'
+   office_hours_app_url: 'https://calendly.com/jacobtnyoung/crj-507-student-meeting'
    office_hours_location: Zoom
 
 
