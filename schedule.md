@@ -53,23 +53,17 @@ Hi there! My name is [Jacob Young]() and I will be your instructor for this cour
 
 <br>
 
-*** { @unit = "", @title = "The R Toolkit", @reading, @lecture, @foldout }
+*** { @unit = "", @title = "Social Network Analysis and the R Toolkit", @reading, @lecture, @foldout }
 
 ## Introducing R
 
 R is a 30-year-old statistical language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to proprietary software for their students at the University of Auckland. In fact, its rich lineage can be directly traced to inventor and scientist Alexander Graham Bell.
 
-Watch the video below for a brief introduction to R as it's used today.
-
-<br>
-
-<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
 <br>
 
 ## The R Toolkit
 
-In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives.
+In this course we cover the foundations of social network analysis and show how to implement these topics with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives.
 
 **RStudio** helps you manage projects by organizing files, scripts, packages and output. **Markdown** is a simple formatting convention that allows you to create publication-quality documents. **R Markdown** is a specific version of Markdown that allows you to combine text and code to create data-driven documents.
 
@@ -82,16 +76,6 @@ The following resources will help you get a better understanding of these tools.
 * [Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html): How R Markdown is used for interactive and dynamic reports
 
 * [A Guide to Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html): How to use Markdown - the easy-to-learn formatting syntax
-
-<br>
-
-## Visualizing Tooling
-
-Each tool you'll use in this course has a corresponding image, summarized below.
-
-<br>
-
-![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
 
 <br>
 
@@ -297,13 +281,14 @@ Visit the [video](https://youtu.be/ALwHaNzQub0) to navigate using timestamps in 
 
 ## Understand Your Resources
 
-Data analytics is a very social endeavor and real-world analytics projects are almost always collaborative.
+Social network analysis is a very social endeavor and real-world analytics projects are almost always collaborative.
 
-These courses are designed to be interactive, and a lot of learning occurs by practicing the technical jargon from the field and learning how to talk about data and models.
+This course is designed to be interactive, and a lot of learning occurs by practicing the technical jargon from the field and learning how to talk about data and models.
 
 Learning how to seek help and use discussion boards will accelerate learning and facilitate collaboration. Social coding tools like GitHub use these features extensively.
 
-We are going to throw a lot at you, but also provide a lot of support. Over these first couple of weeks feel free to reach out for anything you might need.
+This course is going to throw a lot at you, but also provide a lot of support. Over these first couple of weeks feel free to reach out for anything you might need!
+
 
 <br>
 
@@ -311,17 +296,11 @@ We are going to throw a lot at you, but also provide a lot of support. Over thes
 
 If you find something confusing, let us know (likely others will find it confusing as well).
 
-* Schedule a Zoom call with your instructor and screen share to walk through issues
-* Post a question to the [course discussion board](https://watts-college.github.io/cpp-526-fall-2021/help/)
-* Request a walk-through and your instructor will provide examples and steps
+* Schedule a Zoom call with me and screen share to walk through issues
+* Post a question to the [course discussion board](https://watts-college.github.io/crj-507-spring-2024/help/)
+* Request a walk-through and I will provide examples and steps
 
-As a general rule of thumb, if you are stuck on the math or code for a problem, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues then the help discussion page is the easiest and quickest way to get help. If you are confused about concepts or having a hard time even formulating your question, then virtual office hours are your best option.
-
-<br>
-
-![](https://i.imgur.com/FNGjWce.png)
-
-Adapted from **[SRGRAFO](https://www.srgrafo.com/)**.
+As a general rule of thumb, if you are stuck, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues then the help discussion page is the easiest and quickest way to get help. If you are confused about concepts or having a hard time even formulating your question, then virtual office hours are your best option.
 
 <br>
 
@@ -363,37 +342,12 @@ b1 = cov(x,y) / var(x)
 
 The following checklist will help you organize and prepare for success in this course.
 
-- [ ] [Read the Syllabus](https://watts-college.github.io/cpp-526-fall-2022/)
+- [ ] [Read the Syllabus](https://watts-college.github.io/crj-507-spring-2024/)
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/)
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join)
-- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (See Below)
-- [ ] (Recommended) Skim Readings
-- [ ] (Recommended) Videos
-
-<br>
-
-*** { @unit = "{{page.discussion-dates.topic-00}}", @title = "Introduce Yourself", @assignment, @foldout }
-
-<br>
-
-## Introduce Yourself to the Class
-
-We will be using a discussion board called **YellowDig** for this course. Introduce yourself to the class:
-
-1. A little about yourself
-2. Your previous experience with data analytics
-3. One thing you hope to do with your new skills in data analytics
-
-<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">Post to YellowDig</a>
 
 <br>
 <br>
-
-
-
-
-
-
 
 
 <!---
@@ -406,79 +360,24 @@ We will be using a discussion board called **YellowDig** for this course. Introd
 #########################################
 -->
 
-** Week 1 - Functions and Vectors
+** Week 1 - Introduction to Social Network Analysis
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout  }
 
 ## Description
 
-This unit introduces the most fundamental building blocks of data programming in R.
-
-* **Vectors** are one or more values of the same type - each column in a table is a vector
-* **Functions** are defined operations that transform individual or summarize multiple values
-* **Objects** are named representations of values, datasets, functions, and other information
-* **Assignment** is the act of naming and creating an object
+This unit introduces the fundamentals of social network analysis. This unit also familiarizes you with working with R and RStudio.
 
 ## Learning Objectives
 
-Once you have completed this unit, you will be able to:
+Once you have completed this section you will be able to answer the following questions:
 
-1. Create new objects with assignment
-2. Understand the basic anatomy and application of functions
-3. Summarize vectors of various classes e.g. numeric, character, and logical
+* What is “network science” and how is it different from “usual” research?
+* What do networks “look like”?
 
 ## Lab Assignment
 
-Lab-01 is your first opportunity to combine human language and R code in R Markdown. You will practice using tax parcel data from Syracuse, NY (USA), including:
-
-* Summarizing dataset characteristics, e.g. dimensions
-* Use arithmetic functions to summarize and average data
-* Determine the number of occurrences of qualitative data
-
-### Functions
-
-This assignment requires some combination of the following functions and operators:
-
-* `names()`: Returns the variable names of a dataset
-* `head()`: Returns the initial values of a dataset; default is 6 rows
-* `$`: Extracts a variable from a dataset using `data$variable` syntax
-* `length()`: Returnes the total number of values in a vector
-* `dim()`: Returns the total rows and columns of a dataset, respectively
-* `nrow()`: Returns the total rows of a dataset
-* `ncol()`: Returns the total columns of a dataset
-* `sum()`: Returns the sum of:
-    - All values in a numeric vector
-    - Total `TRUE` values of a logical vector
-* `summary()`: Returns summary statistics for a dataset or individual vectors
-* `table()`: Returns a tally of the number of occurrences of unique values in a vector
-
-### Practice Data
-
-This assignment uses Downtown Syracuse tax parcel data. View the documentation **[here](../labs/syr_parcels.html)**.
-
-These data are imported using the following code.
-
-```r
-url <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv"
-dat <- read.csv(url, stringsAsFactors = FALSE)
-
-head(dat)
-```
-
-#### Downtown Syracuse
-
-View the portion of Syracuse represented by these data.
-
-![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/downtown-syr.png?raw=true)
-
-##### All of Syracuse
-
-Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels with single family homes.
-
-![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/syracus-parcels.png?raw=true)
-
-<br>
-<br>
+Lab-01 will provide you the opportunity to start thinking about networks and get your "feet wet" in social network analysis. For the first lab, you will construct a network of your own that you will work with it throughout the term. 
 
 *** { @unit = "", @title = "Readings", @reading, @foldout  }
 
@@ -488,184 +387,9 @@ Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels with singl
 
 Required reading for this unit includes:
 
-1. **[Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html)**: Creating objects that represent data and operations
-2. **[Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html)**: Data transforming or summarizing operations in R
-3. **[Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)**: Arrays of values of the same class, e.g. variables
-
-The following background chapters are recommended for skimming for future reference:
-
-1. **[Learning to Learn R](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html)**: Preparing for lifelong learning in R
-2. **[Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)**: The basics of vanilla R
-3. **[RStudio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)**: Components and features of RStudio
-4. **[Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)**: Creating dynamic reports in R Markdown
-5. **[Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)**: Basic Markdown syntax
-
-<br>
-
-*** { @unit = "", @title = "Videos", @lecture, @foldout }
-
-<br>
-
-## Objects & Assignment
-
-Play the video below for an overview of objects and assignment in R.
-
-* How to open a new script in RStudio.
-* Arithmetic and the order of operations.
-* Creating different objects with assignments.
-* Using objects algebraically and arithmetically.
-* Common conventions and limitations in naming objects.
-
-Visit the [chapter](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html).
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/q6kdjxSlq40?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/q6kdjxSlq40) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**00:36**) Clearing Your Console & Opening New Scripts
-* (**00:58**) Arithmetic Operations in R
-* (**03:38**) Order of Operations ("PEMDAS")
-* (**05:30**) Creating Objects with Assignment
-* (**07:00**) Assigning Multiple Values with `c()`
-* (**08:12**) Assigning Tabular Data to Objects
-* (**12:46**) Assigning Functions to Objects
-* (**14:50**) Using Objects Algebraically
-* (**16:20**) Object Naming Limitations
-* (**17:17**) Common Object Naming Conventions
-* (**21:03**) Be Consistent in Your Naming!
-* (**21:33**) Conventions as "Calling Cards"
-* (**24:00**) Conclusions
-
-<br>
-
-## Functions in R
-
-Play the video below for an overview of functions in R.
-
-* What are functions?
-* Exploring function internals.
-* How to create new functions in R.
-* How to explore function documentation.
-* What are function arguments and how are they used?
-
-Visit the [chapter](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html).
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QoMX6ZauH5k?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/QoMX6ZauH5k) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**00:54**) What Are Functions?
-* (**01:45**) Example of a Function: `mean()`
-* (**03:16**) Meta-Functions without Specifications: `getwd()`
-* (**04:56**) Package Functions: `read_csv()`
-* (**05:12**) Running Functions without Required Specifications
-* (**05:30**) Functions Under the Hood
-* (**06:52**) How to Create New Functions
-* (**09:45**) Function Documentation: `help()`
-* (**10:24**) What Are Function Arguments?
-* (**11:34**) Using Autocomplete & Tool Tips
-* (**13:00**) Implicit (Unnamed) Argument Order
-* (**14:39**) Importance of Argument Order
-* (**16:58**) Default Argument Parameters
-* (**19:41**) Exploring New Package Functions
-
-<br>
-
-## Understanding Vectors
-
-Play the video below for an overview of vectors.
-
-* What are they and how do you make them?
-* What are some different kinds of vectors?
-* What are common functions used for vectors?
-* What are factors and why are they important in R?
-* How do you change vector classes and what are some important nuances?
-
-Visit the [chapter](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html).
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2uavlW7Ytb8?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/2uavlW7Ytb8) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**00:57**) Reviewing Assignment & Objects
-* (**00:57**) Reviewing Assignment & Objects
-* (**01:31**) Creating Vectors with Function `c()`
-* (**03:20**) Creating Integer Vectors
-* (**04:07**) Creating Character Vectors
-* (**04:50**) Creating Logical Vectors
-* (**06:00**) Creating Sequences with `:`
-* (**06:46**) Determining the Length of Vectors with `length()`
-* (**09:06**) Determining Vector Classes with `class()`
-* (**11:47**) "Casting" Vector Classes with `as.*()` Functions
-* (**14:06**) What Are Factors?
-* (**15:12**) An Example of Categorical Values
-* (**15:45**) Specifying a Factor with `as.factor()`
-* (**16:07**) Factor Levels in R
-* (**16:48**) The Importance of Identifying Factors in R
-* (**20:46**) Additional Casting, or `as.*()` Functions
-* (**22:26**) Casting Data Structures with Data Frames
-* (**24:25**) Casting as Matrices
-* (**25:08**) Casting & Coercion
-* (**27:52**) Differing Lengths & Recycling in R
-* (**31:30**) Review & Conclusions
-
-<br>
-
-## Exploring Vectors
-
-Play the video below for an overview of basic exploratory functions for a vector, i.e. a series of values.
-
-* What constitutes tabular data?
-* Extracting variables as a separate vector.
-* Common functions for tables and variables.
-* How to extract and store variables as objects.
-* Exploratory and summarizing functions for vectors.
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6TF6UuM0IbI?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/6TF6UuM0IbI) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**00:38**) Starting a New Script
-* (**01:23**) Practice Dataset 'mtcars'
-* (**01:56**) Exploring Documentation in R
-* (**03:22**) Anatomy of Tabular Data
-* (**04:21**) Listing Variables with Function `names()`
-* (**04:56**) Listing Column & Row Names
-* (**05:32**) Dataset Dimensions with Function `dim()`
-* (**05:56**) Row & Column Dimensions
-* (**06:22**) Previewing First Observations with `head()`
-* (**07:09**) Summarizing Dataset Structures with `str()`
-* (**08:10**) Summarizing Structures with `glimpse()`
-* (**09:31**) Extracting & Operating on Variables as Vectors
-* (**11:20**) Storing Vectors as Objects
-* (**11:32**) Determining Total Elements with `length()`
-* (**12:28**) Summing Numeric Variables with `sum()`
-* (**13:26**) Arithmetic Functions with Missing Values & `na.rm =`
-* (**14:32**) Calculating Averages with Function `mean()`
-* (**15:23**) Summarizing Vectors with Function `summary()`
-* (**16:49**) Tallying Unique Values & Occurrences with Functions `unique()` & `table()`
-* (**18:23**) Creating Crosstabs with Two Variables in `table()`
-* (**19:56**) (**Optional**) Count & Proportion of `TRUE` with Function `mean()`
+* [Chapter 01 - Introduction to Social Network Analysis](https://jacobtnyoung.github.io/sna-textbook/ch-01-intro-to-sna.html)
+* [Tutorial 1: Getting Started with R](../tutorials/tutorial-01-r-intro-to-r.html)
+* [Tutorial 02 - Introduction to Data-Driven Documents](../tutorials/tutorial-02-intro-to-rmarkdown.html)
 
 <br>
 <br>
@@ -676,41 +400,27 @@ Visit the [video](https://youtu.be/6TF6UuM0IbI) to navigate using timestamps in 
 
 The following checklist will help you stay organized in your first week.
 
-- [ ] Complete Assigned Readings: [Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html), [Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html), & [Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)
+- [ ] Complete Assigned Readings: [Chapter 1: Introduction to Social Network Analysis](https://jacobtnyoung.github.io/sna-textbook/ch-01-intro-to-sna.html),
+[Tutorial 1: Getting Started with R](../tutorials/tutorial-01-r-intro-to-r.html), and [Tutorial 02 - Introduction to Data-Driven Documents](../tutorials/tutorial-02-intro-to-rmarkdown.html)
 - [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
 - [ ] Complete & Submit [Lab 01](../labs/lab-01-instructions.html) (See Below)
-- [ ] (Recommended) Videos
 
 <br>
 
 *** { @unit = "{{page.discussion-dates.topic-01}}", @title = "Discussion Topic", @assignment, @foldout  }
 
-## The Promise of Big, Open Data
+## Introduce Yourself to the Class
 
-The world is simultaneously generating more data than it has ever before, as well as pushing for policies for making government data more accessible and democratic. These trends and movements is an important enabling aspect of data science, because it provides opportunity for real insights that can change our understanding of systems and allow us to hold institutions accountable.
+We will be using a discussion board called **YellowDig** for this course. Introduce yourself to the class:
 
-So ignoring potential problems with big and open data for now, read about two interesting cases where big and open data have offered deep insights into city planning and human nature.
-
-"[A Data Analyst's Blog](https://www.npr.org/sections/alltechconsidered/2014/11/28/367046864/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city
-) Is Transforming How New Yorkers See Their City", NPR, Nov 2018.
-
-[How a blog saved OK Cupid](https://fivethirtyeight.com/features/christian-rudder-dataclysm-okcupid/), FiveThirtyEight Blog, Nov 2014.
-
-<br>
-
-**ASSIGNMENT:**
-
-> For your discussion topic this week, find one data-driven blog post from Ben Wellington's [I Quant NY](http://iquantny.tumblr.com/) and/or OK Cupid's [OK Trends](https://theblog.okcupid.com/tagged/data) where you discovered something cool that you did not know, and share it with the group. In your post highlight what is interesting about the example, and what data made it possible.
+1. A little about yourself
+2. Your previous experience with data and analytics
+3. Any experience you have (or do not) with social network analysis
+3. One thing you hope to do with your new skills as a social network analyst
 
 **Please post your reflection as a new pin on YellowDig.**
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">Post to Yellowdig</a>
-
-<br>
-
-You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIxJok), or this short interview.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZTdPpoUp25w?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <br>
 
@@ -725,15 +435,11 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 
 <br>
 
-## Lab-01 - Practice with Vectors
+## Lab-01 - Introduction to Network Analysis
 
-This lab is designed to introduce you to basic functions that explore datasets and variables.
+In this lab you will provide you the opportunity to start thinking about networks and get your "feet wet" in social network analysis. For the first lab, you will construct a network of your own that you will work with it throughout the term. 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-01-instructions.html')">LAB-01 Instructions</a>
-
-Click to download the lab template. Modify and submit using the instructions.
-
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-01-LastName.zip')">LAB-01 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -741,14 +447,6 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <br>
 <br>
-
-
-
-
-
-
-
-
 
 
 <!---
@@ -762,31 +460,7 @@ Click to download the lab template. Modify and submit using the instructions.
 -->
 
 
-** Week 2 - Operators and Descriptives
-
-*** { @unit = "", @title = "Reflection", @reading, @foldout }
-
-# Beginning
-
-*Nobody tells this to people who are beginners, and I really wish somebody had told this to me.*
-
-*All of us who do creative work, we get into it because we have good taste. But it's like there is this gap. For the first couple years that you're making stuff, what you're making isn't so good. It’s not that great. It’s trying to be good, it has ambition to be good, but it’s not that good.*
-
-*But your taste, the thing that got you into the game, is still killer. And your taste is good enough that you can tell that what you're making is kind of a disappointment to you. A lot of people never get past that phase. They quit.*
-
-*Everybody I know who does interesting, creative work they went through years where they had really good taste and they could tell that what they were making wasn't as good as they wanted it to be. They knew it fell short. Everybody goes through that.*
-
-*And if you are just starting out or if you are still in this phase, you gotta know its normal and the most important thing you can do is do a lot of work. Do a huge volume of work. Put yourself on a deadline so that every week or every month you know you're going to finish one story. It is only by going through a volume of work that you're going to catch up and close that gap. And the work you're making will be as good as your ambitions.*
-
-*I took longer to figure out how to do this than anyone I’ve ever met. It takes awhile. It’s gonna take you a while. It’s normal to take a while. You just have to fight your way through that.*
-
-*—Ira Glass [on failure](https://jamesclear.com/ira-glass-failure)*
-
----
-
-*It’s easy when you start out programming to get really frustrated and think, “Oh it’s me, I’m really stupid,” or, “I’m not made out to program.” But, that is absolutely not the case. Everyone gets frustrated. I still get frustrated occasionally when writing R code. It’s just a natural part of programming. So, it happens to everyone and gets less and less over time. Don’t blame yourself. Just take a break, do something fun, and then come back and try again later.*
-
-*—Hadley Wickham on [advice to young and old programmers](https://www.r-bloggers.com/advice-to-young-and-old-programmers-a-conversation-with-hadley-wickham/)*
+** Week 2 - Introduction to R and Social Network Data in R
 
 <br>
 <br>
@@ -797,27 +471,27 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-This section introduces logical statements used to create custom groups from your data.  
+This section will focus on how we represent network data as matrices. We will also focus on creating networks in R as well has how we visualize networks. 
 
 ## Learning Objectives
 
 Once you have completed this section you will be able to:
-* translate human language phrases to a computer language
-* create subsets of data
+* Represent networks using graphs and graph notation
+* Represent undirected and directed networks using matrices
+* Build network data structures in R
+* Plot network data in R
 
 ## Assigned Reading
 
 Required:
 
-[Group Construction with Logical Statements](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html)
+* [Chapter 4: Network Data Structures](https://jacobtnyoung.github.io/sna-textbook/ch-04-net-data-structures.html)
+* [Tutorial 03 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html)
+* [Tutorial 04 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
 
-## Lab
+## Lab Assignment
 
-Lab-02 covers the following topics:
-
-* Logical operators
-* Group construction
-* Descriptive statistics
+Lab-02 will build off your work in Lab-01 by having you reconstruct your network in R and creating a visualization of that network in R.
 
 <br>
 <br>
@@ -830,43 +504,9 @@ Lab-02 covers the following topics:
 
 Required:
 
-[Group Construction with Logical Statements](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html)
-
-<br>
-
-*** { @unit = "", @title = "Videos", @lecture, @foldout }
-
-<br>
-
-## Logical Vectors
-
-Play the video below for an overview of logical vectors, i.e. a series of `TRUE` and `FALSE` values.
-
-* What are logical values?
-* Creating logical vectors
-* Using relational and logical operators
-* Subsetting data with conditional statements
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l9WhjLMMWH4?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/l9WhjLMMWH4) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**01:15**) What Is a Logical Vector?
-* (**03:30**) Logicals "Under the Hood" & Arithmetic
-* (**05:45**) Creating Logical Vectors with Conditions
-* (**08:05**) Using Different Relational Operators
-* (**12:06**) Multiple Conditions with Logical Operators
-* (**18:07**) "Selector Vectors" & Subsetting Rows
-* (**19:08**) Subsetting by Row & Column Positions
-* (**23:13**) Assigning Position Indices to Objects
-* (**25:57**) Notable Nuances of Logical Vectors
-* (**27:00**) Finding & Replacing Values
-* (**34:16**) Conclusions
+* [Chapter 4: Network Data Structures](https://jacobtnyoung.github.io/sna-textbook/ch-04-net-data-structures.html)
+* [Tutorial 03 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html)
+* [Tutorial 04 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
 
 <br>
 <br>
@@ -877,11 +517,10 @@ Visit the [video](https://youtu.be/l9WhjLMMWH4) to navigate using timestamps in 
 
 The following checklist will help you stay organized in your second week.
 
-- [ ] Complete Assigned Readings: [Group Construction with Logical Statements](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html)
+- [ ] Complete Assigned Readings: [Chapter 4: Network Data Structures](https://jacobtnyoung.github.io/sna-textbook/ch-04-net-data-structures.html),  
+[Tutorial 03 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html) and [Tutorial 04 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 02](../labs/lab-02-instructions.html) (See Below)
-- [ ] (Recommended) Explore Packages for [Code Through Project](../labs/code-through-assignment.html)
-- [ ] (Recommended) Videos
 
 <br>
 
@@ -889,29 +528,15 @@ The following checklist will help you stay organized in your second week.
 
 <br>
 
-## A Tour of R Packages
+## The Challenges of Criminal Justice Records
 
-You might not have heard, but [nerd is the new black](https://www.wsj.com/articles/SB10001424127887323478304578332850293360468), data science is the [sexiest job of the 21st century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century), and there is nothing hotter than learning R.
 
-But what is R, and what are the ~~nerds~~ cool kids using it for?
+Bright, Brewer, Morselli article
+Assign week 1 as a discussion; discussion about this article's 7 points. Discussion with you own experience or your own data. THey take an "archeological approach". What does this mean?
 
-**This week, your task is to explore a few blogs about tools in R and find one package or application that you are excited about. It can be an analytics package, a graphics package, a specific application, or a tutorial on a topic that interests you. I don't expect you use of understand the package or tutorial, rather just identify a tool that would be useful given your interests.**
+https://www.sciencedirect.com/science/article/pii/S0378873321000149?via%3Dihub
 
-Mine, personally, was the package that allows you to create comic strip graphics in R:
-
-[xkcd comics](https://stackoverflow.com/questions/12675147/how-can-we-make-xkcd-style-graphs)
-
-Take note, this assignment asks you to explore a new community where the technical language is unfamiliar and the volume of information vast. There are currently over 18,000 packages available in R! Part of the goal of the assignment is to recognize the sheer volume of creativity in the R community and the scope of work that can be done with the language. But the immediate learning objective is to find some sources that make the content accessible. Here are a few to get you started:
-
-[awesome r](https://github.com/qinwf/awesome-R)
-
-[cran views](https://cran.r-project.org/web/views/)
-
-[best of r blogs](https://blog.feedspot.com/r_programming_blogs/)
-
-[r-bloggers](https://www.r-bloggers.com/)
-
-[data science podcasts](https://ds4ps.org/careers/#data-science-podcasts)
+Need to write this out
 
 <br>
 
@@ -927,27 +552,15 @@ Take note, this assignment asks you to explore a new community where the technic
 <br>
 <br>
 
-## Lab-02 - Constructing Groups
+## Lab-02 - Network Visualization
 
-Read the following sections from the [course chapter on groups](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html) before starting the lab.
-
-You will need a basic understanding of constructing groups and subsets in these sections.
-
-* Logical Operators (1.1)
-* Selector Vectors (1.2)
-* Usefulness of Selector Vectors (1.3)
-* Compound Logical Statements (2.1)  
-* The Opposite-Of Operator (2.2)  
-
-The rest of the chapter is useful information to come back to, but not needed for the lab.
-
-*Similar to last week, the chapter highlights some easy ways to make errors with your code. We don't want to convince you that R is hard, but rather to ensure that you are paying attention to some subtle features of machine language that can impact your data.*
+The purpose of this lab is to familiarize yourself with how networks are created and visualized in R.   
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-02-instructions.html')">LAB-02 Instructions</a>
 
-Click to download the lab template. Modify and submit using the instructions.
+This lab has a tempalte. Click to download the lab template. Modify the template using the instructions and submit your assignment.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-02-LastName.zip?raw=true')">LAB-02 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-02-LastName.zip?raw=true')">LAB-02 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -955,12 +568,6 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <br>
 <br>
-
-
-
-
-
-
 
 
 <!---
@@ -973,21 +580,7 @@ Click to download the lab template. Modify and submit using the instructions.
 #########################################
 -->
 
-** Week 3 - Visualization
-
-*** { @unit = "", @title = "Reflection", @reading, @foldout  }
-
-<br>
-
-### Advice on Learning R
-
-> People naturally go through a few phases. When you start out, you don’t have many tips and techniques at your disposal. So, you are forced to do the simplest thing possible using the simplest ideas. And sometimes you face problems that are really hard to solve, because you don’t know quite the right techniques yet. So, the very earliest phase, you’ve got a few techniques that you understand really well, and you apply them everywhere because those are the techniques you know.
->
-> And the next stage that a lot of people go through, is that you learn more techniques, and more complex ways of solving problems, and then you get excited about them and start to apply them everywhere possible. So instead of using the simplest possible solution, you end up creating something that’s probably overly complex or uses some overly general formulation.
->
-> And then eventually you get past that and it’s about understanding, “what are the techniques at my disposal? Which techniques fit this problem most naturally? How can I express myself as clearly as possible, so I can understand what I am doing, and so other people can understand what I am doing?” I talk about this a lot but think explicitly about code as communication. You are obviously telling the computer what to do, but ideally you want to write code to express what it means or what it is trying to do as well, so when others read it and when you in the future reads it, you can understand some of the reasoning.
-
-~ Hadley Wickham [Advice to Young and Old R Programmers](https://www.r-bloggers.com/advice-to-young-and-old-programmers-a-conversation-with-hadley-wickham/)
+** Week 3 - Centrality
 
 <br>
 <br>
@@ -998,58 +591,24 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-This section introduces the Core R graphics engine.
+This week we will start to think about how we describe networks. One of the most popular concepts in network analysis is *centrality*. This section introduces the concept of centrality. 
 
 ## Learning Objectives
 
 Once you have completed this section you will be able to:
-* Use the plot() function
-* Build custom graphics with base graphing commands:
-  * points()  
-  * lines(), abline()    
-  * text()  
-  * axis()  
+* Understand the conceptualization of centrality
+* Calculate degree centrality 
 
 ## Assigned Reading
 
 Required:
 
-Please skim these chapters before starting your lab. Sample code has been provided for each lab question, but you may need the chapters and the R help files to find specific arguments.
+* [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html)
+* [Tutorial 05 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
 
-[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
-[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+## Lab Assignment
 
-Suggested:
-
-[Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
-
-*Help with R graphics:*
-
-* [R Graph Gallery](https://www.r-graph-gallery.com/)  
-* [R Graph Compendium](http://shinyapps.org/apps/RGraphCompendium/index.php)  
-* [ggplot2 Geoms Gallery](https://ggplot2.tidyverse.org/reference/)  
-
-*Inspiration:*
-
-* [Makeover Mondays](http://www.makeovermonday.co.uk/gallery/)  
-* [Flowing Data](http://flowingdata.com/)  
-* [Junk Charts](http://junkcharts.typepad.com/junk_charts/)  
-* [NYT Graphics Blog](http://kpq.github.io/chartsnthings/)  
-* [Help Me Viz](https://twitter.com/HelpMeViz)  
-
-## Lab
-
-Lab-03 introduces the primary plotting functions used to build graphics.
-
-* plot()  
-* points()  
-* lines(), abline()    
-* text()  
-* axis()  
-
-The lab requires you to re-create a graph that was featured in the New York Times:
-
-![](assets/img/pitcher-dominance.png)
+Lab-03 provides an opportunity to familiarize yourself with calculating degree centrality and degree centralization scores for undirected and directed networks in R.     
 
 <br>
 <br>
@@ -1062,12 +621,8 @@ The lab requires you to re-create a graph that was featured in the New York Time
 
 Required:
 
-[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
-[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
-
-Suggested:
-
-[Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
+* [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html)
+* [Tutorial 05 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
 
 <br>
 
@@ -1077,10 +632,9 @@ Suggested:
 
 The following checklist will help you stay organized in your third week.
 
-- [ ] Complete Assigned Readings: [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html) & [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+- [ ] Complete Assigned Readings: [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html) and [Tutorial 05 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 03](../labs/lab-03-instructions.html) (See Below)
-- [ ] (Recommended) Read [Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
 
 <br>
 
@@ -1089,15 +643,16 @@ The following checklist will help you stay organized in your third week.
 <br>
 <br>
 
-## R Graphics Packages
+## Degree Centrality and the Mafia
 
-This week you will begin working in the core R graphics engine. This discussion topic offers an opportunity to explore some of the myriad graphics packages in R.
+TEXT HERE ABOUT THIS!!!
 
-Your task is to select a specialized graphic that you could use in your own (hypothetical) research or professional life, then describe what data or topic from your own work the visualization would be useful for. Reference the R package you would need for the task.
+The DellaPosta article on the mafia:
 
-For example, I might say that I work creating budgets for a government organization. I could use a [Sankey Diagram](https://www.getrichslowly.org/sankey-diagrams/) from the [D3 Package](https://www.r-graph-gallery.com/sankey-diagram/) to visualize our budget.
+https://www.sciencedirect.com/science/article/abs/pii/S0378873321000472
 
-You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/) and [The Data Viz Project](https://datavizproject.com/) helpful.
+Has some good points about using degree centrality
+
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1109,22 +664,20 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 <br>
 <br>
 
-## Lab-03 - Graphics
+## Lab-03 - Degree Centrality
 
-This lab is designed to introduce you to core visualization functions by replicating an elaborate graphic.
+Lab-03 provides an opportunity to familiarize yourself with calculating degree centrality and degree centralization scores for undirected and directed networks in R. 
 
-We recommend you **skim** the chapters on graphing functions and custom graphics in R.
+You will use data from two sources:
 
-* [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
-* [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
-
-Code is provided to get you started, but you will have to use documentation and the web to push the boundaries of your new knowledge of these functions.
+  * [Thomas Grund and James Densley's study](https://journals.sagepub.com/doi/full/10.1177/1043986214553377) of ties among members of an inner-city gang in London, England.
+  * [Mangia Natarajan's study](https://link.springer.com/article/10.1007/s10940-006-9007-x) of a large cocaine trafficking organization in New York City.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-03-instructions.html')">LAB-03 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-03-LastName.zip?raw=true')">LAB-03 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-03-LastName.zip?raw=true')">LAB-03 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1132,10 +685,6 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <br>
 <br>
-
-
-
-
 
 
 <!---
@@ -1148,7 +697,7 @@ Click to download the lab template. Modify and submit using the instructions.
 #########################################
 -->
 
-** Week 4 - Dynamic Visualization
+** Week 4 - Closeness and Betweenness Centrality
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -1156,40 +705,27 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-This section introduces the use of R Shiny **widgets** to make graphs dynamic.
+This week we will continue to think about how we describe networks. We will revisit the concept of centrality. However, we will focus on two different ways of conceptualizing what it means to be *central* in a network. We will examine *closeness* and *betweenness* centrality.
 
 ## Learning Objectives
 
-Dynamic graphics allow a user to select parameters that change the visualization in some way. Graphics will update in real-time within a web browser.
-
-By the end of this unit you will be able to:
-
-* Construct widgets to allow users to select inputs.
-* Convert static graphics to dynamic graphics using the Shiny package.  
+Once you have completed this section you will be able to:
+* Understand the conceptualization of centrality as expressed as distance or betweenness
+* Calculate closeness centrality  
+* Calculate betweenness centrality
 
 ## Assigned Reading
 
-Read the notes on using R Shiny **widgets** and **render** functions to accept user input (widgets), and change graphics in response (render).  
-
-* [Notes on R Shiny]({{page.base}}lectures/shiny-widgets.pdf)  
-* [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)  
-* [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)   
-
-<br>
-
-## Lab
-
-Lab 04 will again use the graph that was featured in the New York Times:
-
-![](assets/img/pitcher-dominance.png)
+* [Chapter 6: Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html)
+* [Chapter 7: Betweenness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html)
+* [Tutorial 06 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html)
+* [Tutorial 07 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
 
 <br>
 
-Try the [**interactive graphic**](https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html) at the NYT.
+## Lab Assignment
 
-<br>
-
-But we will now add an input widget that allows users to select one team that will be highlighted on the graph in yellow.
+In Lab 04 we will focus on familiarizing yourself with calculating closeness centrality and betweeness centrality scores as well as centralization scores for undirected and directed networks in R. We will revisit the networks we used in [Lab 03 - Degree Centrality and Centralization](../labs/lab-03-instructions.html) to assess how different centrality measures tell us a different (or the same) story about what it means to be "central" in a network. 
 
 <br>
 <br>
@@ -1202,64 +738,10 @@ But we will now add an input widget that allows users to select one team that wi
 
 Required:
 
-* [Notes on R Shiny](https://github.com/DS4PS/cpp-526-spr-2020/raw/master/lectures/shiny-widgets.pdf)
-* [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)
-* [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
-
-<br>
-
-*** { @unit = "", @title = "Videos", @lecture, @foldout }
-
-<br>
-
-## Introducing Shiny
-
-Play the video below for an overview of interactive graphics with Shiny.
-
-* How to create a hard-coded graphic
-* The logic behind making graphics dynamic
-* An example of a dynamic Shiny app in RStudio
-* How to create a new Shiny app with user inputs
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UF7T7kAtetQ?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/UF7T7kAtetQ) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**00:38**) What Is a Shiny App?
-* (**02:07**) Exploring Practice Data `faithful`
-* (**03:24**) Recreating a Histogram of Wait Times
-* (**04:59**) Adjusting Argument `breaks =` with "Hard" Values
-* (**05:36**) Adjusting Argument `breaks =` with a Dynamic Values
-* (**06:43**) Understanding Shiny Logic
-* (**07:19**) Opening a New Shiny App
-* (**08:41**) Cleaning RStudio's Example Shiny App
-* (**09:43**) Comparing the App and Code
-* (**10:25**) User Interfaces (UI)
-* (**12:28**) Connecting Inputs (UI) with the Backend (Server)
-* (**14:11**) Creating a New Shiny App
-* (**15:01**) Connecting UI & Server-Side Plots ID
-* (**15:32**) Using a New Input Widget - Radio Buttons
-* (**16:55**) Creating a Dynamic Plot
-* (**17:38**) Critical Arguments for Input Widget Functions
-* (**19:43**) Inserting Server-Side Dynamic Values from User Inputs
-* (**22:44**) Tying It All Together
-* (**24:05**) Additional Notes
-* (**25:13**) Conclusions
-
-<br>
-<br>
-
-*** { @unit = "", @title = "Demo of Shiny Widgets", @reading, @foldout }
-
-<br>
-[Download Shiny Widgets Demo](https://cdn.rawgit.com/DS4PS/Data-Science-Class/53c986f1/TEMPLATES/ShinyWidgetsDemo.Rmd)
-
-For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html) and the [R Shiny Gallery](https://shiny.rstudio.com/gallery/).  
+* [Chapter 6: Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html)
+* [Chapter 7: Betweenness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html)
+* [Tutorial 06 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html)
+* [Tutorial 07 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
 
 <br>
 
@@ -1269,11 +751,10 @@ For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudi
 
 The following checklist will help you stay organized in your fourth week.
 
-- [ ] Complete Assigned Readings: [Notes on R Shiny]({{page.base}}lectures/shiny-widgets.pdf), [Dynamic Graph Example](https://shiny.rstudio.com/gallery/kmeans-example.html), [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
+- [ ] Complete Assigned Readings: [Chapter 6: Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html), [Chapter 7: Betweenness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html), [Tutorial 06 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html), [Tutorial 07 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 04](../labs/lab-04-instructions.html) (See Below)
-- [ ] (Recommended) Videos
-- [ ] (Recommended) Familiarize Yourself with the [Final Dashboard Project](../labs/final-project-instructions.html)
+- [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
 
 <br>
 
@@ -1282,17 +763,12 @@ The following checklist will help you stay organized in your fourth week.
 <br>
 <br>
 
-#### Bad Graphs
+#### Network Disruption
 
-There is a lot of science behind data visualization, but the art to storytelling with data can be hard to distill into a few basic principles. As a result, it takes time to learn how to do it well. The best way to develop data visualization skill is to regularly consume interesting graphics. David McCandless is one of the best ambassadors for the field of graphic design and visualization. Check out his TED Talk,  and some excerpts from his book [*Information is Beautiful*]( https://github.com/DS4PS/Data-Science-Class/raw/master/READINGS/mccandless_information_is_beautiful.pdf).
+In criminology and criminal justice, much attention is focused on disrupting networks. That is, trying to disconnect a network so that it is less functional. For discussion this week, I would like you to read the paper [*Disrupting resilient criminal networks through data analysis: The case of Sicilian Mafia*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0236476) by Lucia Cavallaro and colleagues.  
 
-<div style="max-width:560px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/david_mccandless_the_beauty_of_data_visualization" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
+How does betweenness centrality operate as an intervention procedure in their study? What might the interventions look like if one were to use degree centrality or closeness centrality instead? Would they differ from the betweenness centrality intervention?
 
-Unfortunately, it is much easier to create tragically bad graphics than it is to create good graphics. For your blog this week, read the *Calling Bullshit* overview on [proportional ink](https://callingbullshit.org/tools/tools_proportional_ink.html) and [misleading axes](https://callingbullshit.org/tools/tools_misleading_axes.html) to develop some sensitivity about misleading graphics.
-
-Find a graph that violates one of these principles, or commits an equally egregious visualization crime. Share the graph and explain what offense has been committed. You might start by searching for "bad graphs" on google images.
-
-This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-the-clowns/) in bar charts is one of my favorites. You might also enjoy [pizza charts](http://getdolphins.com/blog/the-worst-graphs-of-2017/) or [these gems](https://www.distractify.com/humor/2017/05/26/cszBB/hilariously-bad-graphs).
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1304,17 +780,15 @@ This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-
 <br>
 <br>
 
-## Lab-04 - Dynamic Graphics
+## Lab-04 - Closeness/Betweenness Centrality
 
-This lab is designed to introduce you to R Shiny by making last week's graphic interactive and dynamic.
+In Lab 04 we will focus on familiarizing yourself with calculating closeness centrality and betweeness centrality scores as well as centralization scores for undirected and directed networks in R. We will revisit the networks we used in [Lab 03 - Degree Centrality and Centralization](../labs/lab-03-instructions.html) to assess how different centrality measures tell us a different (or the same) story about what it means to be "central" in a network. 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-04-instructions.html')">LAB-04 Instructions</a>
 
 Click to download the lab template.
 
-**Note:** Rather than submitting a PDF or HTML file, please submit only the R or R Markdown file.  *Please ignore the boilerplate directions in this week's assignment*.
-
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-04-LastName.zip?raw=true')">LAB-04 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-04-LastName.zip?raw=true')">LAB-03 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1322,10 +796,6 @@ Click to download the lab template.
 
 <br>
 <br>
-
-
-
-
 
 
 <!---
@@ -1338,7 +808,7 @@ Click to download the lab template.
 #########################################
 -->
 
-** Week 5 - Data Wrangling
+** Week 5 - Bipartite Graphs and Two-Mode Networks
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -1346,38 +816,26 @@ Click to download the lab template.
 
 ## Description
 
-This unit focuses on the important task of "**data wrangling**", various manipulations that allow you to quickly filter, join, sort, transform, and describe your data. The **dplyr** package and **tidyverse** tools are some of the most popular in R.
+So far, we have worked with networks that have one set of nodes and one set of edges. But, not all of the networks we want to examine have a single node set. More complex relational structures have multiple partitions of node sets. Bipartite graphs allow us to represent networks that have two partitions of nodes. This section of the course will introduce bipartite graphs and get you started worked with two-mode networks.
 
 ## Learning Objectives
 
 By the end of this unit you will be able to:
 
-* Subset data by rows or columns
-* Create multi-dimensional summary tables by grouping data
-* Generate new variables through transformations of existing variables
-* Write efficient "data recipes" using pipe operators
+* Understand the structure of bipartite graphs (also called two-mode networks).
+* Understand how bipartite graphs are represented in matrix form.
+* Analyze the properties of bipartite graphs.
 
 ## Assigned Reading
 
-Read the notes on data wrangling in R:
-
-* [Data Verbs in dplyr](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html)  
-* [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html)  
-* [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html)   
-
-You may also find the [Data Wrangling Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) useful.
+* [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html)
+* [Tutorial 08 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
 
 <br>
 
-## Lab
+## Lab Assignment
 
-Lab 05 will use data on traffic accidents in the City of Tempe:
-
-[City of Tempe Open Data](https://data.tempe.gov/datasets/tempegov::1-08-crash-data-report-detail/about)  
-
-<br>
-
-![](assets/img/traffic-accidents.png)
+Lab 05 will provide the opportunity to continue to familiarize yourself with bipartite graphs and two-mode networks in *R*. You will work with two networks. First, you will use data collected from [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&), by David Fischer. In the book, Fischer documents Reveres connections through various affiliations in locations and how these influenced history. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The dataset refers to Paul Revere, who was responsible for organizing a local militia of Boston's revolutionary movement. The network is two-mode, with 254 actors and 7 organizations ("events"). Second, you will use the Philippine Kidnappings Data which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salast movement that has been founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other kinds of terrorist attacks. The object is a two-mode network where actors are terrorist kidnappers and the terrorist events they have attended. 
 
 <br>
 <br>
@@ -1390,52 +848,8 @@ Lab 05 will use data on traffic accidents in the City of Tempe:
 
 Required:
 
-* [Data Verbs in dplyr](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html)  
-* [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html)  
-* [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html)  
-
-<br>
-
-*** { @unit = "", @title = "Videos", @lecture, @foldout }
-
-<br>
-
-## Introducing dplyr
-
-Play the video below for an overview of data manipulation with package **dplyr**.
-
-* New syntax, e.g. bare variable names, piping
-* Main "verbs" (functions) for data manipulation
-* Helper "verbs" (functions) for added modification
-* Examples of combining main and helper "verbs" in advanced expressions
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M2QuERvxwm0?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/M2QuERvxwm0) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction & About Package 'dplyr'
-* (**02:12**) Opening RStudio & Creating Our Script
-* (**02:35**) Loading Package 'dplyr'
-* (**03:22**) An Example Expression Using 'dplyr' Verbs
-* (**04:43**) The "Pipe Operator"
-* (**05:46**) 'dplyr' Functions Without Pipe Operators
-* (**07:48**) Bare Variable Names
-* (**09:08**) Reviewing 'dplyr' Syntax
-* (**09:46**) Main Verbs: `select()`
-* (**14:44**) Main Verbs: `filter()`
-* (**19:15**) Main Verbs: `arrange()`
-* (**24:26**) Main Verbs: `mutate()`
-* (**27:30**) Main Verbs: `summarize()`
-* (**33:20**) Main Verbs: `group_by()`
-* (**34:41**) `group_by()` & `mutate()` Operations
-* (**37:37**) Don't Forget to `ungroup()`!
-* (**39:04**) `group_by()` & `summarize()` Operations
-* (**41:36**) Helper Verbs in 'dplyr', e.g. `desc()`, `pull()`
-* (**44:25**) Putting It All Together
+* [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html)
+* [Tutorial 08 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
 
 <br>
 <br>
@@ -1446,11 +860,10 @@ Visit the [video](https://youtu.be/M2QuERvxwm0) to navigate using timestamps in 
 
 The following checklist will help you stay organized in your fifth week.
 
-- [ ] Complete Assigned Readings: [Data Verbs in dplyr](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html), [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html), [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html)
+- [ ] [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) and [Tutorial 08 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 05](../labs/lab-05-instructions.html) (See Below)
-- [ ] (Recommended) Videos
-- [ ] (Recommended) Begin Planning [Final Code-Through Project](../labs/code-through-assignment.html)
+- [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
 
 <br>
 
@@ -1459,29 +872,9 @@ The following checklist will help you stay organized in your fifth week.
 <br>
 <br>
 
-### Data APIs
+### DISCUSSION 5 title
 
-Part of the reason data science has grown so much as a field in recent years is because of advances in computing technologies that allows us to run powerful programs and to work with large datasets on personal computers. But just as important, data has become so ubiquitous, cheap, and valuable for organizations.
-
-Your skill level in data science can be measured by how quickly you can take a real-world problem and produce analysis that offers better solutions than the status quo. Analyzing the data is important, but the process of obtaining data is not a trivial step. Having knowledge about where to look for data, or how to augment your existing data, will help you be more effective as an analyst.
-
-Next week we will discuss some ways to get data into R. You can always download data from a website in its current format (CSV, SPSS, or Stata, etc.) then import it into R. Alternatively, it is typically more efficient to use an API.
-
-API stands for "Application Programming Interface", which is computer science jargon for the protocols that allow two applications to speak to each other. If you are using your mobile phone and you want to log into your bank using an app, an API will send your user credential and password to your bank, and will return information about your balances and transactions. In other words, APIs are structured ways of sending requests back and fourth between systems. The provide permission for external users to query some parts of internal databases (e.g. what is my checking account balance?), and control what information will be returned.
-
-In some cases, organizations that host public datasets have created data APIs to make it easier to request and share the data. In some cases you give some search parameters (such as a zip code), and it returns a new dataset (census data). In other cases, you send data (raw text), and the API sends you a processed version of the data (a sentiment score based upon words in the text). Thus APIs can be used both to access new data sources, as well as to clean or process your current data as part of your project.
-
-The R community has made a lot of APIs easier to use by creating packages that allow you to access data directly in R using custom functions. For example, the Twitter package allows you to request tweets from specific dates and users, and sends back a dataset of all tweets that meet your criteria (with limits on how much you can access at a time).
-
-R packages translate the API into functions that will translate your request into the correct API format, send the request, return the data directly into R, and often convert it into an easy to use format like a data frame. In this way, you can quickly access thousands of datasets in real time through R, and you can also store your requests in scripts for future use.
-
-For the discussion topic this week find an example of an API that could be useful for your work. For example, I use a lot of federal data. I was excited to learn that the website [Data USA](https://datausa.io/) has created a public API that allows users to access over a dozen federal datasets:
-
-[Tutorial on Data USA API](https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b)
-
-You can find APIs through a Google search, or browse datasets on the [DS4PS Open Data](https://ds4ps.org/data/) page. Alternatively you can report on a package in R that uses a data API and describe what kinds of data the package allows you to access.
-
-*Note, you do not have to show how to use the API for the post, just identify what information is accessible and how it might be used.*
+TEXT
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1493,17 +886,15 @@ You can find APIs through a Google search, or browse datasets on the [DS4PS Open
 <br>
 <br>
 
-## Lab-05 - Data Wrangling
+## Lab-05 - Bipartite Graphs and Two-Mode Networks
 
-This lab offers practice analyzing traffic accident patterns using **dplyr** data wrangling functions.
-
-**Note:** *These data and techniques will be used for your final project in building an interactive dashboard.*
+This lab will provide the opportunity to continue to familiarize yourself with bipartite graphs and two-mode networks in *R*. You will work with two networks. First, you will use data collected from [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&), by David Fischer. In the book, Fischer documents Reveres connections through various affiliations in locations and how these influenced history. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The dataset refers to Paul Revere, who was responsible for organizing a local militia of Boston's revolutionary movement. The network is two-mode, with 254 actors and 7 organizations ("events"). Second, you will use the Philippine Kidnappings Data which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salast movement that has been founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other kinds of terrorist attacks. The object is a two-mode network where actors are terrorist kidnappers and the terrorist events they have attended. 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-05-instructions.html')">LAB-05 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-05-LastName.zip?raw=true')">LAB-05 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-05-LastName.zip?raw=true')">LAB-03 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1511,8 +902,6 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <br>
 <br>
-
-
 
 
 <!---
@@ -1525,7 +914,7 @@ Click to download the lab template. Modify and submit using the instructions.
 #########################################
 -->
 
-** Week 6 - Data IO and Joins
+** Week 6 - Network Projection
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -1533,40 +922,26 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-This week has you continue practicing "**data wrangling**". This week will add the step of joining multiple datasets prior to analysis. We will continue to use the **dplyr** package.
+As we saw in the last section, networks with complex node sets can be represented using an adjacency matrix and analyzed in various ways. However, a common approach in research is to reduce a bipartite graph to a unipartite graph so as to use the tools developed for networks with a single set of nodes. Projection is the process by which we map the connectivity between modes to a single mode. This week will focus on network projection.
 
 ## Learning Objectives
 
 By the end of this unit you will be able to:
 
-* Merge two related datasets using join functions
-* Identify appropriate keys for joins
-* Determine whether you need an inner, outer, or full join
-
-![](assets/img/dplyr-joins.png)
+*Understand the logic of projection of bipartite graphs to unipartite graphs.
+*Understand how matrix algebra is used to project networks.
+*Know the consequences of projecting bipartite graphs to unipartite graphs.
 
 ## Assigned Reading
 
-Read the notes on data joins:
-
-* [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
-
-For reference:
-
-* [Manny Gimond's Page](https://mgimond.github.io/ES218/Week03c.html)  
-* [Data Joins in dplyr](https://stat545.com/join-cheatsheet.html)  
+* [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html)
+* [Tutorial 09 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
 
 <br>
 
-## Lab
+## Lab Assignment
 
-Lab 06 will use Lahman data on baseball for some [moneyball examples](https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53).
-
-We will join the Salaries table to player bios (People table) and performance data (Batting and Fielding) to assess which characteristics predict salary and which teams have been able to most efficiently convert salary to wins.
-
-<br>
-
-![](assets/img/moneyball.jpg)
+Lab 06 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 05 - Bipartite Graphs and Two-Mode Networks](). 
 
 <br>
 <br>
@@ -1577,9 +952,8 @@ We will join the Salaries table to player bios (People table) and performance da
 
 ## Assigned Reading
 
-Read the notes on data joins:
-
-* [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
+* [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html)
+* [Tutorial 09 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
 
 <br>
 
@@ -1589,11 +963,10 @@ Read the notes on data joins:
 
 The following checklist will help you stay organized in your sixth week.
 
-- [ ] Complete Assigned Readings: [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
+- [ ] Complete Assigned Readings: [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html) and [Tutorial 09 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 06](../labs/lab-06-instructions.html) (See Below)
-- [ ] (Recommended) Begin [Final Code-Through Project](../labs/code-through-assignment.html)
-- [ ] (Recommended) Begin [Final Dashboard Project](../labs/final-project-instructions.html)
+- [ ] (Recommended) Begin [Final Project](../labs/final-project-instructions.html)
 
 <br>
 
@@ -1601,54 +974,9 @@ The following checklist will help you stay organized in your sixth week.
 
 <br>
 
-## GitHub for Government
+## DISCUSSION 6 title
 
-Hear me out. The government is just one big open-source project.
-
-Except currently the source code is only edited irregularly by one giant team, and they debate every single change, and then vote on it.
-
-The code is now millions of lines long, and most of it doesn't do what it was originally designed for, but it is too exhausting to make changes so they just leave it. There are lots of bugs, and many features do not work.
-
-Despite the flaws, the code somehow still functions (albeit very slowly now, like really slow), and the fan is making funny noises, and sometimes we get a blue screen during the budget process and it shuts down for a few weeks. But when it is re-started, it still kinda works.
-
----
-
-It's an imperfect metaphor, but many people have theorized that government can learn a lot from how open source projects are managed (or governed if we are being precise).
-
-<br>
-<div style="max-width:854px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government" width="854" height="480" style="position:absolute;center:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
-<br>
-
-There's been some uptake of these ideas:
-
-[http://open.innovatesf.com/openlaw/](http://open.innovatesf.com/openlaw/)
-
-### GitHub’s Official Government Evangelist
-
-> Ben Balter wants to get all up in the U.S. government’s code, and he thinks you should be able to as well. Balter, a Washington, D.C.-based lawyer, is GitHub’s official Government Evangelist. His purpose: to educate government agencies about adopting open-source software.
-
-My favorite Ben Balter project was something simple. GIS files are notoriously large and hard to work with (for some reason GIS shapefiles still split data into five separate files that you have to keep together for them to work properly).
-
-The open source community has created some better data structures that are more efficient and easier to share (geoJSON files), but the geographers that work for cities were all trained on ArcGIS products so it's all they know! Ben wrote a script that downloaded all of Washington DC's open data files, converted them to better formats, then uploaded them to GitHub so others have access.
-
-https://github.com/benbalter/dc-maps
-
-It might seem trivial - but geoJSON files can be read into R directly from GitHub, making it easy to deploy the data for a wide variety of purposes:
-
-```r
-library( geojsonio )
-library( sp )
-github <- "https://raw.githubusercontent.com/benbalter/dc-maps/master/maps/2006-traffic-volume.geojson"
-traffic <- geojson_read( x=github, method="local", what="sp" )
-plot( traffic, col="steelblue" )
-```
-**traffic data from dc**
-
-![](assets/img/dc-traffic.png)
-
-For this week, read about how [GitHub has evolved to support government](https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/).
-
-Do you think open source frameworks would help open the black box and make government more accessible? Would government become more accessible, or alienate regular citizens that are not computer scientists? Would it make influence from special interests more transparent, or would it make it easier for them to hijack the process of shaping local laws?
+TEXT
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -1660,15 +988,15 @@ Do you think open source frameworks would help open the black box and make gover
 <br>
 <br>
 
-## Lab-06 - Data Joins
+## Lab-06 - Projection
 
-This lab is designed to introduce you to primary data join functions in R.
+Lab 06 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 05 - Bipartite Graphs and Two-Mode Networks](). 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-06-instructions.html')">LAB-06 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-labs/Lab-06-LastName.zip?raw=true')">LAB-06 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-06-LastName.zip?raw=true')">LAB-03 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1678,29 +1006,17 @@ Click to download the lab template. Modify and submit using the instructions.
 <br>
 
 
-
-
 <!---
 #########################################
 #########################################
 ##########
-##########         FINAL PROJECTS
+##########         FINAL PROJECT
 ##########
 #########################################
 #########################################
 -->
 
-** FINAL PROJECTS
-
-*** { @unit = "", @title = "Reflection", @reading, @foldout }
-
-<br>
-
-“With very few exceptions, there is no shortcut between not knowing something and knowing it. There is a beauty to awkwardness, a wisdom in the wobble.”
-
-~Maya Stein
-
-<br>
+** FINAL PROJECT
 
 *** { @unit = "", @title = "Checklist", @assignment, @foldout }
 
@@ -1708,63 +1024,29 @@ Click to download the lab template. Modify and submit using the instructions.
 
 The following checklist will help you stay organized for your final week.
 
-- [ ] Finalize & Submit Your [Final Code-Through Project](../labs/code-through-assignment.html)
 - [ ] Finalize & Submit Your [Final Dashboard Project](../labs/final-project-instructions.html)
-- [ ] (Recommended) Submit a Course Evaluation
+- [ ] Submit a Course Evaluation
+
+<br>
+<br>
+
+*** { @unit = "{{page.final-project.due-date}}", @title = "Final Project", @assignment, @foldout  }
 
 <br>
 
-*** { @unit = "{{page.code-through.due-date}}", @title = "Code-Through Project", @assignment, @foldout  }
+## Final Project: Network Report
 
-<br>
+The final project will use all of the information you have learned in this course to create a report on a network. For the final project, you will use data from the Phoenix Open Data Portal. Specifically, you will use co-arrest data. These data represent incidents where individuals were arrested together. For the final project, imagine that you work for a police department and your supervisor has asked you to create a report on co-offending networks. 
 
-## Code-Through
+<a class="uk-button uk-button-default" onclick="window.open('../labs/final-project-assignment.html')">Final Project Instructions</a>
 
-Since you are sharing your code-through with your classmates on Yellowdig, it will serve as your discussion topic this week.
+Download the recommended template for your final project with the below link.
 
-If you send me your RMD and HTML files via email, I will post them to GitHub and create a link for you if you would like to share a URL instead of a file.
-
-<a class="uk-button uk-button-default" onclick="window.open('../labs/code-through-assignment.html')">Code-Through Instructions</a>
-
-Download the recommended template for your code-through with the below link.
-
-**Note:** *This is one of many possible layouts; modify appropriately.*
-
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-projects/cpp-526-CodeThrough-LastName.zip?raw=true')">Base Code-Through Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/final-project-LastName.zip?raw=true')">Final Project Template</a>
 
 ## Submit to Canvas
 
-<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT CODE-THROUGH</a>
-
-## Post on Yellowdig
-
-<a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
-
-<br>
-<br>
-
-*** { @unit = "{{page.final-project.due-date}}", @title = "Final Dashboard Project", @assignment, @foldout  }
-
-<br>
-
-## Create a Data Dashboard in R
-
-Working with the crash data from Lab-05, you will extend the work you began in Lab-04 by building on a dynamic data dashboard that will be used to explore and reveal insights in Tempe crash data.
-
-<a class="uk-button uk-button-default" onclick="window.open('../labs/final-project-instructions.html')">Final Project Instructions</a>
-
-The following link downloads two templates:
-
-* The entire dashboard, including all tabs
-* A one-tab dashboard with helpful hints
-
-We recommended creating new tabs independently, then incorporating them into the final dashboard.
-
-<a class="uk-button uk-button-default" onclick="window.open('../labs/cpp-526_reformatted-projects/cpp-526-DashboardTemplates.zip?raw=true')">Final Project Templates</a>
-
-## Submit to Canvas
-
-<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT DASHBOARD</a>
+<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT FINAL PROJECT</a>
 
 <br>
 <br>
