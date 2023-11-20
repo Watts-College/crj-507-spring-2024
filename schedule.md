@@ -2,58 +2,33 @@
 layout: schedule
 title: Schedule
 
-base: 'https://github.com/Watts-College/cpp-526-fall-2021/raw/main/'
+base: 'https://github.com/Watts-College/crj-507-spring-2024/raw/main/'
 
 canvas:
-  assignment_url: 'https://canvas.asu.edu/courses/92494/assignments'
-  yellowdig_url: 'https://canvas.asu.edu/courses/92494/assignments/2358903'
+  assignment_url: 'https://canvas.asu.edu/courses/170143/assignments'
+  yellowdig_url: 'https://canvas.asu.edu/courses/170143/assignments/4630885'
 
 lab-due-dates:
-  lab-01: 'WED August 25'
-  lab-02: 'WED September 1'
-  lab-03: 'WED September 8'
-  lab-04: 'WED September 15'
-  lab-05: 'WED September 22'
-  lab-06: 'WED September 29'
+  lab-01: 'WED January 17'
+  lab-02: 'WED January 24'
+  lab-03: 'WED January 31'
+  lab-04: 'WED February 7'
+  lab-05: 'WED February 14'
+  lab-06: 'WED February 21'
 
 discussion-dates:
-  topic-00: 'MON August 23'
-  topic-01: 'FRI August 27'
-  topic-02: 'FRI September 3'
-  topic-03: 'FRI September 10'
-  topic-04: 'FRI September 17'
-  topic-05: 'FRI September 24'
-  topic-06: 'FRI October 1'
+  topic-00: 'FRI January 12'
+  topic-01: 'FRI January 19'
+  topic-02: 'FRI January 26'
+  topic-03: 'FRI February 2'
+  topic-04: 'FRI February 9'
+  topic-05: 'FRI February 16'
+  topic-06: 'FRI February 23'
 
 final-project:
-  due-date: 'WED October 6'
-
-code-through:
-  due-date: 'WED October 6'
+  due-date: 'TUESDAY February 27'
 
 ---
-
-<!---
-New sections start with 2 stars:  ** Section Title
-New units start with 3 stars:     *** {Unit Metadata}
------------------------------start example
-** Section-I
-*** { @unit = "15th Nov", @title = "Course Overview", @reading, @lecture, @assignment, @foldout }
------------------------------end example
-Unit Metadata is comprised of:
-@unit - date or number
-@title - unit name
-@reading - turn on reading icon
-@assignment - turn on lecture icon
-@lecture - turn on lecture icon
-@foldout - activate unit content (allow foldout)
-Submit Buttons -
-  <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">Submit Lab</a>
-  <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
--->
-
-
-
 
 
 <!---
@@ -72,35 +47,9 @@ Submit Buttons -
 
 <br>
 
-## About Your Instructor
+## About Your Professor: [Jacob Young]()
 
-Play the video below to learn a bit more about your instructor for the course, YOUR NAME.
-
-* Visit his [GitHub](https://github.com/jamisoncrawford) profile
-* View his [RPubs](https://rpubs.com/jamisoncrawford) portfolio
-* Connect on [LinkedIn](https://www.linkedin.com/in/jamisoncrawford/)
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/C1A5x6LCDJo?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/C1A5x6LCDJo) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**00:07**) Two Universities, One Course
-* (**01:06**) My Relationship to the Course
-* (**01:38**) Teaching Experience & Course Origins
-* (**02:30**) What I Do as a Data Scientist
-* (**04:10**) Want a "Hard" Skill?  Do the Work!
-* (**05:40**) Course Resources & Assignment Tips
-* (**07:21**) Resources to Learn & Resources to Ignore
-* (**09:06**) Why the "Unofficial" YouTube Channel Is Invaluable
-* (**09:44**) Weekly To-Do Checklists
-* (**10:26**) Dispute Your Irrational Beliefs on Data Science
-* (**11:18**) First Assignment: Introduce Yourself
-* (**11:33**) Express Yourself
+Hi there! My name is [Jacob Young]() and I will be your instructor for this course. MORE BIO.
 
 <br>
 

@@ -9,8 +9,8 @@
 # COURSE INSTRUCTOR:
 
 author:
-    name:       Jamison Crawford
-    github:     jamisoncrawford   # Github username for avatar
+    name:       Jacob TN Young
+    github:     jacobtnyoung   # Github username for avatar
 
 # calendly app for virtual office hours
 calendly:  'https://calendly.com/jamisoncrawford/20min'
@@ -19,7 +19,7 @@ calendly:  'https://calendly.com/jamisoncrawford/20min'
 
 # COURSE INFO:
 
-description:        Intro. course in data-drive management
+description:        Intro. course in social network analysis
 
 # Header text at the top left of the website
 
@@ -37,13 +37,13 @@ header:
 - title: Course Schedule
   url: schedule/
 - title: Textbook
-  url: https://ds4ps.org/dp4ss/#dp4ss-data-programming-for-the-social-sciences
+  url: https://jacobtnyoung.github.io/sna-textbook/
 - title: Resources
   url: resources/
 # - title: Yellowdig
-#   url: https://www.yellowdig.com/board/43114
+#   url: https://yellowdig.app/n/asu-online/community/6529c8c6-91a4-3875-b0e1-3e74f0d3eff5
 # - title: Canvas
-#  url: https://canvas.asu.edu/courses/29528
+#  url: https://canvas.asu.edu/courses/170143
 - title: Get Help
   url: help/
 
@@ -52,23 +52,15 @@ header:
 # GITHUB CONFIGURATIONS
 
 url :               "https://watts-college.github.io"
-baseurl:            "/cpp-526-template"
-course_url:         "https://Watts-College.github.io/cpp-526-template/"
+baseurl:            "/crj-507-spring-2024"
+course_url:         "https://Watts-College.github.io/crj-507-spring-2024/"
 title:              Watts-College # don't change this
 
 github_info:
     username:          Watts-College # Github location of the course
     branch:            master
-    website-repo:      cpp-526-template
-    course-repo:       cpp-526-template
-
-
-
-
-
-
-
-
+    website-repo:      cpp-507-spring-2024
+    course-repo:       cpp-507-spring-2024
 
 
 # IGNORE THESE SETTINGS

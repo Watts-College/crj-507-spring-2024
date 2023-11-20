@@ -3,20 +3,7 @@ layout: discussions
 ---
 
 
-
-
-
-
-## Discussion Board Etiquette
-
-We are using GitHub Issues for discussion boards to practice posting questions in a style similar to popular data science forums like StackOverflow.
-
-Discussion boards are amazing resources because you can post complex questions and talented professionals from around the world will help solve your problems FOR FREE!
-
-There is some skill involved in asking questions so that they are clear, concise, and provide the information needed for someone to offer a solution.
-
-For example, StackOverflow has a succinct guide on [asking clear questions](https://stackoverflow.com/help/how-to-ask) and Jon Skeet has an excellent [blog post](https://codeblog.jonskeet.uk/2010/08/29/writing-the-perfect-question/) on the topic.
-
+We are using GitHub Issues for posting questions about this course.
 
 ## Simple Rules for Clear Questions
 
