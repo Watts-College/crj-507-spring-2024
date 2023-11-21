@@ -17,13 +17,12 @@ lab-due-dates:
   lab-06: 'WED February 21'
 
 discussion-dates:
-  topic-00: 'FRI January 12'
-  topic-01: 'FRI January 19'
-  topic-02: 'FRI January 26'
-  topic-03: 'FRI February 2'
-  topic-04: 'FRI February 9'
-  topic-05: 'FRI February 16'
-  topic-06: 'FRI February 23'
+  topic-01: 'FRI January 12'
+  topic-02: 'FRI January 19'
+  topic-03: 'FRI January 26'
+  topic-04: 'FRI February 2'
+  topic-05: 'FRI February 9'
+  topic-06: 'FRI February 16'
 
 final-project:
   due-date: 'TUESDAY February 27'
@@ -539,13 +538,9 @@ The following checklist will help you stay organized in your second week.
 
 ## The Challenges of Criminal Justice Records
 
+As you work through the materials this week, I want you to keep in mind some of the difficulties that arise when working with criminal justice records to construct network data.A great review of some of these issues is covered in the article [Using social network analysis to study crime: Navigating the challenges of criminal justice records](https://www.sciencedirect.com/science/article/pii/S0378873321000149?via%3Dihub) by David Bright, Russell Brewer, and Carlo Morselli. As they state in the paper, "Much like archeologists who deal with incomplete data, criminal network researchers must ‘dig’ to access relevant data, prepare the artefacts for analysis in the knowledge that such artefacts are but a sample, and engage in analysis and interpretation of such artefacts giving due consideration to the limits inherent in the artefacts under study."
 
-Bright, Brewer, Morselli article
-Assign week 1 as a discussion; discussion about this article's 7 points. Discussion with you own experience or your own data. THey take an "archeological approach". What does this mean?
-
-https://www.sciencedirect.com/science/article/pii/S0378873321000149?via%3Dihub
-
-Need to write this out
+For your discussion this week, think about your own experience with data and describe the extent to which you have encountered such issues as those described in the article. If you have not encountered any, think about how the topics mentioned in the article might apply to future work you do in your field. 
 
 <br>
 
@@ -613,7 +608,7 @@ Once you have completed this section you will be able to:
 Required:
 
 * [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html)
-* [Tutorial 05 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
+* [Tutorial 5 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
 
 ## Lab Assignment
 
@@ -631,7 +626,7 @@ Lab-03 provides an opportunity to familiarize yourself with calculating degree c
 Required:
 
 * [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html)
-* [Tutorial 05 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
+* [Tutorial 5 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
 
 <br>
 
@@ -641,9 +636,9 @@ Required:
 
 The following checklist will help you stay organized in your third week.
 
-- [ ] Complete Assigned Readings: [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html) and [Tutorial 05 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
+- [ ] Complete Assigned Readings: [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html) and [Tutorial 5 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit [Lab 03](../labs/lab-03-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 3](../labs/lab-03-instructions.html) (See Below)
 
 <br>
 
@@ -654,14 +649,9 @@ The following checklist will help you stay organized in your third week.
 
 ## Degree Centrality and the Mafia
 
-TEXT HERE ABOUT THIS!!!
+This week we focused on degree centrality as a tool for describing networks. In the article [Vertical organizations, flat networks: Centrality and criminal collaboration in the Italian-American Mafia](https://www.sciencedirect.com/science/article/abs/pii/S0378873321000472) by Andrew Krajewski, Daniel DellaPosta, and Diane Felmlee, they use degree centrality to measure *social status*.
 
-The DellaPosta article on the mafia:
-
-https://www.sciencedirect.com/science/article/abs/pii/S0378873321000472
-
-Has some good points about using degree centrality
-
+For your discussion this week, describe how will you think this measure captures the concept they are interested in examining. Also, think back to the discussion for Week 1. What are some of the limitations to these data that may have influenced the findings?
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -673,9 +663,9 @@ Has some good points about using degree centrality
 <br>
 <br>
 
-## Lab-03 - Degree Centrality
+## Lab 3 - Degree Centrality
 
-Lab-03 provides an opportunity to familiarize yourself with calculating degree centrality and degree centralization scores for undirected and directed networks in R. 
+Lab 3 provides an opportunity to familiarize yourself with calculating degree centrality and degree centralization scores for undirected and directed networks in R. 
 
 You will use data from two sources:
 
@@ -727,14 +717,14 @@ Once you have completed this section you will be able to:
 
 * [Chapter 6: Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html)
 * [Chapter 7: Betweenness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html)
-* [Tutorial 06 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html)
-* [Tutorial 07 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
+* [Tutorial 6 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html)
+* [Tutorial 7 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
 
 <br>
 
 ## Lab Assignment
 
-In Lab 04 we will focus on familiarizing yourself with calculating closeness centrality and betweeness centrality scores as well as centralization scores for undirected and directed networks in R. We will revisit the networks we used in [Lab 03 - Degree Centrality and Centralization](../labs/lab-03-instructions.html) to assess how different centrality measures tell us a different (or the same) story about what it means to be "central" in a network. 
+In Lab 4 we will focus on familiarizing yourself with calculating closeness centrality and betweeness centrality scores as well as centralization scores for undirected and directed networks in R. We will revisit the networks we used in [Lab 3 - Degree Centrality and Centralization](../labs/lab-03-instructions.html) to assess how different centrality measures tell us a different (or the same) story about what it means to be "central" in a network. 
 
 <br>
 <br>
@@ -749,8 +739,8 @@ Required:
 
 * [Chapter 6: Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html)
 * [Chapter 7: Betweenness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html)
-* [Tutorial 06 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html)
-* [Tutorial 07 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
+* [Tutorial 6 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html)
+* [Tutorial 7 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
 
 <br>
 
@@ -760,9 +750,9 @@ Required:
 
 The following checklist will help you stay organized in your fourth week.
 
-- [ ] Complete Assigned Readings: [Chapter 6: Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html), [Chapter 7: Betweenness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html), [Tutorial 06 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html), [Tutorial 07 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
+- [ ] Complete Assigned Readings: [Chapter 6: Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html), [Chapter 7: Betweenness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html), [Tutorial 6 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html), [Tutorial 7 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit [Lab 04](../labs/lab-04-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 4](../labs/lab-04-instructions.html) (See Below)
 - [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
 
 <br>
@@ -789,9 +779,9 @@ How does betweenness centrality operate as an intervention procedure in their st
 <br>
 <br>
 
-## Lab-04 - Closeness/Betweenness Centrality
+## Lab 4 - Closeness/Betweenness Centrality
 
-In Lab 04 we will focus on familiarizing yourself with calculating closeness centrality and betweeness centrality scores as well as centralization scores for undirected and directed networks in R. We will revisit the networks we used in [Lab 03 - Degree Centrality and Centralization](../labs/lab-03-instructions.html) to assess how different centrality measures tell us a different (or the same) story about what it means to be "central" in a network. 
+In Lab 4 we will focus on familiarizing yourself with calculating closeness centrality and betweeness centrality scores as well as centralization scores for undirected and directed networks in R. We will revisit the networks we used in [Lab 3 - Degree Centrality and Centralization](../labs/lab-03-instructions.html) to assess how different centrality measures tell us a different (or the same) story about what it means to be "central" in a network. 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-04-instructions.html')">LAB-04 Instructions</a>
 
@@ -838,13 +828,13 @@ By the end of this unit you will be able to:
 ## Assigned Reading
 
 * [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html)
-* [Tutorial 08 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
+* [Tutorial 8 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
 
 <br>
 
 ## Lab Assignment
 
-Lab 05 will provide the opportunity to continue to familiarize yourself with bipartite graphs and two-mode networks in *R*. You will work with two networks. First, you will use data collected from [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&), by David Fischer. In the book, Fischer documents Reveres connections through various affiliations in locations and how these influenced history. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The dataset refers to Paul Revere, who was responsible for organizing a local militia of Boston's revolutionary movement. The network is two-mode, with 254 actors and 7 organizations ("events"). Second, you will use the Philippine Kidnappings Data which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salast movement that has been founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other kinds of terrorist attacks. The object is a two-mode network where actors are terrorist kidnappers and the terrorist events they have attended. 
+Lab 5 will provide the opportunity to continue to familiarize yourself with bipartite graphs and two-mode networks in *R*. You will work with two networks. First, you will use data collected from [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&), by David Fischer. In the book, Fischer documents Reveres connections through various affiliations in locations and how these influenced history. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The dataset refers to Paul Revere, who was responsible for organizing a local militia of Boston's revolutionary movement. The network is two-mode, with 254 actors and 7 organizations ("events"). Second, you will use the Philippine Kidnappings Data which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salast movement that has been founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other kinds of terrorist attacks. The object is a two-mode network where actors are terrorist kidnappers and the terrorist events they have attended. 
 
 <br>
 <br>
@@ -858,7 +848,7 @@ Lab 05 will provide the opportunity to continue to familiarize yourself with bip
 Required:
 
 * [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html)
-* [Tutorial 08 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
+* [Tutorial 8 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
 
 <br>
 <br>
@@ -869,9 +859,9 @@ Required:
 
 The following checklist will help you stay organized in your fifth week.
 
-- [ ] [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) and [Tutorial 08 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
+- [ ] [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) and [Tutorial 8 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit [Lab 05](../labs/lab-05-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 5](../labs/lab-05-instructions.html) (See Below)
 - [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
 
 <br>
@@ -881,9 +871,11 @@ The following checklist will help you stay organized in your fifth week.
 <br>
 <br>
 
-### DISCUSSION 5 title
+### The Efficiency/Security Trade-Off
 
-TEXT
+One of the most discussed topics in the study of illicit or covert networks is the "efficiency/security trade-off". As discussed in the article [The efficiency/security trade-off in criminal networks](https://www.sciencedirect.com/science/article/pii/S0378873306000268), these organizations have to decide whether to emphasize efficiency or security, both of which influence network structure.
+
+For your discussion this week, think about a network that you are interested in studying (or are currently studying) and discuss the "efficiency/security trade-off". Is your network more efficiency focused or security focused? Or does it depend?
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -895,7 +887,7 @@ TEXT
 <br>
 <br>
 
-## Lab-05 - Bipartite Graphs and Two-Mode Networks
+## Lab 5 - Bipartite Graphs and Two-Mode Networks
 
 This lab will provide the opportunity to continue to familiarize yourself with bipartite graphs and two-mode networks in *R*. You will work with two networks. First, you will use data collected from [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&), by David Fischer. In the book, Fischer documents Reveres connections through various affiliations in locations and how these influenced history. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The dataset refers to Paul Revere, who was responsible for organizing a local militia of Boston's revolutionary movement. The network is two-mode, with 254 actors and 7 organizations ("events"). Second, you will use the Philippine Kidnappings Data which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salast movement that has been founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other kinds of terrorist attacks. The object is a two-mode network where actors are terrorist kidnappers and the terrorist events they have attended. 
 
@@ -944,13 +936,13 @@ By the end of this unit you will be able to:
 ## Assigned Reading
 
 * [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html)
-* [Tutorial 09 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
+* [Tutorial 9 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
 
 <br>
 
 ## Lab Assignment
 
-Lab 06 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 05 - Bipartite Graphs and Two-Mode Networks](). 
+Lab 6 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks](). 
 
 <br>
 <br>
@@ -962,7 +954,7 @@ Lab 06 will serve to familiarize yourself with projecting bipartite graphs to un
 ## Assigned Reading
 
 * [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html)
-* [Tutorial 09 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
+* [Tutorial 9 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
 
 <br>
 
@@ -972,9 +964,9 @@ Lab 06 will serve to familiarize yourself with projecting bipartite graphs to un
 
 The following checklist will help you stay organized in your sixth week.
 
-- [ ] Complete Assigned Readings: [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html) and [Tutorial 09 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
+- [ ] Complete Assigned Readings: [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html) and [Tutorial 9 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit [Lab 06](../labs/lab-06-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 6](../labs/lab-06-instructions.html) (See Below)
 - [ ] (Recommended) Begin [Final Project](../labs/final-project-instructions.html)
 
 <br>
@@ -983,9 +975,13 @@ The following checklist will help you stay organized in your sixth week.
 
 <br>
 
-## DISCUSSION 6 title
+## Focused Interventions
 
-TEXT
+What good is a network analysis if we can't put it into action? A common network intervention is the "group-based violence intervention" where the goal is to use the network to disseminate credible threats to actors in a network.
+
+An example of this approach is discussed in the article [Choosing Representatives to Deliver the Message in a Group Violence Intervention](https://www.tandfonline.com/doi/full/10.1080/24751979.2019.1630661) by Andew Wheeler, Sarah McLean, Kelly Becker, and Robert Worden.
+
+For your discussion this week, review the article above and think about how such an intervention might be used in a network you are interested in studying (or currently studying). For this article, don't get lost in the details, think big picture in terms of what the "group-based violence intervention" model does and how analyst go about locating individuals who should be the ones to disseminate the message.
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.yellowdig_url}}">YELLOWDIG</a>
 
@@ -997,9 +993,9 @@ TEXT
 <br>
 <br>
 
-## Lab-06 - Projection
+## Lab 6 - Projection
 
-Lab 06 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 05 - Bipartite Graphs and Two-Mode Networks](). 
+Lab 6 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks](). 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-06-instructions.html')">LAB-06 Instructions</a>
 
