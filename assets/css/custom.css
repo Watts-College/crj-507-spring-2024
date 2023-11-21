@@ -2,7 +2,7 @@ button {
     border-radius: 5px;
     border-color: darkgray;
     background-color: transparent;
-    color: #26b8ef;
+    color: #32a8a6;
 }
 
 
@@ -41,14 +41,14 @@ header {
 }
 
 #default_nav {
-    background-color:rgb(4, 221, 224); 
+    background-color:rgb(50, 168, 166); 
     /* background-color: #f08d14;  #ffaf4d; */
     font-size: 1.7em;
     color: white;
 }
 
 footer {
-    background-color:rgb(4, 221, 224); 
+    background-color:rgb(50, 168, 166); 
     /* background-color: #f08d14;  #ffaf4d; #ff8c00; */
     color: white; /* rgb(255,255,255); */
     margin-top: 0px;
@@ -84,7 +84,7 @@ p.i {
 
 
 a{
-    color: #26b8ef;
+    color: #32a8a6;
     text-decoration: underline; 
     target-name: new;
     target-new: tab;
