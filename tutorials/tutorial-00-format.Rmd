@@ -1,0 +1,36 @@
+---
+title: "Tutorial # - TUTORIAL NAME"
+date: "CRJ 507 Social Network Analysis"
+output: 
+  html_document:
+    df_print: paged
+    theme: united
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+<style>
+body {
+text-align: left}
+</style>
+
+```{r, echo=FALSE}
+
+# set the defaults for the codechunks
+knitr::opts_chunk$set( eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE )
+
+```
+
+CONTENT
+
+<br>
+
+----
+
+<br>
+<br>
+
+##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-template/issues) page. Thanks!

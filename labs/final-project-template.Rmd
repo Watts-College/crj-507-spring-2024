@@ -1,10 +1,11 @@
 ---
-title: "Lab 02 - Network Visualization - INSTRUCTIONS"
-date: "CRJ 507 Social Network Analysis"
+title: "Final Project"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   html_document:
     df_print: paged
-    theme: cosmo
+    theme: journal
     highlight: haddock
     toc: yes
     toc_float: yes
@@ -12,53 +13,89 @@ output:
     self_contained: true
 ---
 
-<style>
-body {
-text-align: justify}
-</style>
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set( echo = FALSE,
+                       eval = TRUE,
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10, 
+                      fig.height = 6 )
+
+```
+
+<br>
+
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
+
+# clear the workspace
+rm( list = ls() )
+
+# load the libraries you will need
+library( network )
+library( sna )
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set( echo = TRUE )
+# Load the networks
+
+# set the url
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-PHX-arrest-2023-net.rds"
+
+# for the 2023
+PhxArrestNet2023 <- readRDS( url( loc ) )
+
+# set the url
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-PHX-arrest-2022-net.rds"
+
+# for the 2023
+PhxArrestNet2022 <- readRDS( url( loc ) )
+
 ```
 
 
-# Introduction
+## Part I: Two-Mode Network
 
-The purpose of this lab is to familiarize yourself with how networks are created and visualized in *R*.  
+*What can you tell me about this network?* 
 
-<br>
+```{r, echo=FALSE}
 
-## Part I
+# your code here
 
-In [lab 01]() you created two networks. I would like you to continue working with those networks for this lab. Please review the [NAME] and [NAME] tutorials prior to beginning this lab.    
-
-<br>
-
-For *each* network you created, do the following:  
-
-1. Import the network into *R* using the `read.csv()` function or create the network using the `matrix()` function.
-2. Create an object of class `network`. 
-3. Plot the network using the `gplot()` function.    
-4. Modify the plot using at least three arguments in the `gplot()` function.  
+```
 
 <br>
 
-## Part II
+## Part II: One-Mode Network
 
-How them work with a network here. Take one two of the trust networks from WO-PINS. Have them then make some comparisons.
+*Who are the central actors in this network?* 
 
-____
+```{r, echo=FALSE}
 
-<br>
+# your code here
 
-# How to Submit
-
-Download the [template for this lab] prior to beginning the lab. 
+```
 
 <br>
 
-### Knitting to HTML
+## Part III: Comparison
+
+*How has the co-offending network changed from 2022 to 2023?* 
+
+```{r, echo=FALSE}
+
+# your code here
+
+```
+
+<br>
+<br>
+
+<center>------------<h4> **DELETE THIS LINE & ALL LINES BELOW BEFORE SUBMITTING** </h4>------------</center>
+
+<br>
+<br>
+
+## Knitting to HTML
 
 When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
 
@@ -92,16 +129,3 @@ See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for
 * If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
 
 **If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
-
-<br>
-
-----
-
-<br>
-
-##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-template/issues) page. Thanks!
-
-<br>
-<br>
-
-###### ***Last updated `r format(Sys.time(), '%d %B, %Y')`***

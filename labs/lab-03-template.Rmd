@@ -1,0 +1,294 @@
+---
+title: "Lab 03 - Degree Centrality"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    df_print: paged
+    theme: journal
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set( echo = TRUE,
+                       eval = TRUE,
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10, 
+                      fig.height = 6)
+
+```
+
+
+<br>
+
+```{r load_packages}
+# make sure these are installed on your machine before knitting
+# install.packages( "network" )
+# install.packages( "sna" )
+#
+# Note that you cannot knit with an install.packages() function
+# called in your RMD file. You only have to install packages
+# once, then they are loaded using the library() function.
+
+library( network )
+library( sna )
+
+```
+
+<br>
+
+# Getting Started
+
+## Setup
+
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+
+# clear the workspace
+rm( list = ls() )
+
+```
+
+<br>
+
+## Part I
+
+<br>
+
+First, let's read in the `LondonGangNet` network. This is stored as an .rds document in the data folder on the [SNA Textbook](https://github.com/jacobtnyoung/sna-textbook/tree/main/data) site. We will use the `readRDS()` function, with the [file path](https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-london-gang-net.rds), to load the file. Since we are calling a url, we need to use the `url()` function as well.  
+
+Finally, we need to make sure the `sna` and `network` packages are loaded, using `library()`, so that R recognizes the `LondonGangNet` object as one of class `network`.
+
+<br>
+
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+
+# load the libraries we need
+library( sna )
+library( network )
+
+# define the path location for the file
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-london-gang-net.rds"
+LondonGangNet <- readRDS( url(loc ) )
+
+# look at the network
+LondonGangNet
+
+```
+
+<br>
+
+#### 1. Plot the network using the `gplot()` function.    
+
+<br>
+
+```{r, echo=TRUE, eval=TRUE}
+
+gplot( 
+  LondonGangNet,               # the network to plot
+  gmode = "graph",             # tell gplot this is an undirected graph
+  main = "London Gang Network" # add a title
+  )
+
+```
+
+<br>
+
+#### 2. Calculate the degree for each actor.  
+
+```{r, echo=TRUE, eval=TRUE}
+
+# Your code here
+
+```
+
+<br>
+
+#### 3. Calculate the standardized degree for each actor.  
+
+```{r, echo=TRUE, eval=TRUE}
+
+# standardized score is deg / g-1 where g is the number of nodes.
+
+# add your code here
+
+```
+
+<br>
+
+#### 4. Calculate the mean degree.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 5. Calculate the graph centralization for degree.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 6. Discuss the graph centralization score.  
+
+*add your interpretation here (THEN DELETE THIS STATEMENT)*
+
+<br>
+<br>
+
+## Part II
+
+<br>
+
+First, let's read in the `CocaineDealingNet` network. This is stored as an .rds document in the data folder on the [SNA Textbook](https://github.com/jacobtnyoung/sna-textbook/tree/main/data) site. We will use the `readRDS()` function, with the [file path](https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-cocaine-dealing-net.rds), to load the file. Since we are calling a url, we need to use the `url()` function as well.  
+
+Above, we needed to make sure the `sna` and `network` packages were loaded, but we loaded them above so we do not need to repeat the step here.
+
+<br>
+
+```{r, echo=TRUE, eval=TRUE}
+
+# define the path location for the file
+loc2 <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-cocaine-dealing-net.rds"
+CocaineDealingNet <- readRDS( url(loc2 ) )
+
+# look at the network
+CocaineDealingNet
+
+```
+
+<br>
+
+#### 1. Plot the network using the `gplot()` function.    
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 2. Calculate the indegree and outdegree for each actor.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 3. Calculate the standardized indegree and outdegree for each actor.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 4. Calculate the mean indegree and outdegree.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 5. Compare the two means.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 6. Calculate the graph centralization for indegree and outdegree.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 7. Compare the two graph centralization scores.  
+
+*add your comparison here (THEN DELETE THIS STATEMENT)*
+
+<br>
+
+----
+
+<br>
+<br>
+
+## Part III:
+
+<br>
+
+*Add your code setup here according to the instructions above, then DELETE THESE STATEMENT*
+
+<br>
+<br>
+
+<center>------------<h4> **DELETE THIS LINE & ALL LINES BELOW BEFORE SUBMITTING** </h4>------------</center>
+
+<br>
+<br>
+
+## Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+1. Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect their use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  

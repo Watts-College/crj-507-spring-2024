@@ -1,0 +1,337 @@
+---
+title: "Lab 05 - Bipartite Graphs and Two-Mode Networks"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    df_print: paged
+    theme: journal
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set( echo = TRUE,
+                       eval = TRUE,
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10, 
+                      fig.height = 6 )
+
+```
+
+<br>
+
+# Getting Started
+
+## Setup
+
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE}
+
+# clear the workspace
+rm( list = ls() )
+
+```
+
+<br>
+
+## Part I
+
+<br>
+
+First, let's read in the `PaulRevereNet` network. This is stored as an .rds document in the data folder on the [SNA Textbook](https://github.com/jacobtnyoung/sna-textbook/tree/main/data) site. We will use the `readRDS()` function, with the [file path](https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-paul-revere-net.rds), to load the file. Since we are calling a url, we need to use the `url()` function as well.  
+
+Finally, we need to make sure the `sna` and `network` packages are loaded, using `library()`, so that R recognizes the `PaulRevereNet` object as one of class `network`.
+
+<br>
+
+```{r, message=FALSE, warning=FALSE}
+
+# load the libraries we need
+library( sna )
+library( network )
+
+# define the path location for the file
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-paul-revere-net.rds"
+PaulRevereNet <- readRDS( url( loc ) )
+
+# look at the network
+PaulRevereNet
+
+```
+
+<br>
+
+#### 1. Plot the network using the `gplot()` function.  
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 2. Calculate the density of the network.
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 3. Interpret the density of the network.
+
+*add your interpretation here (THEN DELETE THIS STATEMENT)*
+
+<br>
+
+#### 4. Calculate the degree centrality scores for each set of nodes.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 5. Calculate the mean degree centrality scores and interpret the values.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+*add your interpretation here (THEN DELETE THIS STATEMENT)*
+
+<br>
+
+#### 6. Calculate the standardized degree centrality scores for each set of nodes.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 7. Calculate the mean standardized degree centrality score.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 8. Plot the network using the standardized degree centrality scores.
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 9. Using the vertex attribute `people.names`, discuss which individual is most central in the network.
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 10. Using the vertex attribute `place.names`, discuss which location is most central in the network.
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+<br>
+
+----
+
+## Part II
+
+<br>
+
+First, let's read in the `PhilKidnapNet` network. This is stored as an .rds document in the data folder on the [SNA Textbook](https://github.com/jacobtnyoung/sna-textbook/tree/main/data) site. We will use the `readRDS()` function, with the [file path](https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-philippine-kidnappings-net.rds), to load the file. Since we are calling a url, we need to use the `url()` function as well.  
+
+Finally, we need to make sure the `sna` and `network` packages are loaded, using `library()`, so that R recognizes the `PhilKidnapNet` object as one of class `network`.
+
+<br>
+
+```{r, message=FALSE, warning=FALSE}
+
+# clear the workspace so we don't use any duplicate names
+rm( list = ls() )
+
+# define the path location for the file
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-philippine-kidnappings-net.rds"
+PhilKidnapNet <- readRDS( url( loc ) )
+
+# look at the network
+PhilKidnapNet
+
+```
+
+<br>
+
+#### 1. Plot the network using the `gplot()` function.  
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 2. Calculate the density of the network.
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 3. Interpret the density of the network.
+
+*add your interpretation here (THEN DELETE THIS STATEMENT)*
+
+<br>
+
+#### 4. Calculate the degree centrality scores for each set of nodes.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 5. Calculate the mean degree centrality scores and interpret the values.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+*add your interpretation here (THEN DELETE THIS STATEMENT)*
+
+<br>
+
+#### 6. Calculate the standardized degree centrality scores for each set of nodes.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 7. Calculate the mean standardized degree centrality score.  
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 8. Plot the network using the standardized degree centrality scores.
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 9 & 10. Using the vertex attribute `vertex.names`, discuss which individual and which event are the most central in the network.
+
+```{r}
+
+# Your code here
+
+```
+
+*add your interpretation here (THEN DELETE THIS STATEMENT)*
+
+<br>
+<br>
+
+<center>------------<h4> **DELETE THIS LINE & ALL LINES BELOW BEFORE SUBMITTING** </h4>------------</center>
+
+<br>
+<br>
+
+## Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+1. Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect their use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  

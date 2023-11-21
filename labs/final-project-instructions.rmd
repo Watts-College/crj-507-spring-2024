@@ -1,346 +1,147 @@
 ---
-title: 'Final Project - Instructions'
-output:
+title: "Final Project - INSTRUCTIONS"
+date: "CRJ 507 Social Network Analysis"
+output: 
   html_document:
-    theme: readable
     df_print: paged
-    highlight: tango
+    theme: cosmo
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
 ---
 
+
+<style>
+body {
+text-align: left}
+</style>
+
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message=F, warning=F)
-library( dplyr )
-library( pander )
+knitr::opts_chunk$set( echo = TRUE )
 ```
 
-#### [CPP 526: Foundations of Data Science I](https://watts-college.github.io/cpp-526-fall-2022/)
+# Introduction
+
+The final project will use all of the information you have learned in this course to create a report on a network. For the final project, you will use data from the Phoenix Open Data Portal. Specifically, you will use co-arrest data. These data represent incidents where individuals were arrested together. For the final project, imagine that you work for a police department and your supervisor has asked you to create a report on co-offending networks. Your supervisor has provided you two networks: the `PhxArrestNet2023` network of co-offending for 2023 and the `PhxArrestNet2022` network of co-offending for 2022.
 
 <br>
 
-A dashboard template has been provided:
+## Data
 
-[![](images/download.png)](https://github.com/Watts-College/cpp-526-fall-2022/blob/main/labs/cpp-526_reformatted-projects/cpp-526-DashboardTemplates.zip?raw=true)
+Both networks are stored as .rds files in the data folder on the [SNA Textbook](https://github.com/jacobtnyoung/sna-textbook/tree/main/data) site. As before, use the `readRDS()` function, to load the file. Be sure to make sure the `sna` and `network` packages are loaded, using `library()`, so that R recognizes the objects as being of class `network`.
 
+Use the following code to load the 2023 network:
 
-<br><br>
+```{r, echo=TRUE, eval=FALSE}
 
-# Data
+# set the url
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-PHX-arrest-2023-net.rds"
 
-You will again use the traffic accidents dataset from the Tempe [Open Data Portal](https://data.tempe.gov/datasets/tempegov::1-08-crash-data-report-detail/about). The details of the dataset are reported at the end of these instructions. 
-
-
-
-<br><br>
-
-
-# Instructions
-
-Create a dashboard with **at least six tabs**, four have already been provided for your.
-
-The template currently provides: 
-
-* The first tab allows the user to explore traffic accidents in Tempe by time periods. 
-* The second tab looks at accidents by driver characteristics. 
-* A leaftlet map with all accidents selected by the query color-coded to differentiate those with no injuries, injuries, and fatalities.
-* Informative pop-up info boxes that give crash details when you click on a crash.
-* Input widgets on a separate sidebar on the left-hand side.
-
-Using these input widgets, the user should be able to define a query that selects a specific time-period (weekends, afternoon rush-hour, etc.) and the map should display the correct data.
-
-The second tab allows the user to explore the prevalence and severity of different types of accidents by driver characteristics.
-
-* Age
-* Gender
-* Driver, pedestrian, or cyclist
-
-The template includes four value boxes at the top of the page to report statistics for each user query:
-
-* Number of crashes
-* Rate of harm (at least one person injured or killed)
-* Total injuries
-* Total fatalities
-
-You can find new icons for the value boxes in the [Font Awesome Gallery](https://fontawesome.com/icons?d=gallery).
-
-
-## YAML Header
-
-The options in the template header embed the source code in your dashboard for easy access. Make sure to include the runtime shiny argument when you include dynamic widgets. 
-
-
-```
----
-title: "Crash Data: City of Tempe"
-output: 
-  flexdashboard::flex_dashboard:
-    theme: spacelab
-    source: embed
-    smart: false
-runtime: shiny
----
-```
-
-## Access to Raw Data
-
-The template includes a data table with the raw data that allows the users to filter and download the data they are interested in.
-
-We use the Data Table **DT** package to embed data in a dashboard. 
-
-```{r, echo=T, eval=F}
-
-# library( DT )
-
-these.buttons <- c( 'copy', 'csv', 'excel', 'pdf', 'print' )
-
-datatable( dat,
-           filter='bottom', rownames=FALSE, 
-           #options=list( pageLength=5, autoWidth=TRUE ),
-           fillContainer=TRUE, 
-           style="bootstrap",
-           class='table-condensed table-striped',
-           extensions = 'Buttons', 
-           options=list( dom='Bfrtip', 
-                         buttons=these.buttons  )) %>%
-  
-  formatStyle( "name", "white-space"="nowrap" )
+# for the 2023
+PhxArrestNet2023 <- readRDS( url( loc ) )
 
 ```
 
+<br>
 
-<br><br>
+Use the following code to load the 2022 network:
 
+```{r, echo=TRUE, eval=FALSE}
+
+# set the url
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-PHX-arrest-2022-net.rds"
+
+# for the 2022
+PhxArrestNet2022 <- readRDS( url( loc ) )
+
+```
+
+<br>
+
+## Template and Report Format
+
+As with the labs, There is a template for the final project. The template is set up as a report in that the code chunks include the option `echo = FALSE`. What this does is hides the code in the final report. When you render your report, the code will be hidden so that it reads cleanly.
+
+<br>
 
 # Your Task
 
-Add at least two additional tabs that allow for meaningful analysis of the data. Include widgets for user input, and link the widgets to a leaflet map (like tabs 1 and 2) or any other tables or graphs that you find useful for analyzing traffic patterns. You might consider:
+## Part I: Two-Mode Network
 
-Accident characteristics:
+*What can you tell me about this network?* To answer your supervisor's question, provide an analysis of the `PhxArrestNet2023` network. This analysis should include a visualization of the network as well as a description of the structural properties such as the density and the degree distributions. Be sure to focus on the interpretation of the structural properties (e.g. what does the average degree centrality score mean?).
 
-* Type (Collisionmanner)
-* Violations issued
+<br>
 
+## Part II: One-Mode Network
 
-Conditions at the time of accident:
+*Who are the central actors in this network?* To answer your supervisor's question, provide an analysis of the "person" matrix for the `PhxArrestNet2023` network. Create an object of class `matrix` using the `as.sociomatrix()` function in the `network` package. Then, focus on describing the centrality of actors. You should examine the three types of centrality we discussed (i.e. degree, closeness, and betweenness). Be sure to emphasize any differences in the measures in terms of interpreting the "who is central?" question. Also, be sure to include visualizations that incorporate each centrality measure.
 
-* Time of day 
-* Weather
-* Light
-* Surface
-* Junction
+<br>
 
-Impairement?  
+## Part III: Comparison
 
-* Alcohol or drugs 
-* Violations issued
-
-
-*Note that some categories like weather conditions are mutually exclusive and thus should be radio buttons, and others might be inclusive such as drugs and alcohol for driver 1 and driver 2, and could be operationalized with check-boxes.*
-
-
-*Instead of using 24-hour periods you might consider defining your own periods such as rush hour, work day, school pick-up, etc.).*
-
-
-
-
-
-<br><br>
-
-
-
-
-## The About Tab
-
-Include a description of the project including references for the data source, your contact info, and the intended use of the dashboard. 
-
-The data dictionary is included in this tab. The data dictionary was created as follows:
-
-```{r, eval=F}
-# pseudo-code only
-data.dictionary <- read.csv()
-dd.simple <-
-  data.dictionary %>%
-  select( variableNames, variableDescriptions )
-pander( dd.simple ) # html table, from pander package
-```
-
-<br><br>
-
-
-
-## BONUS: Principles of Dashboard Design
-
-You will note that on the second tab the input widgets are a little awkward for creating comparisons. It could potentially be improved by considering some of the following.  
-
-* Since we have two drivers, perhaps splitting the map into two views is more meaningful for comparisons?
-* Age can be treated as categories to make it easier to select a meaningful group?
-* The use of mutually exclusive categories forces us to use gender in any comparison we make, which makes the choice set less flexible (perhaps we want to only consider age and not gender).
-* Is the map of points the best way to convey the comparisons? What information do you take from the side-by-side maps? Would tables or a heatmap summary of points, a table or a chart be better? 
-* Driver 1 is typically the individual that caused the accident in the study. Is a driver 1 to driver 2 comparison the most meaningful way to slice the data? Perhaps it would be better as driver 1 to driver 1, with different characteristics? 
-* Can we organize the widgets into groups to convey that they belong to different maps? 
-
-In other words, as the programmer you have a lot of control over how you shape the user's consumption of the information! There are lots of assumptions about reference points and meaningful comparisons built into the dashboard. 
-
-
-
-
-
-
-<br><br>
-
-# Shiny Advice
-
-When developing your analysis using shiny widgets, each will entail three steps:
-
-* Defining parameters
-* Filtering data according to parameters
-* Re-analyzing your data
-
-I suggest that you develop each analytical step outside of the dashboard, then add the code in the appropriate dashboard buckets. Start with static versions of your parameters.
-
-```{r, eval=F}
-# parameters
-days.of.week <- c("Sat","Sun")
-start.time <- 3
-end.time <- 6
-
-# filter data
-d2 <-
-  dat %>%
-  filter( day %in% days.of.week, hour >= start.time & hour <= end.time )
-
-# analyze data
-d2 %>%
-  count( Collisionmanner ) %>%
-  arrange( -n ) %>%
-  pander()
-```
-
-Now to link to your shiny widgets, you just need to grab the user inputs:
-
-```{r, eval=F}
-# shiny widgets
-
-checkboxGroupInput("days", label = h3("Day of Week"), 
-    choices = list("Monday"    = "Mon", 
-                   "Tuesday"   = "Tue", 
-                   "Wednesday" = "Wed", 
-                   "Thursday"  = "Thu",
-                   "Friday"    = "Fri",
-                   "Saturday"  = "Sat",
-                   "Sunday"    = "Sun" ),
-    selected = c("Mon","Tue","Wed","Thu","Fri","Sat","Sun"),
-
-sliderInput("hour", label = h3("Time of Day"), 
-            min = 0, max = 23, value = c(6, 12))
-
-# parameters
-days.of.week <- input$days    # vector will all checked values
-start.time <- input$hour[1]   # sliderInput lower value
-end.time  <-  input$hour[2]   # sliderInput upper value
-```
-
-Pay attention to the return values of each widget:
-
-[Shiny Widget Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
-
-They may be a single value or a vector, and they are typically characters, not numeric values, so you may need to recast as the correct value type to use in the filters. For example, if you use a check box for hours of the day, the return value will be a character and the greater than or less than operators would not work.
-
-
-```{r, eval=F}
-filter( day %in% days.of.week, hour >= start.time & hour <= end.time )
-```
-
-
-
-<br><br>
-
-## Practice with dplyr
-
-If you want to practice some more with data wrangling steps, you might find this tutorial helpful:
-
-[How to Identify Hipster Names](https://www.kaggle.com/ryanburge/hipster-names)
-
-
+*How has the co-offending network changed from 2022 to 2023?* To answer your supervisor's question, provide a comparative analysis of the `PhxArrestNet2022` and the `PhxArrestNet2023` networks. Think about the ways we discussed for comparing networks this semester. Your analysis should compare the two-mode networks as well as the "person" matrices. 
 
 <br>
 <br>
 
+____
 
-# Submission Instructions
+<br>
 
-There are two steps to submitting your final project:
+# How to Submit
 
-**1) Upload RMD to Canvas**
+Download the [template for this final project] prior to beginning the final project. 
 
-Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your RMD file to the appropriate lab submission link.
+<br>
 
-**2) Deploy your dashboard**
+### Knitting to HTML
 
-Visit the [Shiny Apps platform](https://www.shinyapps.io/) hosted by R Studio, and create a free own account. 
-Upload your dashboard to your account (after you run your file you should see the option "Publish" at the top right - follow the commands). 
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
 
-Include the link to your dashboard in your submission comments on Canvas.
+<br>
 
+### Special Instructions
 
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
 
-Remember to:
+<br>
 
-* name your files according to the convention: **Final-Project-LastName.Rmd**
-* show your solution, include your code.
-* do not print excessive output (like a full data set).
-* follow appropriate style guidelines (spaces between arguments, etc.).
+### Before You Submit
 
-<br><br>
+Remember to ensure the following before submitting your assignment.
 
+1. Name your files using this format: **Final-Project-LastName.rmd** and **Final-Project-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
 
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
 
+<br>
+<br>
 
-# Data
+### Common Knitting Issues
 
-You will use the traffic accidents dataset (from the Tempe [Open Data Portal](https://data.tempe.gov/datasets/tempegov::1-08-crash-data-report-detail/about)) that was used in Lab-05:  
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
 
-```{r, echo=T}
-URL <- "https://github.com/DS4PS/Data-Science-Class/blob/master/DATA/TempeTrafficAccidents.rds?raw=true"
-dat <- readRDS( gzcon( url( URL ) ) )
-```
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect their use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
 
-Recall that the dataset contains the following variables:
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
 
+<br>
 
-|column              |type      |label                      |description                                                                                                                 |
-|:-------------------|:---------|:--------------------------|:---------------------------------------------------------------------------------------------------------------------------|
-|Incidentid          |numeric   |Incident ID                |Unique incident ID number assigned by Arizona Department of Transportation (ADOT).                                          |
-|DateTime            |timestamp |Date Time                  |Date and time that the crash occurred.                                                                                      |
-|Year                |numeric   |Year                       |Year that the crash occurred.                                                                                               |
-|StreetName          |text      |Street Name                |The street that the crash occurred on.                                                                                      |
-|CrossStreet         |text      |Cross-street               |The nearest intersecting street or road.                                                                                    |
-|Distance            |numeric   |Distance from Intersection |The distance, in feet, that the crash occurred from the cross-street.                                                       |
-|JunctionRelation    |text      |Junction Relation          |The location of the crash in relation to a junction, either an intersection or connection between a driveway and a roadway. |
-|Totalinjuries       |numeric   |Total Injuries             |Total number of persons with non-fatal injuries involved in the crash.                                                      |
-|Totalfatalities     |numeric   |Total Fatalities           |Total number of persons with fatal injuries involved in the crash.                                                          |
-|Injuryseverity      |text      |Injury Severity            |The highest severity of injury of all persons involved in the crash.                                                        |
-|Collisionmanner     |text      |Collision Manner           |Identifies the manner in which two vehicles initially came into contact.                                                    |
-|Lightcondition      |text      |Lighting Conditions        |The type/level of light that existed at the time of the crash.                                                              |
-|Weather             |text      |Weather                    |The prevailing (most significant) atmospheric conditions that existed at the time of the crash.                             |
-|SurfaceCondition    |text      |Surface Condition          |The roadway surface condition at the time and place of a crash.                                                             |
-|Unittype_One        |text      |Unit Type One              |Driver, Passenger, Pedestrian, Pedalcyclist or Driverless.                                                                  |
-|Age_Drv1            |numeric   |                           |                                                                                                                            |
-|Gender_Drv1         |text      |                           |                                                                                                                            |
-|Traveldirection_One |text      |Travel Direction           |The direction the unit was traveling before the incident occurred,                                                          |
-|Unitaction_One      |text      |Unit Action One            |The maneuver, or last action, of the unit before the crash.                                                                 |
-|Violation1_Drv1     |text      |Violation  One             |The main violation/behavior of the unit that contributed to the crash.                                                      |
-|AlcoholUse_Drv1     |text      |Alcohol Use 1              |Indicates whether alcohol was a contributing factor in the crash or not.                                                    |
-|DrugUse_Drv1        |text      |Drug Use 1                 |Indicates whether drug use was a contributing factor in the crash or not.                                                   |
-|Unittype_Two        |text      |Unit Type Two              |Driver, Passenger, Pedestrian, Pedalcyclist or Driverless.                                                                  |
-|Age_Drv2            |numeric   |                           |                                                                                                                            |
-|Gender_Drv2         |text      |                           |                                                                                                                            |
-|Traveldirection_Two |text      |Travel Direction Two       |The direction the unit was traveling before the incident occurred.                                                          |
-|Unitaction_Two      |text      |Unit Action Two            |The maneuver, or last action, of the unit before the crash.                                                                 |
-|Violation1_Drv2     |text      |Violation Two              |The main violation/behavior of the unit that contributed to the crash.                                                      |
-|AlcoholUse_Drv2     |text      |Alcohol Use 2              |Indicates whether alcohol was a contributing factor in the crash or not.                                                    |
-|DrugUse_Drv2        |text      |Drug Use 2                 |Indicates whether drug use was a contributing factor in the crash or not.                                                   |
-|Latitude            |numeric   |Latitude                   |Used to specify the precise location of the crash.                                                                          |
-|Longitude           |numeric   |Longitude                  |Used to specify the precise location of the crash.                                                                          |
+---
 
+<br>
 
+##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-template/issues) page. Thanks!
 
+<br>
+<br>
+
+###### ***Last updated `r format(Sys.time(), '%d %B, %Y')`***

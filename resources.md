@@ -9,16 +9,6 @@ layout: default
 <hr>
 <br>
 
-**Join the MS-PEDA Community**
-
-Join the MS-PEDA groups on Linked-In or Facebook to meet alumni and stay connected to the program.
-
-<a class="uk-button uk-button-primary" onclick="window.open('https://www.linkedin.com/groups/13977637/')"> LinkedIn Group </a>
-
-<a class="uk-button uk-button-primary" onclick="window.open('https://www.facebook.com/groups/507960480629680')"> Facebook Group </a>
-
-
-
 <br>
 <hr>
 <br>
@@ -26,9 +16,9 @@ Join the MS-PEDA groups on Linked-In or Facebook to meet alumni and stay connect
 
 # Resources
 
-Here are some resources to get you started with the course and to help with projects, as well as offer background on cool data science projects in the social sector.
+Here are some resources to get you started with the course.
 
-Just like learning a new language, there is no way to become fluent in a semester or a year. You can, however, become conversant enough to start traveling extensively in this new world of data science. Much of it has been built in virtual settings, and you will be amazed at how many free resources are available when you know how and where to look.
+Just like learning a new language, there is no way to become fluent in a semester or a year. You can, however, become conversant enough to start traveling extensively in this new world of social network analysis. Much of it has been built in virtual settings, and you will be amazed at how many free resources are available when you know how and where to look.
 
 ## R Cheat Sheets
 
@@ -40,22 +30,6 @@ Cheat sheets are parsimonious and stylized notes that help organize functions an
 
 Short exercises on basic R skills [ [link](https://rstudio.cloud/learn/primers) ]
 Tutorials from Rexercises [ [link](https://www.r-exercises.com/start-here-to-learn-r/) ]
-
-
-## The Data Science Ecosystem
-
-Pete Warden created one of the first **data science toolkits**, which was a collection of open-source tools for common tasks in data science like turning street addresses into geo-coordinates, extracting sentiments from text, and identifying people's names in documents. The original toolkit started out as a simple website with a couple of dozen of these tools (the original website is defunct but you can still use the tools through the [RDSTK Package](https://cran.r-project.org/web/packages/RDSTK/RDSTK.pdf) ).
-
-The R community has taken this to another scale. There are currently 13,000 free and open-source packages available in R. It is better to think about R as an operating system, and the contributed packages as the programs you use for specific tasks.
-
-In addition to packages created for R, there are also powerful tools that make it easier to share data, collaborate on work, and share your results in creative ways. One of the reasons R has become an industry favorite is that it is highly integrated into this ecosystem. Many of these tools are built-right into R Studio, making it easier to manage large projects or collaborate.
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/hasi96/course_website/master/assets/img/data-science-ecosystem.png"
-alt="The DS ECO" width="400" align="center" />
-</p>
-
-A big part of this course is learning about some of these resources and how they fit together to improve work-flow, analysis, and reporting. The most powerful tool that you will discover, however, is the community of smart and creative people active in the field of data science. Some are engineers working on solutions to hard technical problems in the open source space, but most are regular users such as data analysts, artists, educators and activists. Once you understand a few foundational concepts and develop a rudimentary vocabulary you can tap into the community through message boards and list-serves. See the Get Help tab for rules to follow as a good community member.
 
 ## Data-Driven Documents
 
@@ -82,26 +56,12 @@ R Studio makes it easy to create R Markdown documents, and you can select the fo
 output: html_document
 ---
 ```
-And you want to re-organize the material into a dashboard. Simply change the output type:
-
-```
----
-output: flexdashboard
----
-```
 
 Then add a few page dividers, and your analysis will now be organized something like this [StoryBoard](https://beta.rstudioconnect.com/jjallaire/htmlwidgets-showcase-storyboard/htmlwidgets-showcase-storyboard.html).
 
 Markdown is used on GitHub, Stack Overflow, and in R Markdown documents. Familiarity with the basics offers a lot of power in controlling how your analysis is presented to your audience.
 
 You can see some advanced R Markdown features [HERE](https://ds4ps.github.io/Data-Science-Class/HANDOUTS/R_Markdown_Template.html).
-
-## Shiny Apps
-
-Want to build dynamic applications? Learn more about [R Shiny apps](https://leanpub.com/buildingshinyapps) and fully custom [R Shiny Dashboards](https://leanpub.com/c/shinydashboard).
-
-
-
 
 ## Collaboration Tools
 
@@ -128,10 +88,7 @@ Here are some resources for configuring GitHub to work with R Studio:
 * [Nice Blog](https://www.molecularecologist.com/2013/11/using-github-with-r-and-rstudio/)
 * [R Studio Documentation](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
 
-
-
 ## Installing R
-
 
 R is a programming language that was [designed specifically for data analysis](https://www.nytimes.com/2009/01/07/technology/business-computing/07program.html). Along with Python, it is the [most popular tool](https://stackoverflow.blog/2017/10/10/impressive-growth-r/) used by data scientists, data journalists, and quantitative social scientists.
 
@@ -146,44 +103,23 @@ alt="R in 60 seconds" width="854" border="0" /></a>
 
 See [some tips](https://medium.com/@GalarnykMichael/install-r-and-rstudio-on-windows-5f503f708027) on installing R and R Studio.
 
-
-
 ## Installing Packages in R
 
 A large part of R's popularity is it's enormous library of custom programs, called packages. If you know the package name, they are easy to install and load.
 
 ```r
-install.packages( "dplyr" )
-library( dplyr )
+install.packages( "sna" )
+library( sna )
 ```
 
 Note that quotation marks are mandatory during the install phase, but optional during the load phase. There are good reasons for this that will not be discussed here. Be sure to remember the quotes or you will get an error.
 
 With 13,000 available packages, it can be hard to find the ones that are most useful for your task at hand. The R Team has tried to make it a little easier by organizing packages into a [Task Views](https://cran.r-project.org/web/views/) library.
 
-One of the most useful packages is called [The Tidyverse](https://www.tidyverse.org/packages/). It's actually a collection of packages developed by the R Studio team to make basic data processing steps faster and more reliable. They also make it easy to install all of the packages at once by calling:
-
-```r
-install.packages("tidyverse")
-library(tidyverse)
-```
-
-
-
-
-## More Resources
-
-For those that are new to data science, I have compiled some useful resources for getting acquainted with R and the data science community, as well as some notable applications of data science in the public and nonprofit sectors.
-
-[**DS4PS** (Data Science for the Public Sector)](https://ds4ps.org) Site
-
-
 
 <br>
 <br>
 <br>
-
-
 
 </div>
 <br><br><br>

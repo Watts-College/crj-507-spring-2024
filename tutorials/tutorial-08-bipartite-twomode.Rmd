@@ -1,0 +1,522 @@
+---
+title: "Tutorial 08 - Bipartite Graphs and Two-Mode Networks in R"
+date: "CRJ 507 Social Network Analysis"
+output: 
+  html_document:
+    df_print: paged
+    theme: united
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+<style>
+body {
+text-align: left}
+</style>
+
+```{r, echo=FALSE}
+
+# set the defaults for the codechunks
+knitr::opts_chunk$set( eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE )
+
+```
+
+*This lab examines bipartite graphs and two-mode networks*
+
+<br>
+
+### **Bipartite Graphs/Two-Mode Networks**  
+
+As discussed in [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html), bipartite graphs are useful for operationalizing contexts where nodes come from *two* separate classes. Examples:  
+
+* Members of various groups  
+
+* Authors of papers  
+
+* Students in courses  
+
+* Participants in an event
+
+* Co-offending  
+
+In contrast to one-mode networks, or unipartite graphs, where edges can be incident *within* a particular node/vertex set, in two-mode or bipartite graphs there are two partitions of nodes (called modes), and edges only occur *between* these partitions (i.e. not within).  
+
+For example, if two individuals co-offend together, it is their joint participation in that event which creates a tie between them. In this example, there is a set of nodes represented by individuals and a set of nodes represented by the events.
+
+Let's build the example bipartite graph from [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html):
+
+<br>
+
+```{r}
+
+# clear the workspace
+rm( list = ls() )
+
+# create the example network
+bipartite.example <- rbind(
+  c( 1,1,0,0,0 ),
+  c( 1,0,0,0,0 ),
+  c( 1,1,0,0,0 ),
+  c( 0,1,1,1,1 ),
+  c( 0,0,1,0,0 ), 
+  c( 0,0,1,0,1 ) )
+
+# assign names to the rows
+rownames( bipartite.example ) <- c( "A","B","C","D","E","F" )
+
+# assign names to the columns
+colnames( bipartite.example ) <- c( "1","2","3","4","5" )
+
+# print out the object
+bipartite.example
+
+```
+
+<br>
+
+As we can see, the matrix has `r dim( bipartite.example )[1]` rows and `r dim( bipartite.example )[2]` columns. So, the order of the matrix is `r dim( bipartite.example )[1]` x `r dim( bipartite.example )[2]`. 
+
+<br>
+
+We can create an object of class `network` by using the `as.network()` function in the `network` package. First, take a look at the help for the `as.network()` function, paying particular attention to the `bipartite=` argument.
+
+<br>
+
+```{r}
+
+# call the network package
+library( network )
+
+# pull up the help for the as.network() function
+?as.network
+
+```
+
+<br>
+
+In looking through the help file for the `as.network()` function, we see that the `bipartite=` argument says that this argument allows the count of the number of actors in the bipartite network. A bipartite adjacency matrix has order *NxM*, where *N* represents the number of rows (e.g. actors) and *M* represents the number of columns (e.g. events). In the `bipartite=` argument, we can specify the count of actors as *N*.  
+
+For example:
+
+```{r}
+
+# identify the number of actors in the example
+N <- dim( bipartite.example )[1]
+
+# create a network object
+bipartite.example.net <- as.network(
+  bipartite.example, # here is our matrix
+  bipartite = N      # define the number of actors
+  )
+
+# there 11 vertices, 6 are bipartite (in the first mode), and 12 edges
+bipartite.example.net
+
+```
+
+<br>
+
+Now that our object is created, we can take a look at a plot of the network using the `gplot()` function. Before we do so, let's take a look at a few changes we need to make. First, note that the `gplot()` function reads the labels by starting with the names in the first mode, then the names in the second mode. We can see this by printing the vertex labels the function assigns with the `network.vertex.names()` function.
+
+<br>
+
+```{r}
+
+# look how it reads the labels
+network.vertex.names( bipartite.example.net ) 
+
+```
+
+<br>
+
+We can see that it first labels the actor nodes (i.e. A, B, C, D, E, and F) and then names the event nodes (i.e. 1, 2, 3, 4, 5).  
+
+Second, we need to tell the `gplot()` function that the network has two modes, not one mode. We do this using the `gmode=` argument, which automatically changes the colors and the shapes of the nodes when we specify that the graph is `twomode`. Third, we need to set the `usearrows=` argument to `FALSE` so that the arrowheads are turned off. (*Note that there* **are** *directed two-mode networks in which you would use arrowheads, but we will skip that for now* ). Let's check it out:  
+
+```{r}
+
+# load the sna library to get the gplot() function
+library( sna )
+
+# set the seed to reproduce the plot layout
+set.seed( 507 )
+
+# execute the plot
+gplot(
+  bipartite.example.net,                                  # our network to plot
+  label = network.vertex.names( bipartite.example.net ),  # the labels we want
+  gmode = "twomode",                                      # indicate it is two modes
+  usearrows = FALSE,                                      # turn off the arrowheads
+  vertex.cex=2,                                           # size the nodes     
+  label.cex=1.2,                                          # size the labels
+  main="Bipartite Graph of Example Graph"                 # add a title
+)
+
+```
+
+<br>
+
+As we saw in the [Visualization]() tutorial, there are a lot of options that help us convey important information about a network. When we are working with a two mode network object, we need to make sure that whatever information we pass to the nodes matches the order of the nodes in the network. For example, we saw above that the network first labels the actor nodes and then labels the event nodes. If we wanted to choose a different set of colors, for example, using the `vertex.col=` argument, then we would want a set of colors for the actors and a set of colors for the events. Then, we would want these combined into a single object. Let's do that here to demonstrate:
+
+<br>
+
+```{r}
+
+# identify the number of actors in the example
+N <- dim( bipartite.example )[1]
+
+# identify the number of events in the example
+M <- dim( bipartite.example )[2]
+
+# set the actor colors
+actor.col <- rep( "#471b13", N )
+
+# set the event colors
+event.col <- rep( "#382ee8", M )
+
+# now combine them into a single vector of colors
+node.col <- c( actor.col, event.col )
+
+# take a look
+node.col
+
+```
+
+<br>
+
+Now that we have a set of colors that match the order of the nodes, we can pass it into the `gplot()` function using the `vertex.col=` argument:  
+
+<br>
+
+```{r}
+
+# set the seed to reproduce the plot layout
+set.seed( 507 )
+
+# execute the plot
+gplot(
+  bipartite.example.net,                                  # our network to plot
+  label = network.vertex.names( bipartite.example.net ),  # the labels we want
+  gmode = "twomode",                                      # indicate it is two modes
+  usearrows = FALSE,                                      # turn off the arrowheads
+  vertex.cex=2,                                           # size the nodes     
+  label.cex=1.2,                                          # size the labels
+  main="Bipartite Graph of Example Graph",                # add a title
+  
+  # here is the addition to what we had above:
+  vertex.col = node.col                                   # add the colors
+)
+
+```
+
+<br>
+
+This setup, where we define the actor properties and event properties and combine them into a vector will be used for any attribute we want to attach to the nodes. We will work through more examples below illustrating this point. 
+
+<br>
+
+### **Structural Properties of Bipartite Graphs/Two-Mode Networks**  
+
+<br>
+
+As reviewed in [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html), there are multiple structural properties of bipartite graphs that we can examine to help us describe the network.
+
+<br>
+
+#### *Density*  
+
+The *density* of a bipartite graph is the number of observed edges in the graph, *L*, divided by the number of nodes in the first mode, *N*, multiplied by the number of nodes in the second mode, *M*. That is: 
+
+$$\frac{L}{N \times M}$$
+
+In other words, the density of the graph is the number of edges we observed divided by the maximum number of possible edges in the graph. We can calculate this using the `sum()` and `dim()` functions.
+
+```{r}
+
+# identify the number of edges in the graph
+L <- sum( bipartite.example )
+
+# identify the number of actors in the example
+N <- dim( bipartite.example )[1]
+
+# identify the number of events in the example
+M <- dim( bipartite.example )[2]
+
+# calculate the density
+density.bipartite.example <- L / ( N * M )
+
+# check it out
+density.bipartite.example
+
+```
+
+<br>
+
+*What is the interpretation of the density?* The value of `r density.bipartite.example` indicates that 40% of the ties we could observe, were observed.
+
+<br>
+
+#### *Degree Centrality*  
+
+For a bipartite graph there are *two* degree distributions:  
+
+* The distribution of ties in the first mode  
+
+* The distribution of ties in the second mode
+
+We can calculate the degree centrality scores for each node in each corresponding vertex set by taking the *row* sum for *N* nodes in the first mode and taking the *column* sum for *M* nodes in the second mode. We can do so using the `rowSums()` and `colSums()` functions, recspectively.  
+
+<br>
+
+```{r}
+
+# raw scores for actors
+actor.deg <- rowSums( bipartite.example )
+actor.deg
+
+# raw scores for events
+event.deg <- colSums( bipartite.example )
+event.deg
+
+```
+
+*How should we interpret the centrality scores for each node set?* Well, it is a bit difficult when just looking at it here. So, we can calculate a summary statistic, such as the mean, to evaluate the distribution of centrality scores for each node set.
+
+<br>
+
+##### *Mean Degree Centrality*   
+
+As before, we could examine the central tendency by examining the mean degree for each node/vertex set. We take the sum of the edges, $L$ and:  
+
+* for the first node set we divide by $\frac{L}{N}$, the number of nodes in that set.
+
+* for the second node set we divide by $\frac{L}{M}$, the number of nodes in that set.  
+
+<br>
+
+```{r}
+
+# mean degree for actors
+mean.actor.deg <- L / N
+
+# mean degree for events
+mean.event.deg <- L / M
+
+# an alternative is to just use the mean() function with the degree data
+mean( actor.deg )
+mean( event.deg )
+
+```
+
+*How should we interpret the mean centrality score for each node set?* The mean for the actor node set indicates that, on average, each node has `r mean.actor.deg` ties. The mean for the event node set indicates that, on average, each event has `r mean.event.deg` ties.
+
+<br>
+
+##### *Standardized Degree Centrality*   
+
+Degree centrality scores for each node/vertex set not only reflects each node’s connectivity to nodes in the other set, but also depend on the size of that set. As a result, larger networks will have a higher maximum possible degree centrality value. *Solution?*
+
+**Standardize!!!**
+
+As we saw for unipartite graphs, we can adjust the raw degree centrality scores by taking into account the size of the graph. In a bipartite graph, we can standardize, or *normalize*, by dividing the raw centrality scores by the number of nodes in the **opposite** vertex set. That is, for the centrality scores in the first mode we divide by *M* and for the centrality scores in the second mode we divide by *N*.
+
+```{r}
+
+# standardized score for actors
+actor.deg / M
+
+# standardized score for events
+event.deg / N
+
+```
+
+<br>
+
+In networks with lots of nodes, this information might be useful for visualizing differences in nodes degree centrality. Let's create a plot with the standardized scores where larger degree centrality influences the size of the nodes. As we did above, we will want to create a single object that has these sizes. We can do this using the `c()` function.
+
+<br>
+
+```{r}
+
+# define the standardized scores for actors
+actor.size <- actor.deg / M
+
+# define the standardized scores for events
+event.size <- event.deg / N
+
+# combine these to use in the plot
+v.size <- c( actor.size, event.size )
+
+# set the seed to reproduce the plot layout
+set.seed( 507 )
+
+# execute the plot
+gplot(
+  bipartite.example.net,                                  # our network to plot
+  label = network.vertex.names( bipartite.example.net ),  # the labels we want
+  gmode = "twomode",                                      # indicate it is two modes
+  usearrows = FALSE,                                      # turn off the arrowheads
+  label.cex=1.2,                                          # size the labels
+  main="Bipartite Graph of Example Graph",                # add a title
+  vertex.col = node.col,                                  # add the colors
+  
+  # here is the addition to what we had above:
+  vertex.cex = v.size + 0.5                               # set the size (add 0.5 so it is not too small) 
+)
+
+```
+
+<br>
+
+### **Empirical Example**  
+
+Now, let's work with a real example. As discussed in the [Introduction to Social Network Analysis](https://jacobtnyoung.github.io/sna-textbook/ch-01-intro-to-sna.html) chapter of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/), [Young & Ready (2015)](https://journals.sagepub.com/doi/10.1177/1043986214553380) examined how police officers develop cognitive frames about the usefulness of body-worn cameras. They argued that police officers views of body-worn cameras influence whether they use their cameras in incidents and that these views partly result from sharing incidents with other officers where they exchanged views about the legitimacy of body-worn cameras.
+
+The adjacency matrix is available in the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html) [data]() folder. Let's import the the matrix, create a network, assign an attribute, and plot it. Then, we will work through the structural properties.
+
+<br>
+
+```{r}
+
+# set the location for the file
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-officer-events-adj.csv"
+
+# read in the .csv file
+camMat <- as.matrix(
+  read.csv( 
+    loc,
+    as.is = TRUE,
+    header = TRUE,
+    row.names = 1 
+    )
+  )
+
+# identify the number of police officers
+N <- dim( camMat )[1]
+
+# identify the number of incidents
+M <- dim( camMat )[2]
+
+# create the network object
+OfficerEventsNet <- as.network( 
+  camMat,
+  bipartite = N
+)
+
+# take a look
+OfficerEventsNet
+
+```
+
+<br>
+
+Now, let's create a plot of the network. To aid in visualization, we need to create a variable indicating whether the officer was in the treatment (i.e. received a body-cam) or control group. If you look at the `network.vertex.names( OfficerEventsNet )` object, you will see that the officer ids start with "C" or "T". The "C" prefix indicates a **control** officer and a "T" prefix indicates a **treatment** officer. The first 44 ids are for control officers and the subsequent 37 ids are for treatment officers. The remaining 153 correspond to events. We can use this info to create a variable that indicates treatment status. 
+
+We will use this information to create an attribute. To do so, we will use the `rep()` function which repeats a sequence of numbers of characters.
+
+<br>
+
+```{r}
+
+# create a variable using the information in the ids
+status <- c( 
+  rep( "Control", 44 ),   # repeat "Control" 44 times because there are 44 control officers
+  rep( "Treatment", 37 ), # repeat "Treatment" 37 times because there are 37 control officers
+  rep( "Incident", 153 )     # repeat "Incident" 153 times because there are 153 incident
+  )
+
+# create colors for the plot
+vcol <- status
+vcol[ status == "Control" ]   <- "green" # make controls green
+vcol[ status == "Treatment" ] <- "red"   # make treatment group red
+vcol[ status == "Incident" ]  <- "white" # make events white
+
+# create the shapes
+vsides <- rep( 0, length( status ) )
+vsides[ status == "Control" ]   <- 3  # make controls triangles
+vsides[ status == "Treatment" ] <- 4  # make treatment group squares
+vsides[ status == "Incident" ]  <- 50 # make events circles
+
+# create the node sizes
+nsize <- c(
+  rep( 2,   N ), # sizes for officers
+  rep( 1.2, M )  # size for the events
+  ) 
+
+# set the seed for the plot
+set.seed( 507 )
+
+# plot it
+gplot(
+  OfficerEventsNet,
+  gmode="twomode",
+  usearrows=FALSE,
+  displayisolates=FALSE,
+	vertex.col=vcol,
+	vertex.sides=vsides,
+	edge.col="grey60",
+	edge.lwd=1.2,
+	vertex.cex = nsize,
+  main = "Plot of Officers and Events"
+)
+
+```
+
+<br>
+
+#### *Properties of the Bipartite Graph*  
+
+Now, let's take a look at several properties of the graph: density and degree centrality.
+
+<br>
+
+##### *Density*
+
+```{r}
+
+# identify the number of edges in the graph
+L <- sum( camMat )
+
+L / ( N * M )
+
+```
+
+The density for the this network is `r round( L / ( N * M ), 2 )`. *What is the interpretation of the density for this network?*
+
+<br>
+
+##### *Degree*
+
+Now, let's take a look at the degree distributions.
+
+```{r}
+
+# raw scores for officers
+officer.deg <- rowSums( camMat )
+
+# raw scores for incidents
+incident.deg <- colSums( camMat )
+
+# mean degree for officers
+mean.officer.deg <- L / N
+mean.officer.deg
+
+# mean degree for incidents
+mean.incident.deg <- L / M
+mean.incident.deg
+
+```
+
+*What is the interpretation of the mean degree for each node set?*
+
+<br>
+
+----
+
+<br>
+<br>
+
+##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-template/issues) page. Thanks!

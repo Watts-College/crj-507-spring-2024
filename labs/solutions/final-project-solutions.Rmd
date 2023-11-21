@@ -1,0 +1,359 @@
+---
+title: "Lab 06 - Projection of Bipartite Graphs - SOLUTIONS"
+date: "CRJ 507 Social Network Analysis"
+output: 
+  html_document:
+    df_print: paged
+    theme: paper
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+<style>
+body {
+text-align: left}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo = TRUE, eval = TRUE )
+```
+
+# Introduction
+
+The purpose of this lab is to familiarize yourself with projecting bipartite graphs to unipartite graphs in *R*. Please review the [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html) chapter of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html) as well as the [Projection of Bipartite Graphs in R]() tutorial prior to beginning this lab.
+
+For this lab, we will revisit the networks we used in [Lab 05 - Bipartite Graphs and Two-Mode Networks](). 
+
+<br>
+
+## Part I: A Conspiracy Network
+
+For this part of the lab, you will use data collected from [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&), by David Fischer. In the book, Fischer documents Reveres connections through various affiliations in locations and how these influenced history. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The dataset refers to Paul Revere, who was responsible for organizing a local militia of Boston's revolutionary movement. The network is two-mode, with 254 actors and 7 organizations ("events"). We will refer to this network as the `PaulRevereNet`.
+
+<br>
+
+For the `PaulRevereNet` network, do the following:  
+
+1. Create an object of class `matrix` from the `PaulRevereNet` network. Use the `as.sociomatrix()` function in the `network` package to do so.
+2. Create the unipartite graph that represents the "person" matrix.
+3. Create the unipartite graph that represents the "group" matrix.
+4. Plot all three graphs.
+
+<br>
+
+## Part II: A Kidnapping Network
+
+For this part of the lab, you will use the Philippine Kidnappings Data which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salast movement that has been founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other kinds of terrorist attacks. The object is a two-mode network where actors are terrorist kidnappers and the terrorist events they have attended. We will refer to this as the `PhilKidnapNet` network.
+
+For this part of the lab, use the `PhilKidnapNet` to repeat steps 1-4 in Part I.
+
+<br>
+<br>
+
+----
+
+# **Solutions**  
+
+<br>
+
+## Setup
+
+```{r, message=FALSE, warning=FALSE}
+
+# clear the workspace
+rm( list = ls() )
+
+```
+
+## Part I
+
+<br>
+
+First, let's read in the `PaulRevereNet` network. This is stored as an .rds document in the data folder on the [SNA Textbook](https://github.com/jacobtnyoung/sna-textbook/tree/main/data) site. We will use the `readRDS()` function, with the [file path](https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-paul-revere-net.rds), to load the file. Since we are calling a url, we need to use the `url()` function as well.  
+
+Finally, we need to make sure the `sna` and `network` packages are loaded, using `library()`, so that R recognizes the `PaulRevereNet` object as one of class `network`.
+
+<br>
+
+```{r, message=FALSE, warning=FALSE}
+
+# load the libraries we need
+library( sna )
+library( network )
+
+# define the path location for the file
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-paul-revere-net.rds"
+PaulRevereNet <- readRDS( url( loc ) )
+
+# look at the network
+PaulRevereNet
+
+```
+
+<br>
+
+#### 1. Create an object of class `matrix` from the `PaulRevereNet` network.
+  
+<br>
+
+```{r}
+
+PaulRevereMat <- as.sociomatrix( PaulRevereNet )
+
+```
+
+<br>
+
+#### 2. Create the unipartite graph that represents the "person" matrix.
+
+<br>
+
+```{r}
+
+# create the "person" matrix
+PaulRevereMatP <- PaulRevereMat %*% t( PaulRevereMat )
+
+```
+
+<br>
+
+#### 3. Create the unipartite graph that represents the "group" matrix.
+
+<br>
+
+```{r}
+
+# create the "group" matrix
+PaulRevereMatG <- t( PaulRevereMat ) %*% PaulRevereMat
+
+```
+
+<br>
+
+#### 4. Plot all three graphs.
+
+Let's use the `edge.rescale()` function to help us here. This function returns a weighted edgelist that can be used to aid with plotting.
+
+```{r}
+
+edge.rescale <- function( uniMat, low, high ){
+  diag( uniMat ) <- 0
+  min_w <- min( uniMat[uniMat != 0] )
+  max_w <- max( uniMat[uniMat != 0] )
+  rscl <- ( ( high-low )  * ( uniMat[uniMat != 0] - min_w ) ) / ( max_w - min_w ) + low
+  rscl
+}
+
+edge.shade <- function( uniMat ){
+  net.edges <- edge.rescale( uniMat, 0.01, 1 )
+  vec.to.color <- as.vector( abs( net.edges ) )
+  vec.to.color <- 1 - vec.to.color # subtract 1 to flip the grey function scale.
+  edge.cols <- grey( vec.to.color )
+  return( edge.cols )
+}
+
+
+```
+
+Now, plug it into the plot.
+
+```{r, fig.width=10, fig.height=10, fig.fullwidth=TRUE}
+
+# set the plot regions to ease with visualization
+par( 
+  mfrow = c( 2, 2 ),
+  mar = c( 2, 1, 4, 1)
+  )
+
+# set the seed to reproduce the plot
+set.seed( 507 )
+
+# plot the bipartite network
+gplot( PaulRevereMat,
+       gmode="twomode",
+       usearrows=FALSE,
+       edge.col="grey60",
+       edge.lwd = 1.2,
+       vertex.col = c( 
+         rep( "#34f772", dim( PaulRevereMat )[1] ), 
+         rep( "#656ffc", dim( PaulRevereMat )[2] ) )
+       )
+title( "Bipartite Matrix of Paul Revere Network", line = 1 )
+
+# plot the person matrix
+gplot( PaulRevereMatP,
+       gmode = "graph",
+       usearrows = FALSE,
+       edge.col = edge.shade( PaulRevereMatP ),
+       edge.lwd = edge.rescale( PaulRevereMatP, 0.0001, 10 ),
+       vertex.col = "#34f772"
+       )
+title( "Unipartite Projection of\n Individuals (Person) Matrix", line = 1 )
+
+# plot the group matrix
+gplot( PaulRevereMatG,
+       gmode = "graph",
+       usearrows = FALSE,
+       edge.col = edge.shade( PaulRevereMatG ),
+       edge.lwd = edge.rescale( PaulRevereMatP, 0.0001, 10 ),
+       vertex.col = "#656ffc",
+       vertex.sides = 4
+       )
+title( "Unipartite Projection of\n Locations (Group) Matrix", line = 1 )
+
+```
+ 
+<br>
+
+## Part II
+
+<br>
+
+First, let's read in the `PhilKidnapNet` network. This is stored as an .rds document in the data folder on the [SNA Textbook](https://github.com/jacobtnyoung/sna-textbook/tree/main/data) site. We will use the `readRDS()` function, with the [file path](https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-philippine-kidnappings-net.rds), to load the file. Since we are calling a url, we need to use the `url()` function as well.  
+
+Finally, we need to make sure the `sna` and `network` packages are loaded, using `library()`, so that R recognizes the `PhilKidnapNet` object as one of class `network`.
+
+<br>
+
+```{r, message=FALSE, warning=FALSE}
+
+# clear the workspace so we don't use any duplicate names
+rm( list = ls() )
+
+# define the path location for the file
+loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-philippine-kidnappings-net.rds"
+PhilKidnapNet <- readRDS( url( loc ) )
+
+# look at the network
+PhilKidnapNet
+
+```
+
+<br>
+
+#### 1. Create an object of class `matrix` from the `PhilKidnapNet` network.
+  
+<br>
+
+```{r}
+
+PhilKidnapMat <- as.sociomatrix( PhilKidnapNet )
+
+```
+
+<br>
+
+#### 2. Create the unipartite graph that represents the "person" matrix.
+
+<br>
+
+```{r}
+
+# create the "person" matrix
+PhilKidnapMatP <- PhilKidnapMat %*% t( PhilKidnapMat )
+
+```
+
+<br>
+
+#### 3. Create the unipartite graph that represents the "group" matrix.
+
+<br>
+
+```{r}
+
+# create the "group" matrix
+PhilKidnapMatG <- t( PhilKidnapMat ) %*% PhilKidnapMat
+
+```
+
+<br>
+
+#### 4. Plot all three graphs.
+
+Let's use the `edge.rescale()` function to help us here. This function returns a weighted edgelist that can be used to aid with plotting.
+
+```{r}
+
+edge.rescale <- function( uniMat, low, high ){
+  diag( uniMat ) <- 0
+  min_w <- min( uniMat[uniMat != 0] )
+  max_w <- max( uniMat[uniMat != 0] )
+  rscl <- ( ( high-low )  * ( uniMat[uniMat != 0] - min_w ) ) / ( max_w - min_w ) + low
+  rscl
+}
+
+edge.shade <- function( uniMat ){
+  net.edges <- edge.rescale( uniMat, 0.01, 1 )
+  vec.to.color <- as.vector( abs( net.edges ) )
+  vec.to.color <- 1 - vec.to.color # subtract 1 to flip the grey function scale.
+  edge.cols <- grey( vec.to.color )
+  return( edge.cols )
+}
+
+
+```
+
+Now, plug it into the plot.
+
+```{r, fig.width=10, fig.height=10, fig.fullwidth=TRUE}
+
+# set the plot regions to ease with visualization
+par( 
+  mfrow = c( 2, 2 ),
+  mar = c( 2, 1, 4, 1)
+  )
+
+# set the seed to reproduce the plot
+set.seed( 507 )
+
+# plot the bipartite network
+gplot( PhilKidnapMat,
+       gmode="twomode",
+       usearrows=FALSE,
+       edge.col="grey60",
+       edge.lwd = 1.2,
+       vertex.col = c( 
+         rep( "#34f772", dim( PhilKidnapMat )[1] ), 
+         rep( "#656ffc", dim( PhilKidnapMat )[2] ) )
+       )
+title( "Bipartite Matrix of Kidnapping Network", line = 1 )
+
+# plot the person matrix
+gplot( PhilKidnapMatP,
+       gmode = "graph",
+       usearrows = FALSE,
+       edge.col = edge.shade( PhilKidnapMatP ),
+       edge.lwd = edge.rescale( PhilKidnapMatP, 0.0001, 10 ),
+       vertex.col = "#34f772"
+       )
+title( "Unipartite Projection of\n Individuals (Person) Matrix", line = 1 )
+
+# plot the group matrix
+gplot( PhilKidnapMatG,
+       gmode = "graph",
+       usearrows = FALSE,
+       edge.col = edge.shade( PhilKidnapMatG ),
+       edge.lwd = edge.rescale( PhilKidnapMatG, 0.0001, 10 ),
+       vertex.col = "#656ffc",
+       vertex.sides = 4
+       )
+title( "Unipartite Projection of\n Meetings (Group) Matrix", line = 1 )
+
+```
+
+<br>
+<br>
+
+----
+
+##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-template/issues) page. Thanks!
+
+<br>
+<br>
+
+###### ***Last updated `r format(Sys.time(), '%d %B, %Y')`***

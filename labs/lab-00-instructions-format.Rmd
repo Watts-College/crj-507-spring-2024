@@ -1,5 +1,5 @@
 ---
-title: "Lab 02 - Network Visualization - INSTRUCTIONS"
+title: "Lab 0# - LAB NAME - INSTRUCTIONS"
 date: "CRJ 507 Social Network Analysis"
 output: 
   html_document:
@@ -18,36 +18,7 @@ text-align: justify}
 </style>
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set( echo = TRUE )
-```
-
-
-# Introduction
-
-The purpose of this lab is to familiarize yourself with how networks are created and visualized in *R*.  
-
-<br>
-
-## Part I
-
-In [lab 01]() you created two networks. I would like you to continue working with those networks for this lab. Please review the [NAME] and [NAME] tutorials prior to beginning this lab.    
-
-<br>
-
-For *each* network you created, do the following:  
-
-1. Import the network into *R* using the `read.csv()` function or create the network using the `matrix()` function.
-2. Create an object of class `network`. 
-3. Plot the network using the `gplot()` function.    
-4. Modify the plot using at least three arguments in the `gplot()` function.  
-
-<br>
-
-## Part II
-
-How them work with a network here. Take one two of the trust networks from WO-PINS. Have them then make some comparisons.
-
+CONTENT
 ____
 
 <br>
@@ -95,7 +66,7 @@ See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for
 
 <br>
 
-----
+---
 
 <br>
 

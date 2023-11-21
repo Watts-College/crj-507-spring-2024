@@ -1,0 +1,279 @@
+---
+title: "Lab 06 - Projection of Bipartite Graphs"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    df_print: paged
+    theme: journal
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set( echo = TRUE,
+                       eval = TRUE,
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10, 
+                      fig.height = 6 )
+
+```
+
+<br>
+
+# Getting Started
+
+<br>
+
+## Setup
+
+```{r, message=FALSE, warning=FALSE}
+
+# clear the workspace
+rm( list = ls() )
+
+```
+
+## Part I
+
+<br>
+
+First, let's read in the `PaulRevereNet` network. This is stored as an .rds document in the data folder on the [SNA Textbook](https://github.com/jacobtnyoung/sna-textbook/tree/main/data) site. We will use the `readRDS()` function, with the [file path](https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-paul-revere-net.rds), to load the file. Since we are calling a url, we need to use the `url()` function as well.  
+
+Finally, we need to make sure the `sna` and `network` packages are loaded, using `library()`, so that R recognizes the `PaulRevereNet` object as one of class `network`.
+
+<br>
+
+```{r, message=FALSE, warning=FALSE}
+
+# Your code here
+
+```
+
+<br>
+
+#### 1. Create an object of class `matrix` from the `PaulRevereNet` network.
+  
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 2. Create the unipartite graph that represents the "person" matrix.
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 3. Create the unipartite graph that represents the "group" matrix.
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 4. Plot all three graphs.
+
+Let's use the `edge.rescale()` function to help us here. This function returns a weighted edgelist that can be used to aid with plotting.
+
+```{r}
+
+edge.rescale <- function( uniMat, low, high ){
+  diag( uniMat ) <- 0
+  min_w <- min( uniMat[uniMat != 0] )
+  max_w <- max( uniMat[uniMat != 0] )
+  rscl <- ( ( high-low )  * ( uniMat[uniMat != 0] - min_w ) ) / ( max_w - min_w ) + low
+  rscl
+}
+
+edge.shade <- function( uniMat ){
+  net.edges <- edge.rescale( uniMat, 0.01, 1 )
+  vec.to.color <- as.vector( abs( net.edges ) )
+  vec.to.color <- 1 - vec.to.color # subtract 1 to flip the grey function scale.
+  edge.cols <- grey( vec.to.color )
+  return( edge.cols )
+}
+
+
+```
+
+Now, plug it into the plot.
+
+```{r, fig.width=10, fig.height=10, fig.fullwidth=TRUE}
+
+# set the plot regions to ease with visualization
+par( 
+  mfrow = c( 2, 2 ),
+  mar = c( 2, 1, 4, 1)
+  )
+
+# set the seed to reproduce the plot
+set.seed( 507 )
+
+
+# Your code for the plots here
+
+```
+ 
+<br>
+
+## Part II
+
+<br>
+
+First, let's read in the `PhilKidnapNet` network. This is stored as an .rds document in the data folder on the [SNA Textbook](https://github.com/jacobtnyoung/sna-textbook/tree/main/data) site. We will use the `readRDS()` function, with the [file path](https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-philippine-kidnappings-net.rds), to load the file. Since we are calling a url, we need to use the `url()` function as well.  
+
+Finally, we need to make sure the `sna` and `network` packages are loaded, using `library()`, so that R recognizes the `PhilKidnapNet` object as one of class `network`.
+
+<br>
+
+```{r, message=FALSE, warning=FALSE}
+
+# Your code here
+
+```
+
+<br>
+
+#### 1. Create an object of class `matrix` from the `PhilKidnapNet` network.
+  
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 2. Create the unipartite graph that represents the "person" matrix.
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 3. Create the unipartite graph that represents the "group" matrix.
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+#### 4. Plot all three graphs.
+
+Let's use the `edge.rescale()` function to help us here. This function returns a weighted edgelist that can be used to aid with plotting.
+
+```{r}
+
+edge.rescale <- function( uniMat, low, high ){
+  diag( uniMat ) <- 0
+  min_w <- min( uniMat[uniMat != 0] )
+  max_w <- max( uniMat[uniMat != 0] )
+  rscl <- ( ( high-low )  * ( uniMat[uniMat != 0] - min_w ) ) / ( max_w - min_w ) + low
+  rscl
+}
+
+edge.shade <- function( uniMat ){
+  net.edges <- edge.rescale( uniMat, 0.01, 1 )
+  vec.to.color <- as.vector( abs( net.edges ) )
+  vec.to.color <- 1 - vec.to.color # subtract 1 to flip the grey function scale.
+  edge.cols <- grey( vec.to.color )
+  return( edge.cols )
+}
+
+
+```
+
+Now, plug it into the plot.
+
+```{r, fig.width=10, fig.height=10, fig.fullwidth=TRUE}
+
+# set the plot regions to ease with visualization
+par( 
+  mfrow = c( 2, 2 ),
+  mar = c( 2, 1, 4, 1)
+  )
+
+# set the seed to reproduce the plot
+set.seed( 507 )
+
+
+# Your code for the plots here
+
+```
+
+<br>
+<br>
+
+<center>------------<h4> **DELETE THIS LINE & ALL LINES BELOW BEFORE SUBMITTING** </h4>------------</center>
+
+<br>
+<br>
+
+## Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+1. Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect their use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  

@@ -1,0 +1,254 @@
+---
+title: "Lab 02 - Network Visualization"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    df_print: paged
+    theme: journal
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+    code_fold: show
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10, 
+                      fig.height = 6)
+
+```
+
+<br>
+
+```{r load_packages}
+# make sure these are installed on your machine before knitting
+# install.packages( "network" )
+# install.packages( "sna" )
+#
+# Note that you cannot knit with an install.packages() function
+# called in your RMD file. You only have to install packages
+# once, then they are loaded using the library() function.
+
+library( network )
+library( sna )
+
+```
+
+<br>
+
+# Part I
+
+Recall the instructions for Part I. For *each* network you created, do the following:  
+
+1. Import the network into *R* using the `read.csv()` function or create the network using the `matrix()` function.
+2. Create an object of class `network`. 
+3. Plot the network using the `gplot()` function.    
+4. Modify the plot using at least three arguments in the `gplot()` function.  
+
+As a refresher, review the example below.
+
+<br>
+
+## Example: 
+
+If you are importing your network, use the `read.csv()` function:
+
+```{r import-example, echo = TRUE, eval = TRUE}
+
+# define the path
+url <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-undirected-example.csv"
+
+# import the undirected matrix
+mat.u <- read.csv( 
+  url,
+  as.is = TRUE,
+  header = TRUE,
+  row.names = 1 
+  )
+
+```
+
+If you are creating your network, use the `matrix()` function:
+
+<br>
+
+```{r create-example, echo = TRUE, eval = TRUE}
+
+# created a directed matrix
+mat.d <- matrix(
+  c(0,1,0,0,0,1,0,1,0,0,0,1,0,1,1,0,0,1,0,1,0,0,1,1,0),
+  nrow=5,
+  byrow=TRUE
+  )
+
+# attach row names
+rownames( mat.d ) <- c( "Jen","Tom","Bob","Leaf","Jim" )
+
+# attach column names
+colnames( mat.d ) <- c( "Jen","Tom","Bob","Leaf","Jim" )
+
+# print out the object
+mat.d
+
+```
+
+<br>
+
+Now, let's create the network object using the `network()` function.
+
+```{r create-undirected-network, echo = TRUE, eval = TRUE}
+
+net.u <- as.network( 
+  mat.u, # this is the matrix we want to create a network from
+  directed = FALSE # tell the function it is an undirected network
+  )
+
+```
+
+```{r create-directed-network, echo = TRUE, eval = TRUE}
+
+net.d <- as.network( 
+  mat.d, # this is the matrix we want to create a network from
+  directed = TRUE # tell the function it is a directed network
+  )
+
+```
+
+<br>
+
+Finally, let's plot the networks using the `gplot()` function.
+
+```{r create-undirected-plot, echo = TRUE, eval = TRUE}
+
+# produce the plot
+gplot(
+  net.u,                          # this is the network to plot
+  vertex.col = "lightblue",       # color the nodes
+  vertex.cex = 1.2,               # size of the nodes (bigger number is bigger nodes)
+  edge.col = "grey80",            # color the ties
+  edge.lwd = 1.2,                 # the width of the ties (bigger is wider)
+  main = "Plot of undirected net" # add a title
+)
+
+```
+
+<br>
+
+```{r create-undirected-plot, echo = TRUE, eval = TRUE}
+
+# produce the plot
+gplot(
+  net.d,                          # this is the network to plot
+  vertex.col = "firebrick",       # color the nodes
+  vertex.cex = 1.2,               # size of the nodes (bigger number is bigger nodes)
+  edge.col = "grey80",            # color the ties
+  edge.lwd = 1.2,                 # the width of the ties (bigger is wider)
+  main = "Plot of a directed net" # add a title
+)
+
+```
+
+<br>
+
+These were some examples to help you get going. Feel free to use them to aid in working through the lab.
+
+----
+
+# Part I
+
+<br>
+
+## First Network
+
+<br>
+
+### Step 1
+
+Import the network into *R* using the `read.csv()` function or create the network using the `matrix()` function.
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+### Step 2
+
+Create an object of class `network`. 
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+### Steps 3 & 4
+
+Create an object of class `network`. Plot the network using the `gplot()` function. Modify the plot using at least three arguments in the `gplot()` function.    
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+<br>
+
+## Part II
+
+How them work with a network here. Take one two of the trust networks from WO-PINS. Have them then make some comparisons.
+
+<br>
+<br>
+
+<center>------------<h4> **DELETE THIS LINE & ALL LINES BELOW BEFORE SUBMITTING** </h4>------------</center>
+
+<br>
+<br>
+
+## Knitting to HTML
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Upload both your `.RMD` and `.HTML` files to the appropriate link for this assignment on the Canvas page for this course.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+1. Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect their use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  

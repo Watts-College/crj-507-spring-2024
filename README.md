@@ -1,2 +1,2 @@
-# cpp-526-sum-2021
-Coure shell for CPP 526. 
+# crj-507-spring-2024
+Course shell for CRJ 507. 
