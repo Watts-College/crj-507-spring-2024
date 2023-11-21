@@ -4,8 +4,8 @@ title: Syllabus
 
 index:
     title: Social Network Analysis
-    image: data-science.png
-    subtitle: The objective of this course is to introduce students to Social Network Analysis and its practical application in the criminal justice system. Students will be able to understand and discuss the fundamental issues associated with social network analysis and will understand how to use software to conduct social network analysis. Upon completion of the course students will be knowledgeable about the history of social network analysis, theories applicable to social network analysis, the role of social network analysis in criminal justice agencies, strategies in social network analysis data collection and techniques associated with social network analysis. This course offers a practical, tools-based approach that is designed to build strong foundations for people that want to work as analysts. The course is analytically rigorous, but no prior programming experience is assumed.
+    <!--- image: data-science.png -->
+    subtitle: The objective of this course is to introduce students to *Social Network Analysis* and its practical application in the criminal justice system. Students will be able to understand and discuss the fundamental issues associated with social network analysis and will understand how to use software to conduct social network analysis. Upon completion of the course students will be knowledgeable about the history of social network analysis, theories applicable to social network analysis, the role of social network analysis in criminal justice agencies, strategies in social network analysis data collection and techniques associated with social network analysis. This course offers a practical, tools-based approach that is designed to build strong foundations for people that want to work as analysts. The course is analytically rigorous, but no prior programming experience is assumed. By the end of this course, you will know how to construct networks, analyze them, and create reports on networks. 
 
 info:
  program_title: Online Master of Science in Crime Analysis
@@ -13,7 +13,7 @@ info:
  course_title: Social Network Analysis
  course_number: CRJ 507
  course_level: Graduate
- course_website: 'https://canvas.asu.edu/courses/92494'
+ course_website: 'https://canvas.asu.edu/courses/170143'
  course_start_end_dates: January 8 - February 27, 2024
  course_prerequisites:  
  class_meets_when:  Asynchronous  
@@ -24,13 +24,10 @@ instructor:
 -  name: Jacob T.N. Young
    title: Associate Professor
    email: CRJ507@asu.edu
-   office_location:
-   website_url:
-   github_url:  
-   twitter_url:
-   scholar_url:
-   linked_in_url:
-   office_hours_time: See Schedule
+   office_location: UCENT 649
+   website_url: 'https://jacobtnyoung.github.io/'
+   github_url:  'https://github.com/jacobtnyoung'
+   office_hours_time: Monday, Tuesday, and Thursday, 2:30pm-3:30pm (AZ time)
    office_hours_app_url: 'https://calendly.com/jacobtnyoung/crj-507-student-meeting'
    office_hours_location: Zoom
 
@@ -47,7 +44,7 @@ textbooks:
 
 ## A. Overview
 
-The objective of this course is to introduce students to *Social Network Analysis* and its practical application in the criminal justice system. Students will be able to understand and discuss the fundamental issues associated with social network analysis and will understand how to use software to conduct social network analysis. Upon completion of the course students will be knowledgeable about the history of social network analysis, theories applicable to social network analysis, the role of social network analysis in criminal justice agencies, strategies in social network analysis data collection, and techniques associated with social network analysis. This course offers a practical, tools-based approach that is designed to build strong foundations for people that want to work as analysts. The course is analytically rigorous, but no prior programming experience is assumed.
+The objective of this course is to introduce students to *Social Network Analysis* and its practical application in the criminal justice system. Students will be able to understand and discuss the fundamental issues associated with social network analysis and will understand how to use software to conduct social network analysis. Upon completion of the course students will be knowledgeable about the history of social network analysis, theories applicable to social network analysis, the role of social network analysis in criminal justice agencies, strategies in social network analysis data collection, and techniques associated with social network analysis. This course offers a practical, tools-based approach that is designed to build strong foundations for people that want to work as analysts. The course is analytically rigorous, but no prior programming experience is assumed. By the end of this course, you will know how to construct networks, analyze them, and create reports on networks.
 
 ## B. Course Objectives
 
@@ -104,7 +101,7 @@ The online discussions are explicitly intended to meet the objectives stated abo
 
 ## B. Assigned Reading Materials
 
-We will use a custom textbook for this course. Visit the [**Course Textbook**](https://jacobtnyoung.github.io/sna-textbook/).
+We will use a custom textbook for this course. Visit the [**Course Textbook**](https://jacobtnyoung.github.io/sna-textbook/) to review the materials that pertain to this course.
 
 In addition to the required reading, the instructor will supplement these with journal articles. These will be made available in the course shell.
 
@@ -123,11 +120,11 @@ Below 80%   |  **C, D, F**
 
 The assigned work for the term comes in the form of four elements, described below.
 
-### Weekly Labs (50%)  
+### Weekly Labs (60%)  
 
 Each week you will receive a short lab that will help you synthesize the material from the week. **They are graded pass / fail** based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection.
 
-### Discussion Topics (15%)
+### Discussion Topics (10%)
 
 YellowDig discussion topics are used to introduce you to the broad area of social network analysis. The weekly discussion topics are a chance to explore some resources or reflect on a specific theme or article. We will use YellowDig discussion boards for this assignment. You earn points through your activities on the board. You need to earn at least 100 points by posting topics and interacting with peers in order to earn full credit. The points are allocated as follows:
 
@@ -140,7 +137,7 @@ These points automatically update on *Canvas*. The total grade is cumulative, re
 
 *Earning an "Instructor Badge" nets an additional 5 points.*
 
-### Final Project (35%)  
+### Final Project (30%)  
 
 This course will close with a final project. The final project will involve a report that draws on all of the material you have learned in the course.
 

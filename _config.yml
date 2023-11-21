@@ -16,7 +16,7 @@ description:        Intro. course in social network analysis
 # Header text at the top left of the website
 
 brand:
-    #image:          # logo.svg  # e.g. logo.png, upload logo image file to /assets/img/ folder
+    image:          # logo.svg  # e.g. logo.png, upload logo image file to /assets/img/ folder
     text:           "Social Network Analysis"    # if the above "logo:" image variable  is not set, this text logo is displayed instead
        # in the default html file add extra fav icons to header for parts II and III
        # header color set at assets/css/custom.css under default_nav and footer background-color
@@ -43,16 +43,16 @@ header:
 
 # GITHUB CONFIGURATIONS
 
-#url :               "https://watts-college.github.io"
-#baseurl:            "/crj-507-spring-2024"
-#course_url:         "https://Watts-College.github.io/crj-507-spring-2024/"
-#title:              Watts-College # don't change this
+url :               "https://watts-college.github.io"
+baseurl:            "/crj-507-spring-2024"
+course_url:         "https://Watts-College.github.io/crj-507-spring-2024/"
+title:              Watts-College # don't change this
 
-#github_info:
-#    username:          Watts-College # Github location of the course
-#    branch:            master
-#    website-repo:      crj-507-spring-2024
-#    course-repo:       crj-507-spring-2024
+github_info:
+    username:          Watts-College # Github location of the course
+    branch:            master
+    website-repo:      crj-507-spring-2024
+    course-repo:       crj-507-spring-2024
 
 
 # IGNORE THESE SETTINGS
