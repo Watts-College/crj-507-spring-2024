@@ -25,7 +25,7 @@ description:        Intro. course in social network analysis
 
 brand:
     image:          # logo.svg  # e.g. logo.png, upload logo image file to /assets/img/ folder
-    text:           "Data Science"    # if the above "logo:" image variable  is not set, this text logo is displayed instead
+    text:           "Social Network Analysis"    # if the above "logo:" image variable  is not set, this text logo is displayed instead
        # in the default html file add extra fav icons to header for parts II and III
        # header color set at assets/css/custom.css under default_nav and footer background-color
 
@@ -59,8 +59,8 @@ title:              Watts-College # don't change this
 github_info:
     username:          Watts-College # Github location of the course
     branch:            master
-    website-repo:      cpp-507-spring-2024
-    course-repo:       cpp-507-spring-2024
+    website-repo:      crj-507-spring-2024
+    course-repo:       crj-507-spring-2024
 
 
 # IGNORE THESE SETTINGS
