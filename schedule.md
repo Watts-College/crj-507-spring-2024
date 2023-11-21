@@ -397,7 +397,7 @@ Lab-01 will provide you the opportunity to start thinking about networks and get
 Required reading for this unit includes:
 
 * [Chapter 01 - Introduction to Social Network Analysis](https://jacobtnyoung.github.io/sna-textbook/ch-01-intro-to-sna.html)
-* [Tutorial 1: Getting Started with R](../tutorials/tutorial-01-r-intro-to-r.html)
+* [Tutorial 01 - Getting Started with R](../tutorials/tutorial-01-r-intro-to-r.html)
 * [Tutorial 02 - Introduction to Data-Driven Documents](../tutorials/tutorial-02-intro-to-rmarkdown.html)
 
 <br>

@@ -99,35 +99,14 @@ mat.d
 
 <br>
 
-Now, let's create the network object using the `network()` function.
-
-```{r create-undirected-network, echo = TRUE, eval = TRUE}
-
-net.u <- as.network( 
-  mat.u, # this is the matrix we want to create a network from
-  directed = FALSE # tell the function it is an undirected network
-  )
-
-```
-
-```{r create-directed-network, echo = TRUE, eval = TRUE}
-
-net.d <- as.network( 
-  mat.d, # this is the matrix we want to create a network from
-  directed = TRUE # tell the function it is a directed network
-  )
-
-```
-
-<br>
-
 Finally, let's plot the networks using the `gplot()` function.
 
 ```{r create-undirected-plot, echo = TRUE, eval = TRUE}
 
 # produce the plot
 gplot(
-  net.u,                          # this is the network to plot
+  mat.u,                          # this is the network to plot
+  gmode = "graph",                # let it know it is undirected    
   vertex.col = "lightblue",       # color the nodes
   vertex.cex = 1.2,               # size of the nodes (bigger number is bigger nodes)
   edge.col = "grey80",            # color the ties
@@ -139,11 +118,11 @@ gplot(
 
 <br>
 
-```{r create-undirected-plot, echo = TRUE, eval = TRUE}
+```{r create-directed-plot, echo = TRUE, eval = TRUE}
 
 # produce the plot
 gplot(
-  net.d,                          # this is the network to plot
+  mat.d,                          # this is the network to plot
   vertex.col = "firebrick",       # color the nodes
   vertex.cex = 1.2,               # size of the nodes (bigger number is bigger nodes)
   edge.col = "grey80",            # color the ties
