@@ -396,9 +396,9 @@ Lab-01 will provide you the opportunity to start thinking about networks and get
 
 Required reading for this unit includes:
 
-* [Chapter 01 - Introduction to Social Network Analysis](https://jacobtnyoung.github.io/sna-textbook/ch-01-intro-to-sna.html)
-* [Tutorial 01 - Getting Started with R](../tutorials/tutorial-01-r-intro-to-r.html)
-* [Tutorial 02 - Introduction to Data-Driven Documents](../tutorials/tutorial-02-intro-to-rmarkdown.html)
+* [Chapter 1: Introduction to Social Network Analysis](https://jacobtnyoung.github.io/sna-textbook/ch-01-intro-to-sna.html)
+* [Tutorial 1 - Getting Started with R](../tutorials/tutorial-01-r-intro-to-r.html)
+* [Tutorial 2 - Introduction to Data-Driven Documents](../tutorials/tutorial-02-intro-to-rmarkdown.html)
 
 <br>
 <br>
@@ -410,9 +410,9 @@ Required reading for this unit includes:
 The following checklist will help you stay organized in your first week.
 
 - [ ] Complete Assigned Readings: [Chapter 1: Introduction to Social Network Analysis](https://jacobtnyoung.github.io/sna-textbook/ch-01-intro-to-sna.html),
-[Tutorial 1: Getting Started with R](../tutorials/tutorial-01-r-intro-to-r.html), and [Tutorial 02 - Introduction to Data-Driven Documents](../tutorials/tutorial-02-intro-to-rmarkdown.html)
+[Tutorial 1 - Getting Started with R](../tutorials/tutorial-01-r-intro-to-r.html), and [Tutorial 2 - Introduction to Data-Driven Documents](../tutorials/tutorial-02-intro-to-rmarkdown.html)
 - [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
-- [ ] Complete & Submit [Lab 01](../labs/lab-01-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 1](../labs/lab-01-instructions.html) (See Below)
 
 <br>
 
@@ -495,12 +495,12 @@ Once you have completed this section you will be able to:
 Required:
 
 * [Chapter 4: Network Data Structures](https://jacobtnyoung.github.io/sna-textbook/ch-04-net-data-structures.html)
-* [Tutorial 03 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html)
-* [Tutorial 04 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
+* [Tutorial 3 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html)
+* [Tutorial 4 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
 
 ## Lab Assignment
 
-Lab-02 will build off your work in Lab-01 by having you reconstruct your network in R and creating a visualization of that network in R.
+Lab 2 will build off your work in Lab 1 by having you reconstruct your network in R and creating a visualization of that network in R.
 
 <br>
 <br>
@@ -514,8 +514,8 @@ Lab-02 will build off your work in Lab-01 by having you reconstruct your network
 Required:
 
 * [Chapter 4: Network Data Structures](https://jacobtnyoung.github.io/sna-textbook/ch-04-net-data-structures.html)
-* [Tutorial 03 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html)
-* [Tutorial 04 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
+* [Tutorial 3 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html)
+* [Tutorial 4 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
 
 <br>
 <br>
@@ -527,9 +527,9 @@ Required:
 The following checklist will help you stay organized in your second week.
 
 - [ ] Complete Assigned Readings: [Chapter 4: Network Data Structures](https://jacobtnyoung.github.io/sna-textbook/ch-04-net-data-structures.html),  
-[Tutorial 03 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html) and [Tutorial 04 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
+[Tutorial 3 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html) and [Tutorial 4 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit [Lab 02](../labs/lab-02-instructions.html) (See Below)
+- [ ] Complete & Submit [Lab 2](../labs/lab-02-instructions.html) (See Below)
 
 <br>
 
