@@ -51,16 +51,16 @@ header:
 
 # GITHUB CONFIGURATIONS
 
-url :               "https://watts-college.github.io"
-baseurl:            "/crj-507-spring-2024"
-course_url:         "https://Watts-College.github.io/crj-507-spring-2024/"
-title:              Watts-College # don't change this
+#url :               "https://watts-college.github.io"
+#baseurl:            "/crj-507-spring-2024"
+#course_url:         "https://Watts-College.github.io/crj-507-spring-2024/"
+#title:              Watts-College # don't change this
 
-github_info:
-    username:          Watts-College # Github location of the course
-    branch:            master
-    website-repo:      crj-507-spring-2024
-    course-repo:       crj-507-spring-2024
+#github_info:
+#    username:          Watts-College # Github location of the course
+#    branch:            master
+#    website-repo:      crj-507-spring-2024
+#    course-repo:       crj-507-spring-2024
 
 
 # IGNORE THESE SETTINGS
