@@ -141,32 +141,23 @@ These points automatically update on *Canvas*. The total grade is cumulative, re
 
 This course will close with a final project. The final project will involve a report that draws on all of the material you have learned in the course.
 
-UPDATE UPDATE UPDATE UPDATE UPDATE UPDATE UPDATE 
+The final project will use all of the information you have learned in this course to create a report on a network. For the final project, you will use data from the Phoenix Open Data Portal. Specifically, you will use co-arrest data. These data represent incidents where individuals were arrested together. For the final project, imagine that you work for a police department and your supervisor has asked you to create a report on co-offending networks. 
 
-SEE THE ASSIGNMENT FOR WHAT THIS SHOULD BE
+The following criteria, description, and corresponding points are used to evaluate the project (30 points total):
 
-The following criteria, description, and corresponding points are used to evaluate the project (35 points total):
-
-  - **New Tabs Added:** Custom tabs successfully integrated; runs without errors **(10 pts)**
-  - **Widget Integration:** Widgets correctly linked; visual output is reactive **(8 pts)**
-  - **Data Reporting:** Value boxes, tables, graphics, or other reporting is provided, functional **(4 pts)**
-  - **Documentation:** Sufficient documentation provided on "About" tab **(2 pts)**
-  - **Style:** Content exceeds expectations in functionality, design, layout, analysis, or insights **(3 pts)**
-  - **Upload to Shinyapps.io:** Dashboard posted to Shinyapps.io and available through an active URL **(3 pts)**
-
+  - **Answering Prompts:** Providing responses and code for all prompts **(25 pts)**
+  - **Proofreading and Style:** Responses are free of grammatical errors; content exceeds expectations in functionality, design, layout, analysis, or insights **(5 pts)**
 
 ## D. General Grading Rubric for Written Work
 
-In general, any submitted work work is assessed on these evaluative criteria:
+In general, any submitted work is assessed on these evaluative criteria:
 
 - **Completeness:** All elements of the assignment are addressed
 - **Quality of Analysis:** Substantively rigorous in addressing the assignment
 - **Understanding:** Demonstrated synthesis and application of core lecture concepts
 - **Appearance:** Consistent formatting, style, spelling, grammar, and conventions in code/text
 
-Most assignments in this course are labs that are graded pass-fail based upon completeness and correctness of responses (every attempt must be made to complete labs, and they must be more than 50% correct to receive credit). Discussion boards that accumulate points through each activity on the board.
-
-The final projects will be accompanied by a rubric describing the allocation of points and criteria for evaluation.
+Most assignments in this course are labs that are graded pass-fail based upon completeness and correctness of responses (every attempt must be made to complete labs, and they must be more than 50% correct to receive credit). Discussion boards accumulate points through each activity on the board.
 
 ## E. Late and Missing Assignments
 
