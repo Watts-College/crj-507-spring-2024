@@ -47,11 +47,20 @@ final-project:
 
 <br>
 
-## About Your Professor: [Jacob Young]()
+## About Your Professor: [Jacob Young](https://jacobtnyoung.github.io/)
 
-Hi there! My name is [Jacob Young]() and I will be your instructor for this course. MORE BIO.
+Hi there! My name is [Jacob Young](https://jacobtnyoung.github.io/) and I will be your instructor for this course. For the last two decades I have researched and taught about social networks in a variety of contexts: adolescent friendship groups, incarcerated men and women, police officers, and academics. I am passionate about social network analysis and I hope to pass that passion on to you in this course.
 
 <br>
+
+*** { @unit = "", @title = "Social Network Analysis, What is it?", @reading, @lecture, @foldout }
+
+## Introducing Social Network Analysis
+
+Network science is an approach to science that views the world as being composed of systems of actors connected through relational ties (i.e. a network). Network science takes these relational structures as the primary domain of interest. In so doing, research questions take the following forms: How does the network matter? What effects the network? Network analysis is the set of tools used to study relational variables. A set of methods for systematically understanding and identifying connections among actors. This course will introduce you to these tools and their application to problems in the the field of criminology and criminal justice.
+        
+<br>
+
 
 *** { @unit = "", @title = "Social Network Analysis and the R Toolkit", @reading, @lecture, @foldout }
 
