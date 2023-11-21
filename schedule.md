@@ -53,7 +53,7 @@ Hi there! My name is [Jacob Young](https://jacobtnyoung.github.io/) and I will b
 
 <br>
 
-*** { @unit = "", @title = "Social Network Analysis, What is it?", @reading, @lecture, @foldout }
+*** { @unit = "", @title = "Social Network Analysis, What is it?", @foldout }
 
 ## Introducing Social Network Analysis
 
@@ -63,6 +63,8 @@ Network science is an approach to science that views the world as being composed
 
 
 *** { @unit = "", @title = "Social Network Analysis and the R Toolkit", @reading, @lecture, @foldout }
+
+In this course you will learn how to use R and R Studio to import, analyze, and report on social networks.
 
 ## Introducing R
 
@@ -93,7 +95,8 @@ The following resources will help you get a better understanding of these tools.
 You will get plenty of practice with these tools and submit your labs as knitted R Markdown (`.RMD`) files.
 
 * Learn more about R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
-* View R Markdown in action in the below image
+
+View R Markdown in action in the below image:
 
 <br>
 
