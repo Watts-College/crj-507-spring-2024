@@ -443,11 +443,11 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 
 <br>
 
-## Lab-01 - Introduction to Network Analysis
+## Lab 1 - Introduction to Network Analysis
 
 In this lab you will provide you the opportunity to start thinking about networks and get your "feet wet" in social network analysis. For the first lab, you will construct a network of your own that you will work with it throughout the term. 
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-01-instructions.html')">LAB-01 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-01-instructions.html')">LAB 1 Instructions</a>
 
 ## Submit Solutions to Canvas
 
@@ -556,15 +556,15 @@ For your discussion this week, think about your own experience with data and des
 <br>
 <br>
 
-## Lab-02 - Network Visualization
+## Lab 2 - Network Visualization
 
 The purpose of this lab is to familiarize yourself with how networks are created and visualized in R.   
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-02-instructions.html')">LAB-02 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-02-instructions.html')">LAB 2 Instructions</a>
 
 This lab has a tempalte. Click to download the lab template. Modify the template using the instructions and submit your assignment.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-02-LastName.zip?raw=true')">LAB-02 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-02-LastName.zip?raw=true')">LAB 2 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -672,11 +672,11 @@ You will use data from two sources:
   * [Thomas Grund and James Densley's study](https://journals.sagepub.com/doi/full/10.1177/1043986214553377) of ties among members of an inner-city gang in London, England.
   * [Mangia Natarajan's study](https://link.springer.com/article/10.1007/s10940-006-9007-x) of a large cocaine trafficking organization in New York City.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-03-instructions.html')">LAB-03 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-03-instructions.html')">LAB 3 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-03-LastName.zip?raw=true')">LAB-03 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-03-LastName.zip?raw=true')">LAB 3 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -764,7 +764,7 @@ The following checklist will help you stay organized in your fourth week.
 
 #### Network Disruption
 
-In criminology and criminal justice, much attention is focused on disrupting networks. That is, trying to disconnect a network so that it is less functional. For discussion this week, I would like you to read the paper [*Disrupting resilient criminal networks through data analysis: The case of Sicilian Mafia*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0236476) by Lucia Cavallaro and colleagues.  
+In criminology and criminal justice, much attention is focused on disrupting networks. That is, trying to disconnect a network so that it is less functional. For discussion this week, I would like you to read the paper [Disrupting resilient criminal networks through data analysis: The case of Sicilian Mafia](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0236476) by Lucia Cavallaro and colleagues.  
 
 How does betweenness centrality operate as an intervention procedure in their study? What might the interventions look like if one were to use degree centrality or closeness centrality instead? Would they differ from the betweenness centrality intervention?
 
@@ -783,11 +783,11 @@ How does betweenness centrality operate as an intervention procedure in their st
 
 In Lab 4 we will focus on familiarizing yourself with calculating closeness centrality and betweeness centrality scores as well as centralization scores for undirected and directed networks in R. We will revisit the networks we used in [Lab 3 - Degree Centrality and Centralization](../labs/lab-03-instructions.html) to assess how different centrality measures tell us a different (or the same) story about what it means to be "central" in a network. 
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-04-instructions.html')">LAB-04 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-04-instructions.html')">LAB 4 Instructions</a>
 
 Click to download the lab template.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-04-LastName.zip?raw=true')">LAB-03 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-04-LastName.zip?raw=true')">LAB 4 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -891,11 +891,11 @@ For your discussion this week, think about a network that you are interested in 
 
 This lab will provide the opportunity to continue to familiarize yourself with bipartite graphs and two-mode networks in *R*. You will work with two networks. First, you will use data collected from [Paul Revere's Ride](https://global.oup.com/ushe/product/paul-reveres-ride-9780195098310?cc=us&lang=en&), by David Fischer. In the book, Fischer documents Reveres connections through various affiliations in locations and how these influenced history. The Paul Revere conspiracy dataset concerns relationships between 254 people and their affiliations with seven different organizations in Boston. The dataset refers to Paul Revere, who was responsible for organizing a local militia of Boston's revolutionary movement. The network is two-mode, with 254 actors and 7 organizations ("events"). Second, you will use the Philippine Kidnappings Data which is a collection of relationships on the Abu Sayyaf Group (ASG), a violent non-state actor operating in the Southern Philippines. In particular, this data is related to the Salast movement that has been founded by Aburajak Janjalani, a native terrorist of the Southern Philippines in 1991. ASG is active in kidnapping and other kinds of terrorist attacks. The object is a two-mode network where actors are terrorist kidnappers and the terrorist events they have attended. 
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-05-instructions.html')">LAB-05 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-05-instructions.html')">LAB 5 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-05-LastName.zip?raw=true')">LAB-03 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-05-LastName.zip?raw=true')">LAB 5 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -929,9 +929,9 @@ As we saw in the last section, networks with complex node sets can be represente
 
 By the end of this unit you will be able to:
 
-*Understand the logic of projection of bipartite graphs to unipartite graphs.
-*Understand how matrix algebra is used to project networks.
-*Know the consequences of projecting bipartite graphs to unipartite graphs.
+ * Understand the logic of projection of bipartite graphs to unipartite graphs.
+ * Understand how matrix algebra is used to project networks.
+ * Know the consequences of projecting bipartite graphs to unipartite graphs.
 
 ## Assigned Reading
 
@@ -942,7 +942,7 @@ By the end of this unit you will be able to:
 
 ## Lab Assignment
 
-Lab 6 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks](). 
+Lab 6 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks](../labs/lab-05-instructions.html). 
 
 <br>
 <br>
@@ -995,7 +995,7 @@ For your discussion this week, review the article above and think about how such
 
 ## Lab 6 - Projection
 
-Lab 6 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks]('../labs/lab-06-instructions.html'). 
+Lab 6 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks](../labs/lab-05-instructions.html). 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-06-instructions.html')">LAB 6 Instructions</a>
 
