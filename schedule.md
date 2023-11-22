@@ -439,7 +439,7 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 <br>
 <br>
 
-*** { @unit = "{{page.lab-due-dates.lab-01}}", @title = "Lab 01", @assignment, @foldout  }
+*** { @unit = "{{page.lab-due-dates.lab-01}}", @title = "Lab 1", @assignment, @foldout  }
 
 <br>
 
@@ -551,7 +551,7 @@ For your discussion this week, think about your own experience with data and des
 <br>
 <br>
 
-*** { @unit = "{{page.lab-due-dates.lab-02}}", @title = "Lab 02", @assignment, @foldout }
+*** { @unit = "{{page.lab-due-dates.lab-02}}", @title = "Lab 2", @assignment, @foldout }
 
 <br>
 <br>
@@ -658,7 +658,7 @@ For your discussion this week, describe how will you think this measure captures
 <br>
 <br>
 
-*** { @unit = "{{page.lab-due-dates.lab-03}}", @title = "Lab 03", @assignment, @foldout  }
+*** { @unit = "{{page.lab-due-dates.lab-03}}", @title = "Lab 3", @assignment, @foldout  }
 
 <br>
 <br>
@@ -774,7 +774,7 @@ How does betweenness centrality operate as an intervention procedure in their st
 <br>
 <br>
 
-*** { @unit = "{{page.lab-due-dates.lab-04}}", @title = "Lab 04", @assignment, @foldout  }
+*** { @unit = "{{page.lab-due-dates.lab-04}}", @title = "Lab 4", @assignment, @foldout  }
 
 <br>
 <br>
@@ -882,7 +882,7 @@ For your discussion this week, think about a network that you are interested in 
 <br>
 <br>
 
-*** { @unit = "{{page.lab-due-dates.lab-05}}", @title = "Lab 05", @assignment, @foldout  }
+*** { @unit = "{{page.lab-due-dates.lab-05}}", @title = "Lab 5", @assignment, @foldout  }
 
 <br>
 <br>
@@ -988,20 +988,20 @@ For your discussion this week, review the article above and think about how such
 <br>
 <br>
 
-*** { @unit = "{{page.lab-due-dates.lab-06}}", @title = "Lab 06", @assignment, @foldout  }
+*** { @unit = "{{page.lab-due-dates.lab-06}}", @title = "Lab 6", @assignment, @foldout  }
 
 <br>
 <br>
 
 ## Lab 6 - Projection
 
-Lab 6 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks](). 
+Lab 6 will serve to familiarize yourself with projecting bipartite graphs to unipartite graphs in R. For this lab, we will revisit the networks we used in [Lab 5 - Bipartite Graphs and Two-Mode Networks]('../labs/lab-06-instructions.html'). 
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-06-instructions.html')">LAB-06 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/lab-06-instructions.html')">LAB 6 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-06-LastName.zip?raw=true')">LAB-03 Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-06-LastName.zip?raw=true')">LAB 6 Template</a>
 
 ## Submit Solutions to Canvas
 
@@ -1029,7 +1029,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 The following checklist will help you stay organized for your final week.
 
-- [ ] Finalize & Submit Your [Final Dashboard Project](../labs/final-project-instructions.html)
+- [ ] Finalize & Submit Your [Final Project](../labs/final-project-instructions.html)
 - [ ] Submit a Course Evaluation
 
 <br>
@@ -1041,9 +1041,11 @@ The following checklist will help you stay organized for your final week.
 
 ## Final Project: Network Report
 
-The final project will use all of the information you have learned in this course to create a report on a network. For the final project, you will use data from the Phoenix Open Data Portal. Specifically, you will use co-arrest data. These data represent incidents where individuals were arrested together. For the final project, imagine that you work for a police department and your supervisor has asked you to create a report on co-offending networks. 
+The final project will use all of the information you have learned in this course to create a report on a network. For the final project, you will use data from the City of Phoenix [Open Data Portal](https://www.phoenixopendata.com/). Specifically, you will use co-arrest data. These data represent incidents where individuals were arrested together. 
 
-<a class="uk-button uk-button-default" onclick="window.open('../labs/final-project-assignment.html')">Final Project Instructions</a>
+For the final project, imagine that you work for a police department and your supervisor has asked you to create a report on co-offending networks. 
+
+<a class="uk-button uk-button-default" onclick="window.open('../labs/final-project-instructions.html')">Final Project Instructions</a>
 
 Download the recommended template for your final project with the below link.
 
