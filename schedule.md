@@ -9,12 +9,12 @@ canvas:
   yellowdig_url: 'https://canvas.asu.edu/courses/170143/assignments/4630885'
 
 lab-due-dates:
-  lab-01: 'WED January 17'
-  lab-02: 'WED January 24'
-  lab-03: 'WED January 31'
-  lab-04: 'WED February 7'
-  lab-05: 'WED February 14'
-  lab-06: 'WED February 21'
+  lab-01: 'TUES January 16'
+  lab-02: 'TUES January 23'
+  lab-03: 'TUES January 30'
+  lab-04: 'TUES February 6'
+  lab-05: 'TUES February 13'
+  lab-06: 'TUES February 20'
 
 discussion-dates:
   topic-01: 'FRI January 12'
