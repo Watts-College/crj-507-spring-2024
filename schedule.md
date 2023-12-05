@@ -412,6 +412,7 @@ The following checklist will help you stay organized in your first week.
 [Tutorial 1 - Getting Started with R](../tutorials/tutorial-01-r-intro-to-r.html), and [Tutorial 2 - Introduction to Data-Driven Documents](../tutorials/tutorial-02-intro-to-rmarkdown.html)
 - [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
 - [ ] Complete & Submit [Lab 1](../labs/lab-01-instructions.html) (See Below)
+- [ ] [Sign-Up for the Lab Review Session](https://calendly.com/jacobtnyoung/crj-507-lab-review-session)
 
 <br>
 
@@ -529,6 +530,7 @@ The following checklist will help you stay organized in your second week.
 [Tutorial 3 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html) and [Tutorial 4 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 2](../labs/lab-02-instructions.html) (See Below)
+- [ ] [Sign-Up for the Lab Review Session](https://calendly.com/jacobtnyoung/crj-507-lab-review-session)
 
 <br>
 
@@ -639,6 +641,7 @@ The following checklist will help you stay organized in your third week.
 - [ ] Complete Assigned Readings: [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html) and [Tutorial 5 - Degree Centrality and Centralization in R](../tutorials/tutorial-05-degree-centrality.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 3](../labs/lab-03-instructions.html) (See Below)
+- [ ] [Sign-Up for the Lab Review Session](https://calendly.com/jacobtnyoung/crj-507-lab-review-session)
 
 <br>
 
@@ -753,6 +756,7 @@ The following checklist will help you stay organized in your fourth week.
 - [ ] Complete Assigned Readings: [Chapter 6: Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html), [Chapter 7: Betweenness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html), [Tutorial 6 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html), [Tutorial 7 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 4](../labs/lab-04-instructions.html) (See Below)
+- [ ] [Sign-Up for the Lab Review Session](https://calendly.com/jacobtnyoung/crj-507-lab-review-session)
 - [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
 
 <br>
@@ -862,6 +866,7 @@ The following checklist will help you stay organized in your fifth week.
 - [ ] [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) and [Tutorial 8 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 5](../labs/lab-05-instructions.html) (See Below)
+- [ ] [Sign-Up for the Lab Review Session](https://calendly.com/jacobtnyoung/crj-507-lab-review-session)
 - [ ] (Recommended) Familiarize Yourself with the [Final Project](../labs/final-project-instructions.html)
 
 <br>
@@ -967,6 +972,7 @@ The following checklist will help you stay organized in your sixth week.
 - [ ] Complete Assigned Readings: [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html) and [Tutorial 9 - Projection of Networks in R](../tutorials/tutorial-09-projection.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 6](../labs/lab-06-instructions.html) (See Below)
+- [ ] [Sign-Up for the Lab Review Session](https://calendly.com/jacobtnyoung/crj-507-lab-review-session)
 - [ ] (Recommended) Begin [Final Project](../labs/final-project-instructions.html)
 
 <br>
