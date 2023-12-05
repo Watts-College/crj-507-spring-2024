@@ -18,7 +18,7 @@ info:
  course_prerequisites:  
  class_meets_when:  Asynchronous  
  class_meets_where:  Online
- discussion_board_url: 'https://watts-college.github.io/crj-507-spring-2024/help/'
+ discussion_board_url: 'https://calendly.com/jacobtnyoung/crj-507-lab-review-session'
 
 instructor:
 -  name: Jacob T.N. Young
@@ -27,7 +27,7 @@ instructor:
    office_location: UCENT 649
    website_url: 'https://jacobtnyoung.github.io/'
    github_url:  'https://github.com/jacobtnyoung'
-   office_hours_time: Monday, Tuesday, and Thursday, 2:30pm-3:30pm (AZ time)
+   office_hours_time: Monday and Tuesday 2:30pm-3:30pm (AZ time)
    office_hours_app_url: 'https://calendly.com/jacobtnyoung/crj-507-student-meeting'
    office_hours_location: Zoom
 
