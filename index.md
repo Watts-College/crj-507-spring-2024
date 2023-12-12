@@ -124,6 +124,10 @@ The assigned work for the term comes in the form of four elements, described bel
 
 Each week you will receive a short lab that will help you synthesize the material from the week. **They are graded pass / fail** based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection.
 
+#### Lab Review Sessions
+
+For each lab, there will be a review session a few days after the assignment is due. In these sessions I will go over the solutions in the lab. Use the following link to sign-up for the [Lab Review Sessions](https://calendly.com/jacobtnyoung/crj-507-lab-review-session).
+
 ### Discussion Topics (10%)
 
 YellowDig discussion topics are used to introduce you to the broad area of social network analysis. The weekly discussion topics are a chance to explore some resources or reflect on a specific theme or article. We will use YellowDig discussion boards for this assignment. You earn points through your activities on the board. You need to earn at least 100 points by posting topics and interacting with peers in order to earn full credit. The points are allocated as follows:
