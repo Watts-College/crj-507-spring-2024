@@ -1,5 +1,5 @@
 ---
-title: "Lab 04 - Closeness/Betweeness Centrality"
+title: "Lab 04 - Closeness/Betweenness Centrality"
 author: "Your Name"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 

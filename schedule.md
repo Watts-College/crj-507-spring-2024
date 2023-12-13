@@ -564,7 +564,7 @@ The purpose of this lab is to familiarize yourself with how networks are created
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-02-instructions.html')">LAB 2 Instructions</a>
 
-This lab has a tempalte. Click to download the lab template. Modify the template using the instructions and submit your assignment.
+This lab has a template. Click to download the lab template. Modify the template using the instructions and submit your assignment.
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/templates/lab-02-LastName.zip?raw=true')">LAB 2 Template</a>
 

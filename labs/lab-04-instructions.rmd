@@ -1,5 +1,5 @@
 ---
-title: "Lab 04 - Closeness/Betweeness Centrality - INSTRUCTIONS"
+title: "Lab 04 - Closeness/Betweenness Centrality - INSTRUCTIONS"
 date: "CRJ 507 Social Network Analysis"
 output: 
   html_document:
@@ -24,15 +24,15 @@ knitr::opts_chunk$set( echo = TRUE )
 
 # Introduction
 
-The purpose of this lab is to familiarize yourself with calculating closeness centrality and betweeness centrality scores as well as centralization scores for undirected and directed networks in *R*. Please review the [Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html) and the [Betweeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html) chapters of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html) as well as the [closeness centrality]() and [betweenness centrality]() tutorials prior to beginning this lab.
+The purpose of this lab is to familiarize yourself with calculating closeness centrality and betweeness centrality scores as well as centralization scores for undirected and directed networks in *R*. Please review the [Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html) and the [Betweeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html) chapters of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html) as well as [Tutorial 6 - Closeness Centrality and Centralization in R](../tutorials/tutorial-06-closeness-centrality.html) and [Tutorial 7 - Betweenness Centrality and Centralization in R](../tutorials/tutorial-07-betweenness-centrality.html), prior to beginning this lab.
 
-For this lab, we will revisit the networks we used in [Lab 03 - Degree Centrality and Centralization](). 
+For this lab, we will revisit the networks we used in [Lab 3 - Degree Centrality and Centralization](../labs/lab-03-instructions.html). 
 
 <br>
 
 ## Part I: Working with an Undirected Network
 
-For this part of the lab you will again use data from [Thomas Grund and James Densley's study](https://journals.sagepub.com/doi/full/10.1177/1043986214553377) of ties among members of an inner-city gang in London, England between. The network is undirected, binary ties collected from anonymized arrests data. We will refer to this network as the `LondonGangNet`.
+For this part of the lab you will again use data from [Thomas Grund and James Densley's study](https://journals.sagepub.com/doi/full/10.1177/1043986214553377) of ties among members of an inner-city gang in London, England. The network is undirected, binary ties collected from anonymized arrests data. We will refer to this network as the `LondonGangNet`.
 
 <br>
 
@@ -53,7 +53,7 @@ For the `LondonGangNet` network, do the following:
 
 ## Part II: Working with a Directed Network
 
-For this part of the lab you will again use data from [Mangia Natarajan's study](https://link.springer.com/article/10.1007/s10940-006-9007-x) of a large cocaine trafficking organization in New York City. The network is directed, binary ties of communication between individuals collected from police wiretaps of 151 telephone conversations. The raw data are available [here]( https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/cocainedealingnatarajan). We will refer to this network as the `CocaineDealingNet`.
+For this part of the lab you will again use data from [Mangia Natarajan's study](https://link.springer.com/article/10.1007/s10940-006-9007-x) of a large cocaine trafficking organization in New York City. The network is directed, binary ties of communication between individuals collected from police wiretaps of 151 telephone conversations. We will refer to this network as the `CocaineDealingNet`.
 
 <br>
 
@@ -74,7 +74,7 @@ For the `CocaineDealingNet` network, do the following:
 
 ## Part III:
 
-In [lab 01]() you created two networks and in [lab 02]() you imported, created a object of class network, and plotted the networks. In [lab 03]() you examined degree centrality for your networks. I would like you to continue working with those networks for this part of the lab. 
+In [Lab 1](../labs/lab-01-instructions.html) you created two networks and in [Lab 2](../labs/lab-02-instructions.html) you imported, created a object of class network, and plotted the networks. In [Lab 3](../labs/lab-03-instructions.html) you examined degree centrality for your networks. I would like you to continue working with those networks for this part of the lab. 
 
 Pick **one** of your networks and do the following:
 
@@ -87,7 +87,7 @@ Pick **one** of your networks and do the following:
 
 # How to Submit
 
-Download the [template for this lab]() prior to beginning the lab. **The template contains code for accessing the data files**.
+Download the [template for this lab](../labs/templates/lab-04-LastName.zip?raw=true) prior to beginning the lab. **The template contains code for accessing the data files**.
 
 <br>
 

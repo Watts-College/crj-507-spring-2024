@@ -61,8 +61,6 @@ Then add a few page dividers, and your analysis will now be organized something 
 
 Markdown is used on GitHub, Stack Overflow, and in R Markdown documents. Familiarity with the basics offers a lot of power in controlling how your analysis is presented to your audience.
 
-You can see some advanced R Markdown features [HERE](https://ds4ps.github.io/Data-Science-Class/HANDOUTS/R_Markdown_Template.html).
-
 ## Collaboration Tools
 
 Working in groups [is hard](https://www.ted.com/talks/clay_shirky_on_institutions_versus_collaboration). Most work is done in groups. As a result, project management is a non-trivial task that should not be approached in an ad-hoc fashion. The field of data science has inherited many great collaboration tools that were developed to manage large teams of software engineers, but are being used for many other creative purposes:

@@ -41,9 +41,7 @@ library( sna )
 
 <br>
 
-# Part I
-
-Recall the instructions for Part I. For *each* network you created, do the following:  
+As indicated in the instructions, for *each* network you created, do the following:  
 
 1. Import the network into *R* using the `read.csv()` function or create the network using the `matrix()` function.
 2. Create an object of class `network`. 
@@ -181,13 +179,6 @@ Create an object of class `network`. Plot the network using the `gplot()` functi
 # Your code here
 
 ```
-
-<br>
-<br>
-
-## Part II
-
-How them work with a network here. Take one two of the trust networks from WO-PINS. Have them then make some comparisons.
 
 <br>
 <br>

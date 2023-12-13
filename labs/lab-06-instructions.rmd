@@ -24,9 +24,9 @@ knitr::opts_chunk$set( echo = TRUE )
 
 # Introduction
 
-The purpose of this lab is to familiarize yourself with projecting bipartite graphs to unipartite graphs in *R*. Please review the [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html) chapter of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html) as well as the [Projection of Bipartite Graphs in R]() tutorial prior to beginning this lab.
+The purpose of this lab is to familiarize yourself with projecting bipartite graphs to unipartite graphs in *R*. Please review the [Chapter 11: Projection](https://jacobtnyoung.github.io/sna-textbook/ch-11-projection.html) chapter of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html) as well as [Tutorial 9 - Projection of Networks in R](../tutorials/tutorial-09-projection.html) prior to beginning this lab.
 
-For this lab, we will revisit the networks we used in [Lab 05 - Bipartite Graphs and Two-Mode Networks](). 
+For this lab, we will revisit the networks we used in [Lab 5](../labs/lab-05-instructions.html). 
 
 <br>
 
@@ -56,7 +56,7 @@ For this part of the lab, use the `PhilKidnapNet` to repeat steps 1-4 in Part I.
 
 # How to Submit
 
-Download the [template for this lab]() prior to beginning the lab. **The template contains code for accessing the data files**.
+Download the [template for this lab](../labs/templates/lab-06-LastName.zip?raw=true) prior to beginning the lab. **The template contains code for accessing the data files**.
 
 <br>
 

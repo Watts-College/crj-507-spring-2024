@@ -89,7 +89,7 @@ But, over time you will find that your thought processes change as you approach 
 
 ### Retention
 
-imilar to immersion in a language, the best way to learn the material is to be consistent in doing course work each day. The more frequently you revisit concepts and practice data programming the more you will absorb. The curriculum has been designed around this approach. Readings and tutorials are split into small units, and each unit includes questions to test your understanding of the material. Weekly labs allow you to spend some time applying the material to a specific problem. The final project at the end of the semester is designed to help you make connections between concepts and consolidate knowledge.
+Similar to immersion in a language, the best way to learn the material is to be consistent in doing course work each day. The more frequently you revisit concepts and practice data programming the more you will absorb. The curriculum has been designed around this approach. Readings and tutorials are split into small units, and each unit includes questions to test your understanding of the material. Weekly labs allow you to spend some time applying the material to a specific problem. The final project at the end of the semester is designed to help you make connections between concepts and consolidate knowledge.
 
 You will be much better off spending a small amount of time each day on the material instead of trying to cram everything into a couple of days a week.
 
@@ -107,18 +107,17 @@ In addition to the required reading, the instructor will supplement these with j
 
 ## C. Course Grading System for Assigned Work & Final Projects
 
-Letter grades comport with a traditional set of intervals:
+This course does not use a +/- grading system. Rather, final letter grades will be awarded as defined in the table below:
 
-------------|--------
-Above 98%   |  **A+**
- 98 – 94%   |  **A**
- 93 – 90%   |  **A-**
- 89 – 87%   |  **B+**
- 86 – 84%   |  **B**
- 83 – 80%   |  **B-**
-Below 80%   |  **C, D, F**  
 
-The assigned work for the term comes in the form of four elements, described below.
+------|------------------|-------
+**A**	| 90.00% – 100.00% | 90-100
+**B**	| 80.00% – 89.99%  | 80-89
+**C**	| 70.00% – 79.99%  | 70-79
+**D**	| 60.00% – 69.99%  | 60-69
+**E**	| Below 60%        | 59 and below
+
+The assigned work for the term comes in the form of three elements, described below.
 
 ### Weekly Labs (60%)  
 
@@ -175,17 +174,19 @@ Please post lab questions on the [**Get Help**](https://watts-college.github.io/
 
 Students should be aware that the course instructor will attempt to respond to any course-related email as quickly as possible. Students are asked to allow between 24 and 48 hours for replies to direct instructor emails, generally, as a reasonable time to reply to questions or other issues posed in an email. Additionally, the general timeline for instructor grading or other feedback on assignments, either writer work or online discussion work, is between 5 and 10 work days.
 
+ASU email is the official means of communication among students, faculty, and staff. Students bear the responsibility of missed messages and should check their ASU-assigned email regularly. All correspondence will be sent to your ASU email account. Please ensure Canvas notifications are being sent to your email.
+
 ## G. Student Conduct: Expectation of Professional Behavior
 
 Respectful conversations and tolerance of others&#39; opinions will be strictly enforced. Any inappropriate language, threatening, harassing, or otherwise inappropriate behavior during discussion could result in the student(s) being administratively dropped from the course with no refund, per [**ASU Policy USI 201-10**](http://www.asu.edu/aad/manuals/usi).
 
-Students are required to adhere to the behavior standards listed in the [**Arizona Board of Regents Policy Manual Chapter V: Campus and Student Affairs**](http://azregents.asu.edu/rrc/Policy%20Manual/5-308-Student%20Code%20of%20Conduct.pdf) .
+Students are required to adhere to the behavior standards listed in the [**Arizona Board of Regents Policy Manual Chapter V: Campus and Student Affairs**](https://public.powerdms.com/ABOR/documents/1491970) .
 
 # H. Academic Integrity and Honesty
 
 ASU expects the highest standards of academic integrity. Violations of academic integrity include but are not limited to cheating, plagiarism, fabrication, etc. or facilitating any of these activities. This course relies heavily on writing and original critical thought. Any student who is suspected of not producing his or her own original work will be reported to the College of Public Programs for investigation.
 
-**Plagiarism will not be tolerated**. **Any student who plagiarizes or fabricates her or his work will receive no credit the assignment. Additional disciplinary action following investigation may occur at the discretion of the instructor, up to and including course failure.**
+**Plagiarism will not be tolerated**. **Any student who plagiarizes or fabricates her or his work will receive no credit for the assignment. Additional disciplinary action following investigation may occur at the discretion of the instructor, up to and including course failure.**
 
 For more information, refer to the [**Office of the Provost's Guide to Academic Integrity**](http://provost.asu.edu/academicintegrity).
 
@@ -196,6 +197,10 @@ For more information, refer to the [**Office of the Provost's Guide to Academic 
 **Religious accommodations:** Students will not be penalized for missing an assignment due solely to a religious holiday/observance, but as this class operates with a fairly flexible schedule, all efforts should be made to complete work within the required timeframe. If this is not possible, students must notify the instructor as far in advance as possible in order to make an alternative arrangement.
 
 **Military Accommodations:** A student who is a member of the National Guard, Reserve, or other branch of the armed forces and is unable to complete classes because of military activation may request complete or partial unrestricted administrative withdrawals or incompletes depending on the timing of the activation. For more information see [**ASU Policy USI 201-18**](http://www.asu.edu/aad/manuals/usi).
+
+# J. Additional Syllabus Content
+
+Any content for the syllabus required by the university, but not included here, is available in the [additional content document](CRJ507-syllabus-additional-content.pdf).
 
 # IV. Course Schedule
 

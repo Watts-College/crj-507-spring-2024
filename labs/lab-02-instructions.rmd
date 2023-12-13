@@ -29,9 +29,7 @@ The purpose of this lab is to familiarize yourself with how networks are created
 
 <br>
 
-## Part I
-
-In [lab 01]() you created two networks. I would like you to continue working with those networks for this lab. Please review the [NAME] and [NAME] tutorials prior to beginning this lab.    
+In [Lab 1](../labs/lab-01-instructions.html) you created two networks. I would like you to continue working with those networks for this lab. Please review [Tutorial 3 - Introduction to Networks in R](../tutorials/tutorial-03-network-data.html) and [Tutorial 4 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html) prior to beginning this lab.    
 
 <br>
 
@@ -44,17 +42,13 @@ For *each* network you created, do the following:
 
 <br>
 
-## Part II
-
-How them work with a network here. Take one two of the trust networks from WO-PINS. Have them then make some comparisons.
-
 ____
 
 <br>
 
 # How to Submit
 
-Download the [template for this lab] prior to beginning the lab. 
+Download the [template for this lab](../labs/templates/lab-02-LastName.zip?raw=true) prior to beginning the lab. 
 
 <br>
 

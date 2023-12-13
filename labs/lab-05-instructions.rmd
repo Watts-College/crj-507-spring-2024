@@ -24,7 +24,7 @@ knitr::opts_chunk$set( echo = TRUE )
 
 # Introduction
 
-The purpose of this lab is to familiarize yourself with bipartite graphs and two-mode networks in *R*. Please review the [Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) chapter of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html) as well as the [Bipartite Graphs and Two-Mode Networks in R]() tutorial prior to beginning this lab.
+The purpose of this lab is to familiarize yourself with bipartite graphs and two-mode networks in *R*. Please review the [Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) chapter of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html) as well as [Tutorial 8 - Bipartite Graphs and Two-Mode Networks in R](../tutorials/tutorial-08-bipartite-twomode.html) prior to beginning this lab.
 
 <br>
 
@@ -62,7 +62,7 @@ For this part of the lab, use the `PhilKidnapNet` to repeat steps 1-10 in Part I
 
 # How to Submit
 
-Download the [template for this lab]() prior to beginning the lab. **The template contains code for accessing the data files**.
+Download the [template for this lab](../labs/templates/lab-05-LastName.zip?raw=true) prior to beginning the lab. **The template contains code for accessing the data files**.
 
 <br>
 
