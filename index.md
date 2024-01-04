@@ -125,7 +125,9 @@ Each week you will receive a short lab that will help you synthesize the materia
 
 #### Lab Review Sessions
 
-For each lab, there will be a review session a few days after the assignment is due. In these sessions I will go over the solutions in the lab. Use the following link to sign-up for the [Lab Review Sessions](https://calendly.com/jacobtnyoung/crj-507-lab-review-session).
+For each lab, there will be a review session after the assignment is due. In these sessions I will go over the solutions in the lab. This provides an opportunity for you to ask questions as I work through the code for the lab. NOTE: Since we will be discussing the solutions for the labs, you will not be able to turn in a lab assignment after the review session. I understand that things come up that interfere with assignments, but the best way to prevent this situation is to start early on the assignment. This is why I will hold the review sessions after the labs are due: so that we can discuss the code and you can start working on the next assignment as soon as possible.
+
+Use the following link to sign-up for the [Lab Review Sessions](https://calendly.com/jacobtnyoung/crj-507-lab-review-session).
 
 ### Discussion Topics (10%)
 
