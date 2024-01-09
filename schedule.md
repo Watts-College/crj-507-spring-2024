@@ -382,6 +382,8 @@ Once you have completed this section you will be able to answer the following qu
 
 * What is “network science” and how is it different from “usual” research?
 * What do networks “look like”?
+* What is R and and RStudio and how do I use these programs?
+* What are "data-driven documents" and how do I use them for this course?
 
 ## Lab Assignment
 

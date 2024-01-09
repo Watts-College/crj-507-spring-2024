@@ -2934,6 +2934,17 @@ body {
 text-align: justify}
 </style>
 <p><br></p>
+<p>In this tutorial, you will be introduced to the programming language
+R. The tutorial is designed for those who have no experience with R. We
+begin with what R is, how you install it, and work through how to
+navigate the environment. Even if you have used R before (awesome!), I
+would encourage you to review the tutorial as a refresher.</p>
+<p>A note on the tutorials. Each tutorial in this course will contain R
+code which is in the “code chunks” you see below. There is also regular
+text. The R code chunks can be copied and pasted directly into R. As you
+work through this tutorial, follow along in R by coping and pasting the
+R code and seeing it work on your end.</p>
+<p><br></p>
 <div id="things-about-r-to-get-you-started" class="section level1">
 <h1><em>10 Things about R to get you started:</em></h1>
 <p><br></p>
@@ -3228,31 +3239,26 @@ great!]).</p>
 reinstall it each time you open a new session. Rather, you just need to
 load the package using the <code>library()</code> function like this:
 <code>library(&quot;</code>package name<code>&quot;)</code>.</p>
-<p>Note that some packages require other packages for them to work. If
-there is an error, you need to install the additional packages.</p>
-<p>For example, let’s install the ergm package, a set of tools for
-estimating exponential random graph models. To get it we type:
-<code>install.packages( &quot;ergm&quot; )</code> and look at the additional
-packages that are installed. Then type:
-<code>library( &quot;ergm&quot; )</code>.</p>
+<p>Some packages require other packages for them to work. If there is an
+error, you need to install the additional packages.</p>
 <p>Note that each time you open R you have to load any packages that you
 manually loaded using the <code>install.packages()</code> function. In
 other words, if we closed R and then reopened it, we would need to type
 <code>library( &quot;ergm&quot; )</code> to load the functions in
-<code>ergm</code>.</p>
-<p>Note that we <em>do not</em> have to reinstall the package using
-<code>install.packages()</code>, we just have to load the library.</p>
+<code>ergm</code>. Note that we <em>do not</em> have to reinstall the
+package using <code>install.packages()</code>, we just have to load the
+library.</p>
 <p>If you have installed the package, but have not loaded it, R will
 return an error saying that a particular function is not found.<br />
-For example, the function <code>ergmm()</code> in the package
-<code>latentnet</code> is used to fit latent space and latent space
-cluster random network models. Type <code>?ergmm</code> and you get an
-error stating that there is no documentation available. This is because
-the <code>latetnet</code> library has not been loaded (even if you have
-installed <code>latentnet</code>). Typing
-<code>install.packages( &quot;latentnet&quot; )</code> and
-<code>library( latentnet )</code> prior to <code>?ergmm()</code> will
-solve this problem.</p>
+For example, the function <code>rgraph()</code> in the package
+<code>sna</code> (which is a set of tools for working with social
+networks that we will use for this course) is used to create random
+graphs. Type <code>?rgraph</code> and you get an error stating that
+there is no documentation available. This is because the
+<code>sna</code> library has not been loaded (even if you have installed
+<code>sna</code>). Typing <code>install.packages( &quot;sna&quot; )</code> and
+<code>library( sna )</code> prior to <code>?rgraph()</code> will solve
+this problem.</p>
 <p>A final point on loading packages. Since anyone can write and
 contributes packages to R, it is not surprising that some packages
 occasionally use the same names for functions. When you have loaded
@@ -3340,9 +3346,15 @@ easier-to-use GUI for R. It is a free, open-source IDE (i.e. integrated
 development environment) for working with R. Unlike the standard R GUI,
 RStudio tiles windows on the screen and puts different windows in
 different tabs. RStudio can be downloaded from: <a href="http://www.rstudio.com">http://www.rstudio.com</a>.</p>
-<p>For a brief, but informative, introduction to RStudio, check out this
-<a href="https://www.youtube.com/embed/xgPwDlAtuNI">video</a>.</p>
-<p>Go ahead and open RStudio and let’s take a look!</p>
+<div id="rstudio-workthrough" class="section level3">
+<h3>RStudio workthrough</h3>
+<p>Ok, now open RStudio and let’s take a look! Go ahead, I can wait.</p>
+<p>Ok, glad your back! Now, that you have RStudio up and running, try
+rerunning some of the code above. You will see that R operates within
+the RStudio environment. However, there are more tools available in
+RStudio which we will use.</p>
+<p>These tools are explored further in the next tutorial, <a href="../tutorials/tutorial-02-intro-to-rmarkdown.html">Introduction to
+Data-Driven Documents</a></p>
 <hr />
 <p><br></p>
 <div id="please-report-any-needed-corrections-to-the-issues-page.-thanks" class="section level5">
@@ -3350,8 +3362,9 @@ different tabs. RStudio can be downloaded from: <a href="http://www.rstudio.com"
 the <a href="https://github.com/Watts-College/crj-507-template/issues">Issues</a>
 page. Thanks!</h5>
 <p><br> <br></p>
-<div id="last-updated-21-november-2023" class="section level6">
-<h6><strong><em>Last updated 21 November, 2023</em></strong></h6>
+<div id="last-updated-09-january-2024" class="section level6">
+<h6><strong><em>Last updated 09 January, 2024</em></strong></h6>
+</div>
 </div>
 </div>
 </div>

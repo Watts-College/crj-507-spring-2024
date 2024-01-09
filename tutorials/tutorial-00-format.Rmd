@@ -33,4 +33,4 @@ CONTENT
 <br>
 <br>
 
-##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-template/issues) page. Thanks!
+##### ***Please*** report any needed corrections to the [Issues](https://watts-college.github.io/crj-507-spring-2024/tutorials/tutorial-02-intro-to-rmarkdown.html) page. Thanks!

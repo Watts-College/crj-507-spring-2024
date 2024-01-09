@@ -470,13 +470,11 @@ title( "Unipartite Projection of\n Incidents (Group) Matrix", line = 1 )
 
 ```
 
+____
+
+<br>
+
+##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-spring-2024/issues/new) page. Thanks!
 
 <br>
 <br>
-
-----
-
-<br>
-<br>
-
-##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-template/issues) page. Thanks!

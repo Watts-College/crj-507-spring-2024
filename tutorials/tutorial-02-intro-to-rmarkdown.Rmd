@@ -20,7 +20,16 @@ text-align: justify}
 
 ----
 
-*This lab will illustrate how to use RMarkdown to create reproducible analyses.*
+<br>
+
+In this tutorial, you will be introduced to RMarkdown using RStudio. A great feature of RStudio is that you can create these so-called data-driven documents that combine text and analysis into a "reproducible" document. In other words, it allows you to write all of the text, syntax for the analysis, etc. and keep it in a document. This way you are not bouncing between programs and everything is reproducible. This is ideal if you are using a publicly available data set or for making your workflow reproducible.
+
+Why are you learning this? We will be using RMarkdown templates for your lab assignments in this course. When you get to the labs with templates (these are indicated in the course schedule), you will be working with RMarkdown. So, we want to start learning it early.
+
+*Also*, this is a skill you should develop as you expand your data analysis tool kit. 
+
+<br>
+
 
 ***
 
@@ -361,17 +370,11 @@ Or you can link directly to an image online using the URL address of the image:
 <br>
 
 
-
-***
-
-#### ***Questions?***
+____
 
 <br>
 
-
-##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-template/issues) page. Thanks!
+##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-spring-2024/issues/new) page. Thanks!
 
 <br>
 <br>
-
-###### ***Last updated `r format(Sys.time(), '%d %B, %Y')`***

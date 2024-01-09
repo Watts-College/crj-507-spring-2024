@@ -23,6 +23,12 @@ tutorial::go_interactive( greedy = FALSE )
 
 <br>
 
+In this tutorial, you will be introduced to the programming language R. The tutorial is designed for those who have no experience with R. We begin with what R is, how you install it, and work through how to navigate the environment. Even if you have used R before (awesome!), I would encourage you to review the tutorial as a refresher.  
+
+A note on the tutorials. Each tutorial in this course will contain R code which is in the "code chunks" you see below. There is also regular text. The R code chunks can be copied and pasted directly into R. As you work through this tutorial, follow along in R by coping and pasting the R code and seeing it work on your end.
+
+<br>
+
 # *10 Things about R to get you started:*  
 
 <br>
@@ -288,16 +294,12 @@ If there is a particular package you want to add, you simply use the `install.pa
 
 After the package is installed on your machine, you do not need to reinstall it each time you open a new session. Rather, you just need to load the package using the `library()` function like this: `library("`package name`")`.  
 
-Note that some packages require other packages for them to work. If there is an error, you need to install the additional packages.  
+Some packages require other packages for them to work. If there is an error, you need to install the additional packages.  
 
-For example, let’s install the ergm package, a set of tools for estimating exponential random graph models. To get it we type: `install.packages( "ergm" )` and look at the additional packages that are installed. Then type: `library( "ergm" )`.  
-
-Note that each time you open R you have to load any packages that you manually loaded using the `install.packages()` function. In other words, if we closed R and then reopened it, we would need to type `library( "ergm" )` to load the functions in `ergm`.   
-
-Note that we *do not* have to reinstall the package using `install.packages()`, we just have to load the library.  
+Note that each time you open R you have to load any packages that you manually loaded using the `install.packages()` function. In other words, if we closed R and then reopened it, we would need to type `library( "ergm" )` to load the functions in `ergm`. Note that we *do not* have to reinstall the package using `install.packages()`, we just have to load the library.  
 
 If you have installed the package, but have not loaded it, R will return an error saying that a particular function is not found.  
-For example, the function `ergmm()` in the package `latentnet` is used to fit latent space and latent space cluster random network models. Type `?ergmm` and you get an error stating that there is no documentation available. This is because the `latetnet` library has not been loaded (even if you have installed `latentnet`). Typing `install.packages( "latentnet" )` and `library( latentnet )` prior to `?ergmm()` will solve this problem.  
+For example, the function `rgraph()` in the package `sna` (which is a set of tools for working with social networks that we will use for this course) is used to create random graphs. Type `?rgraph` and you get an error stating that there is no documentation available. This is because the `sna` library has not been loaded (even if you have installed `sna`). Typing `install.packages( "sna" )` and `library( sna )` prior to `?rgraph()` will solve this problem.  
 
 A final point on loading packages. Since anyone can write and contributes packages to R, it is not surprising that some packages occasionally use the same names for functions. When you have loaded libraries for packages that have conflicting functions, R will output a message indicating there is an issue.
 
@@ -354,18 +356,20 @@ You may be surprised to discover how little functionality is implemented in the 
 
 This was just the nature of working with R until some awesome human beings created RStudio. RStudio is one of several projects to build an easier-to-use GUI for R. It is a free, open-source IDE (i.e. integrated development environment) for working with R. Unlike the standard R GUI, RStudio tiles windows on the screen and puts different windows in different tabs. RStudio can be downloaded from: [http://www.rstudio.com](http://www.rstudio.com).  
 
-For a brief, but informative, introduction to RStudio, check out this [video](https://www.youtube.com/embed/xgPwDlAtuNI).
+### RStudio workthrough
 
-Go ahead and open RStudio and let's take a look!
+Ok, now open RStudio and let's take a look! Go ahead, I can wait. 
+
+Ok, glad your back! Now, that you have RStudio up and running, try rerunning some of the code above. You will see that R operates within the RStudio environment. However, there are more tools available in RStudio which we will use. 
+
+These tools are explored further in the next tutorial, [Introduction to Data-Driven Documents](https://watts-college.github.io/crj-507-spring-2024/tutorials/tutorial-02-intro-to-rmarkdown.html).
+
 
 ____
 
 <br>
 
-
-##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-template/issues) page. Thanks!
+##### ***Please*** report any needed corrections to the [Issues](https://github.com/Watts-College/crj-507-spring-2024/issues/new) page. Thanks!
 
 <br>
 <br>
-
-###### ***Last updated `r format(Sys.time(), '%d %B, %Y')`***
