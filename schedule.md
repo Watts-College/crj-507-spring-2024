@@ -387,7 +387,7 @@ Once you have completed this section you will be able to answer the following qu
 
 ## Lab Assignment
 
-Lab-01 will provide you the opportunity to start thinking about networks and get your "feet wet" in social network analysis. For the first lab, you will construct a network of your own that you will work with it throughout the term. 
+In this lab you will provide you the opportunity to start thinking about networks and get your "feet wet" in social network analysis. For the first lab, you will construct several networks of your own that you will work with it throughout the course. 
 
 *** { @unit = "", @title = "Readings", @reading, @foldout  }
 
@@ -422,7 +422,7 @@ The following checklist will help you stay organized in your first week.
 
 ## Introduce Yourself to the Class
 
-We will be using a discussion board called **YellowDig** for this course. Introduce yourself to the class:
+We will be using a discussion board called **YellowDig** for this course. For your first discussion post, I would like you to introduce yourself to the class by telling us:
 
 1. A little about yourself
 2. Your previous experience with data and analytics
@@ -448,7 +448,7 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 
 ## Lab 1 - Introduction to Network Analysis
 
-In this lab you will provide you the opportunity to start thinking about networks and get your "feet wet" in social network analysis. For the first lab, you will construct a network of your own that you will work with it throughout the term. 
+In this lab you will provide you the opportunity to start thinking about networks and get your "feet wet" in social network analysis. For the first lab, you will construct several networks of your own that you will work with it throughout the course. 
 
 <a class="uk-button uk-button-default" onclick="window.open('../labs/lab-01-instructions.html')">LAB 1 Instructions</a>
 
