@@ -30,9 +30,6 @@ Why are you learning this? We will be using RMarkdown templates for your lab ass
 
 <br>
 
-
-***
-
 # **Data-Driven Documents**    
 
 ## What are Data-Driven Documents?
