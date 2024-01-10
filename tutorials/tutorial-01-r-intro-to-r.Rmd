@@ -33,14 +33,14 @@ A note on the tutorials. Each tutorial in this course will contain R code which 
 
 <br>
 
-## **1. What is R**
+### **1. What is R**
 R is a dialect of the *S* language that was written by John Chambers and others at Bell Labs in the 70s. In the 90s, R was developed and made available to the public with the GNU general public license. Importantly, R is *free*, meaning that you don’t have to pay for it (duh), but it is also **open source**, meaning that you have freedom to use and modify it.  
 
 R is an operating system for data science software. Just as Windows allows you to turn on your computer, open a web browser, moved files around, and write a paper using MS Word, R allows you to install and run packages and manage files while organizing large data projects. Just like Windows would be a very boring piece of software without all of the applications you run while on the computer, R would be a boring language without all of the packages it can run.
 
 <br>
 
-## **2. Installing and Starting**  
+### **2. Installing and Starting**  
 Go to [http://cran.r-project.org](http://cran.r-project.org). Find the "Download R for..." link that is appropriate for your operating system.
 
 When R starts it loads some basic info and provides you with a prompt: `>`
