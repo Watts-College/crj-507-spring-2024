@@ -35,10 +35,11 @@ In [Lab 1](../labs/lab-01-instructions.html) you created two networks. I would l
 
 For *each* network you created, do the following:  
 
-1. Import the network into *R* using the `read.csv()` function or create the network using the `matrix()` function.
-2. Create an object of class `network`. 
-3. Plot the network using the `gplot()` function.    
-4. Modify the plot using at least three arguments in the `gplot()` function.  
+1. Create an adjacency matrix of the network and save it as a .csv file.
+2. Import the network into *R* using the `read.csv()` function or create the network using the `matrix()` function.
+3. Create an object of class `network`. 
+4. Plot the network using the `gplot()` function.    
+5. Modify the plot using at least three arguments in the `gplot()` function.  
 
 <br>
 

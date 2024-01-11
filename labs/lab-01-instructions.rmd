@@ -43,8 +43,6 @@ For the first lab, I would like you to construct a network. Think about a type o
     
 ### B. Draw a picture of the network (by hand is fine)
   
-### C. Draw the adjacency matrix for the network (by hand is fine)
-
 ____  
 
 ## Part II
