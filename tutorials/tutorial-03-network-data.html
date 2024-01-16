@@ -2930,13 +2930,22 @@ body {
 text-align: justify}
 </style>
 <hr />
-<p><em>This lab will work through some basic examples of matrices and
-how they are created, imported, and manipulated in R.</em></p>
-<hr />
+<p><br></p>
+<p>Now that you know about representing network data as matrices, let’s
+start getting our hands dirty (figuratively of course) by building some
+networks in R! This lab will work through some basic examples of
+matrices and how they are created, imported, and manipulated in R.</p>
+<p>A note on the tutorials. Each tutorial in this course will contain R
+code which is in the “code chunks” you see below. There is also regular
+text. The R code chunks can be copied and pasted directly into R. As you
+work through this tutorial, follow along in R by coping and pasting the
+R code and seeing it work on your end.</p>
+<p><br></p>
 <div id="working-with-matrices" class="section level3">
 <h3><strong>Working with matrices</strong></h3>
-<p>First, clear the workspace:<br />
-<code>rm( list = ls() )</code></p>
+<p>First, clear the workspace. To do so, we use the following
+statement:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">rm</span>( <span class="at">list =</span> <span class="fu">ls</span>() )</span></code></pre></div>
 <p>Let’s start by working with an example of an undirected, binary
 network. We will create an object that is the <em>adjacency
 matrix</em>.</p>
@@ -2948,48 +2957,55 @@ We can look at what these functions do by asking for help using the
 <code>?(&quot;</code> function name here <code>&quot;)</code> functions.</p>
 <p>The help window describes the arguments that the function takes and
 also provides examples.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># help for the matrix() function</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>?matrix</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># help for the c() function</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>?c</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># help for the matrix() function</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>?matrix</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co"># help for the c() function</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>?c</span></code></pre></div>
+<p><br></p>
 <p>Now, let’s create the data object:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>),</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">5</span>,<span class="at">byrow=</span><span class="cn">TRUE</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>  )</span></code></pre></div>
-<p>This command reads as follows:<br />
-- Combine the following numbers;<br />
-- From these combined numbers, create a matrix by reading across the
-list;<br />
-- Create an object called data. This object will be a matrix with 5
-rows.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>mat <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>    <span class="at">nrow=</span><span class="dv">5</span>,<span class="at">byrow=</span><span class="cn">TRUE</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  )</span></code></pre></div>
+<p>This command reads as follows:</p>
+<ul>
+<li><p>Combine the following numbers</p></li>
+<li><p>From these combined numbers, create a matrix by reading across
+the list</p></li>
+<li><p>Create an object called data. This object will be a matrix with 5
+rows.</p></li>
+</ul>
 <p>We can see the object by just typing the object name:
 <code>mat</code>. <em>Note</em> that if the number of elements does not
 correctly match the dimensions of the matrix, R gives you an error.</p>
+<p><br></p>
 <p>For example:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>junk1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>),<span class="at">nrow=</span><span class="dv">2</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>) </span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co"># Because there are 7 elements here, </span></span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co"># the 8th element needed for a matrix </span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co"># is replaced with the first value in the vector</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>junk1</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>junk1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>),<span class="at">nrow=</span><span class="dv">2</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>) </span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co"># Because there are 7 elements here, </span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co"># the 8th element needed for a matrix </span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co"># is replaced with the first value in the vector</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co"># print out the object by just typing the name of the object</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>junk1 </span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3] [,4]
 ## [1,]    1    2    3    4
 ## [2,]    5    6    7    1</code></pre>
+<p><br></p>
 <p>After we have created our object <code>mat</code>, we can examine the
 dimensions with the dim function: <code>dim( mat )</code>.</p>
 <p>We can also attach names to the rows and columns of the matrix by
 using the <code>rownames()</code> and <code>colnames()</code>
 functions.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># attach row names</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="fu">rownames</span>( mat ) <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">&quot;Jen&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Jim&quot;</span> )</span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co"># attach column names</span></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="fu">colnames</span>( mat ) <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">&quot;Jen&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Jim&quot;</span> )</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="co"># print out the object</span></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>mat</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co"># attach row names</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">rownames</span>( mat ) <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">&quot;Jen&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Jim&quot;</span> )</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="co"># attach column names</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="fu">colnames</span>( mat ) <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">&quot;Jen&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Jim&quot;</span> )</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="co"># print out the object</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>mat</span></code></pre></div>
 <pre><code>##      Jen Tom Bob Leaf Jim
 ## Jen    0   1   0    0   0
 ## Tom    1   0   1    0   0
@@ -3008,55 +3024,58 @@ dimension and the column is the second dimension. Remember: “rows by
 columns”</p>
 <p>We can also call the values for an entire row or column. A single
 value is called a <em>scalar</em>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># this reads: return the first row of data</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>mat[<span class="dv">1</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># this reads: return the first row of data</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>mat[<span class="dv">1</span>,]</span></code></pre></div>
 <pre><code>##  Jen  Tom  Bob Leaf  Jim 
 ##    0    1    0    0    0</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># this reads: return the first column of data</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>mat[,<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># this reads: return the first column of data</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>mat[,<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>##  Jen  Tom  Bob Leaf  Jim 
 ##    0    1    0    0    0</code></pre>
 <p>Since we have defined names for the rows and columns, we can use
 those as well.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># reference the ROW pertaining to Jen</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>mat[<span class="st">&quot;Jen&quot;</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># reference the ROW pertaining to Jen</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>mat[<span class="st">&quot;Jen&quot;</span>,]</span></code></pre></div>
 <pre><code>##  Jen  Tom  Bob Leaf  Jim 
 ##    0    1    0    0    0</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># reference the COLUMN pertaining to Jen</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>mat[,<span class="st">&quot;Jen&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># reference the COLUMN pertaining to Jen</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>mat[,<span class="st">&quot;Jen&quot;</span>]</span></code></pre></div>
 <pre><code>##  Jen  Tom  Bob Leaf  Jim 
 ##    0    1    0    0    0</code></pre>
+<p><br></p>
 <p><em>Note</em>: the following does not work because it needs a
 character, defined by the <code>&quot;&quot;</code> symbols around the name.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># returns an error because there is no OBJECT called Jen </span></span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>mat[,Jen]</span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a><span class="co"># compare the difference with the prior line</span></span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>mat[,<span class="st">&quot;Jen&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># returns an error because there is no OBJECT called Jen </span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>mat[,Jen]</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a><span class="co"># compare the difference with the prior line</span></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>mat[,<span class="st">&quot;Jen&quot;</span>]</span></code></pre></div>
+<p><br></p>
 <p>We can also call a series of values:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># return the first three ROWS of the object data</span></span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>mat[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># return the first three ROWS of the object data</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>mat[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span></code></pre></div>
 <pre><code>##     Jen Tom Bob Leaf Jim
 ## Jen   0   1   0    0   0
 ## Tom   1   0   1    0   0
 ## Bob   0   1   0    1   1</code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="co"># return the first three COLUMNS of the object data</span></span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>mat[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co"># return the first three COLUMNS of the object data</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>mat[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div>
 <pre><code>##      Jen Tom Bob
 ## Jen    0   1   0
 ## Tom    1   0   1
 ## Bob    0   1   0
 ## Leaf   0   0   1
 ## Jim    0   0   1</code></pre>
+<p><br></p>
 <p>We can also call a group of values that are non-contiguous using the
 <code>c()</code> function:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="co"># return the first and second ROWS of the object data</span></span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>mat[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),]</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="co"># return the first and second ROWS of the object data</span></span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>mat[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),]</span></code></pre></div>
 <pre><code>##     Jen Tom Bob Leaf Jim
 ## Jen   0   1   0    0   0
 ## Bob   0   1   0    1   1</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="co"># return the first and second COLUMNS of the object data</span></span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>mat[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="co"># return the first and second COLUMNS of the object data</span></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>mat[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span></code></pre></div>
 <pre><code>##      Jen Bob
 ## Jen    0   0
 ## Tom    1   1
@@ -3066,20 +3085,26 @@ character, defined by the <code>&quot;&quot;</code> symbols around the name.</p>
 <p>We can also call a group of values that that do not contain specified
 values by putting a <code>-</code> (i.e. a minus sign) in front of the c
 function:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="co"># return the object data without ROWS 1 and 3</span></span>
-<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>mat[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),]</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="co"># return the object data without ROWS 1 and 3</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>mat[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),]</span></code></pre></div>
 <pre><code>##      Jen Tom Bob Leaf Jim
 ## Tom    1   0   1    0   0
 ## Leaf   0   0   1    0   1
 ## Jim    0   0   1    1   0</code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="co"># return the object data without COLUMNS 1 and 3</span></span>
-<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>mat[,<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="co"># return the object data without COLUMNS 1 and 3</span></span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>mat[,<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span></code></pre></div>
 <pre><code>##      Tom Leaf Jim
 ## Jen    1    0   0
 ## Tom    0    0   0
 ## Bob    1    1   1
 ## Leaf   0    0   1
 ## Jim    0    1   0</code></pre>
+<p><br></p>
+<p>Got it? If yes, then GREAT! If no, hang in there: you got this! If
+you are a bit hesitant with working with indexing, the best way to get
+better is to practice. Feel free to work back through the section above
+to get better at this basic skill we will use a LOT in this course.</p>
+<p><br></p>
 </div>
 <div id="exploring-the-network-package" class="section level3">
 <h3><strong>Exploring the <code>network</code> package</strong></h3>
@@ -3101,32 +3126,35 @@ function. <code>library( &quot;network&quot; )</code></p>
 respect to the package itself use the <code>help()</code> function, but
 tell R we want help on the particular package:
 <code>help( package=&quot;network&quot; )</code></p>
+<p><br></p>
 </div>
 <div id="working-with-unidirected-binary-networks" class="section level3">
 <h3><strong>Working with <em>Unidirected</em>, Binary
 Networks</strong></h3>
 <p>Now that the package is loaded, lets create a new object from our
-matrix that is a network. In R lingo, we will use the network function
-to create an object that is of <em>class</em> <code>network</code>. To
-use some of the functions, it has to be a specific class.</p>
+matrix that is a network. In R lingo, we will use the
+<code>network()</code> function to create an object that is of
+<em>class</em> <code>network</code>. To use some of the functions, it
+has to be a specific class.</p>
 <p>Just like you can’t perform calculations on a object that is of class
 <code>character</code> (e.g. a list of names), the functions in this
 page are designed to work with a <code>network</code> object.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="co"># look at our object</span></span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>mat</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="co"># look at our object</span></span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a>mat</span></code></pre></div>
 <pre><code>##      Jen Tom Bob Leaf Jim
 ## Jen    0   1   0    0   0
 ## Tom    1   0   1    0   0
 ## Bob    0   1   0    1   1
 ## Leaf   0   0   1    0   1
 ## Jim    0   0   1    1   0</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="co"># what class is the object</span></span>
-<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a><span class="fu">class</span>( mat )</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="co"># what class is the object</span></span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="fu">class</span>( mat )</span></code></pre></div>
 <pre><code>## [1] &quot;matrix&quot; &quot;array&quot;</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="co"># now, coerce the object into </span></span>
-<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="co"># an object called net.u that</span></span>
-<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a><span class="co"># is of class network</span></span>
-<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a>net.u <span class="ot">&lt;-</span> <span class="fu">as.network</span>( mat )</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="co"># now, coerce the object into </span></span>
+<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a><span class="co"># an object called net.u that</span></span>
+<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a><span class="co"># is of class network</span></span>
+<span id="cb33-4"><a href="#cb33-4" tabindex="-1"></a>net.u <span class="ot">&lt;-</span> <span class="fu">as.network</span>( mat )</span></code></pre></div>
+<p><br></p>
 <p>When we enter the object in the command line, summary info about the
 object is produced: <code>net.u</code>. This is because the object is of
 class <code>network</code>. We can use the class function to confirm
@@ -3144,13 +3172,13 @@ because our network is <strong>undirected</strong>. In other words,
 <code>directed = FALSE</code>. This tells the function that the matrix
 we are entering is an undirected network. This is logical: is the object
 a directed network? False. Therefore, it is an undirected network.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="co"># create a new object called net.u.correct</span></span>
-<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a>net.u.correct <span class="ot">&lt;-</span> <span class="fu">as.network</span>( </span>
-<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a>  mat, </span>
-<span id="cb33-4"><a href="#cb33-4" tabindex="-1"></a>  <span class="at">directed =</span> <span class="cn">FALSE</span> )</span>
-<span id="cb33-5"><a href="#cb33-5" tabindex="-1"></a></span>
-<span id="cb33-6"><a href="#cb33-6" tabindex="-1"></a><span class="co"># compare the difference since telling the function that the network is directed</span></span>
-<span id="cb33-7"><a href="#cb33-7" tabindex="-1"></a>net.u</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="co"># create a new object called net.u.correct</span></span>
+<span id="cb34-2"><a href="#cb34-2" tabindex="-1"></a>net.u.correct <span class="ot">&lt;-</span> <span class="fu">as.network</span>( </span>
+<span id="cb34-3"><a href="#cb34-3" tabindex="-1"></a>  mat, </span>
+<span id="cb34-4"><a href="#cb34-4" tabindex="-1"></a>  <span class="at">directed =</span> <span class="cn">FALSE</span> )</span>
+<span id="cb34-5"><a href="#cb34-5" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="#cb34-6" tabindex="-1"></a><span class="co"># compare the difference since telling the function that the network is directed</span></span>
+<span id="cb34-7"><a href="#cb34-7" tabindex="-1"></a>net.u</span></code></pre></div>
 <pre><code>##  Network attributes:
 ##   vertices = 5 
 ##   directed = TRUE 
@@ -3166,7 +3194,7 @@ a directed network? False. Therefore, it is an undirected network.</p>
 ##     vertex.names 
 ## 
 ## No edge attributes</code></pre>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a>net.u.correct</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a>net.u.correct</span></code></pre></div>
 <pre><code>##  Network attributes:
 ##   vertices = 5 
 ##   directed = FALSE 
@@ -3182,6 +3210,7 @@ a directed network? False. Therefore, it is an undirected network.</p>
 ##     vertex.names 
 ## 
 ## No edge attributes</code></pre>
+<p><br></p>
 <p>The <code>summary()</code> function is a generic function that
 summarizes objects. We can use it on an object of class
 <code>network</code> to provide more information:
@@ -3194,30 +3223,30 @@ network is shown on the <code>?as.network</code> page.</p>
 to <code>adjacency</code>. For an edgelist, we would need to change the
 input for the <code>matrix.type =</code> argument to
 <code>edgelist</code>.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="co"># for example, lets make an edgelist called edge</span></span>
-<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a><span class="co"># it will be a matrix of 5 rows and we are reading off by row</span></span>
-<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a>edge <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
-<span id="cb37-4"><a href="#cb37-4" tabindex="-1"></a>  <span class="fu">c</span>( <span class="st">&quot;Jen&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Jim&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Jim&quot;</span> ),</span>
-<span id="cb37-5"><a href="#cb37-5" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">5</span>, </span>
-<span id="cb37-6"><a href="#cb37-6" tabindex="-1"></a>  <span class="at">byrow =</span> <span class="cn">TRUE</span> )</span>
-<span id="cb37-7"><a href="#cb37-7" tabindex="-1"></a></span>
-<span id="cb37-8"><a href="#cb37-8" tabindex="-1"></a><span class="co"># take a look</span></span>
-<span id="cb37-9"><a href="#cb37-9" tabindex="-1"></a>edge</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="co"># for example, lets make an edgelist called edge</span></span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a><span class="co"># it will be a matrix of 5 rows and we are reading off by row</span></span>
+<span id="cb38-3"><a href="#cb38-3" tabindex="-1"></a>edge <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb38-4"><a href="#cb38-4" tabindex="-1"></a>  <span class="fu">c</span>( <span class="st">&quot;Jen&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Jim&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Jim&quot;</span> ),</span>
+<span id="cb38-5"><a href="#cb38-5" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">5</span>, </span>
+<span id="cb38-6"><a href="#cb38-6" tabindex="-1"></a>  <span class="at">byrow =</span> <span class="cn">TRUE</span> )</span>
+<span id="cb38-7"><a href="#cb38-7" tabindex="-1"></a></span>
+<span id="cb38-8"><a href="#cb38-8" tabindex="-1"></a><span class="co"># take a look</span></span>
+<span id="cb38-9"><a href="#cb38-9" tabindex="-1"></a>edge</span></code></pre></div>
 <pre><code>##      [,1]   [,2]  
 ## [1,] &quot;Jen&quot;  &quot;Tom&quot; 
 ## [2,] &quot;Tom&quot;  &quot;Bob&quot; 
 ## [3,] &quot;Bob&quot;  &quot;Leaf&quot;
 ## [4,] &quot;Bob&quot;  &quot;Jim&quot; 
 ## [5,] &quot;Leaf&quot; &quot;Jim&quot;</code></pre>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="co"># create an object called edge.net.u</span></span>
-<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a><span class="co"># but change the default to edgelist for the matrix.type argument.</span></span>
-<span id="cb39-3"><a href="#cb39-3" tabindex="-1"></a>edge.net.u <span class="ot">&lt;-</span> <span class="fu">as.network</span>(</span>
-<span id="cb39-4"><a href="#cb39-4" tabindex="-1"></a>  edge, </span>
-<span id="cb39-5"><a href="#cb39-5" tabindex="-1"></a>  <span class="at">directed =</span> <span class="cn">FALSE</span>, </span>
-<span id="cb39-6"><a href="#cb39-6" tabindex="-1"></a>  <span class="at">matrix.type =</span> <span class="st">&quot;edgelist&quot;</span> ) </span>
-<span id="cb39-7"><a href="#cb39-7" tabindex="-1"></a></span>
-<span id="cb39-8"><a href="#cb39-8" tabindex="-1"></a><span class="co"># now take a look</span></span>
-<span id="cb39-9"><a href="#cb39-9" tabindex="-1"></a><span class="fu">summary</span>( edge.net.u )</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a><span class="co"># create an object called edge.net.u</span></span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a><span class="co"># but change the default to edgelist for the matrix.type argument.</span></span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a>edge.net.u <span class="ot">&lt;-</span> <span class="fu">as.network</span>(</span>
+<span id="cb40-4"><a href="#cb40-4" tabindex="-1"></a>  edge, </span>
+<span id="cb40-5"><a href="#cb40-5" tabindex="-1"></a>  <span class="at">directed =</span> <span class="cn">FALSE</span>, </span>
+<span id="cb40-6"><a href="#cb40-6" tabindex="-1"></a>  <span class="at">matrix.type =</span> <span class="st">&quot;edgelist&quot;</span> ) </span>
+<span id="cb40-7"><a href="#cb40-7" tabindex="-1"></a></span>
+<span id="cb40-8"><a href="#cb40-8" tabindex="-1"></a><span class="co"># now take a look</span></span>
+<span id="cb40-9"><a href="#cb40-9" tabindex="-1"></a><span class="fu">summary</span>( edge.net.u )</span></code></pre></div>
 <pre><code>## Network attributes:
 ##   vertices = 5
 ##   directed = FALSE
@@ -3244,16 +3273,16 @@ input for the <code>matrix.type =</code> argument to
 ## Jim    1   0   0    1   0
 ## Leaf   1   0   1    0   0
 ## Tom    1   1   0    0   0</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a><span class="co"># The as.network() function will often recognize the matrix type being entered</span></span>
-<span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a><span class="co"># create the object again, but do not toggle the matrix.type argument</span></span>
-<span id="cb41-3"><a href="#cb41-3" tabindex="-1"></a>edge.net.u <span class="ot">&lt;-</span> <span class="fu">as.network</span>( </span>
-<span id="cb41-4"><a href="#cb41-4" tabindex="-1"></a>  edge,</span>
-<span id="cb41-5"><a href="#cb41-5" tabindex="-1"></a>  <span class="at">directed =</span> <span class="cn">FALSE</span> )</span>
-<span id="cb41-6"><a href="#cb41-6" tabindex="-1"></a></span>
-<span id="cb41-7"><a href="#cb41-7" tabindex="-1"></a><span class="co"># is it different</span></span>
-<span id="cb41-8"><a href="#cb41-8" tabindex="-1"></a><span class="co"># no, because the function is programmed to </span></span>
-<span id="cb41-9"><a href="#cb41-9" tabindex="-1"></a><span class="co"># read the dimensions of the input object</span></span>
-<span id="cb41-10"><a href="#cb41-10" tabindex="-1"></a><span class="fu">summary</span>( edge.net.u )</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="co"># The as.network() function will often recognize the matrix type being entered</span></span>
+<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a><span class="co"># create the object again, but do not toggle the matrix.type argument</span></span>
+<span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a>edge.net.u <span class="ot">&lt;-</span> <span class="fu">as.network</span>( </span>
+<span id="cb42-4"><a href="#cb42-4" tabindex="-1"></a>  edge,</span>
+<span id="cb42-5"><a href="#cb42-5" tabindex="-1"></a>  <span class="at">directed =</span> <span class="cn">FALSE</span> )</span>
+<span id="cb42-6"><a href="#cb42-6" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="#cb42-7" tabindex="-1"></a><span class="co"># is it different</span></span>
+<span id="cb42-8"><a href="#cb42-8" tabindex="-1"></a><span class="co"># no, because the function is programmed to </span></span>
+<span id="cb42-9"><a href="#cb42-9" tabindex="-1"></a><span class="co"># read the dimensions of the input object</span></span>
+<span id="cb42-10"><a href="#cb42-10" tabindex="-1"></a><span class="fu">summary</span>( edge.net.u )</span></code></pre></div>
 <pre><code>## Network attributes:
 ##   vertices = 5
 ##   directed = FALSE
@@ -3280,34 +3309,36 @@ input for the <code>matrix.type =</code> argument to
 ## Jim    1   0   0    1   0
 ## Leaf   1   0   1    0   0
 ## Tom    1   1   0    0   0</code></pre>
+<p><br></p>
 </div>
 <div id="working-with-directed-binary-networks" class="section level3">
 <h3><strong>Working with <em>Directed</em>, Binary
 Networks</strong></h3>
 <p>Now, let’s work with the example of a directed, binary network. We
 will create an object that is the adjacency matrix.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="co"># these were written in by row</span></span>
-<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a><span class="co"># so we want it to read by row, byrow=TRUE</span></span>
-<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a>mat.d <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
-<span id="cb43-4"><a href="#cb43-4" tabindex="-1"></a>  <span class="fu">c</span>( <span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span> ),</span>
-<span id="cb43-5"><a href="#cb43-5" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">5</span>,</span>
-<span id="cb43-6"><a href="#cb43-6" tabindex="-1"></a>  <span class="at">byrow =</span> <span class="cn">TRUE</span> )</span>
-<span id="cb43-7"><a href="#cb43-7" tabindex="-1"></a></span>
-<span id="cb43-8"><a href="#cb43-8" tabindex="-1"></a><span class="co"># take a look at the matrix</span></span>
-<span id="cb43-9"><a href="#cb43-9" tabindex="-1"></a>mat.d </span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="co"># these were written in by row</span></span>
+<span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a><span class="co"># so we want it to read by row, byrow=TRUE</span></span>
+<span id="cb44-3"><a href="#cb44-3" tabindex="-1"></a>mat.d <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb44-4"><a href="#cb44-4" tabindex="-1"></a>  <span class="fu">c</span>( <span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span> ),</span>
+<span id="cb44-5"><a href="#cb44-5" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">5</span>,</span>
+<span id="cb44-6"><a href="#cb44-6" tabindex="-1"></a>  <span class="at">byrow =</span> <span class="cn">TRUE</span> )</span>
+<span id="cb44-7"><a href="#cb44-7" tabindex="-1"></a></span>
+<span id="cb44-8"><a href="#cb44-8" tabindex="-1"></a><span class="co"># take a look at the matrix</span></span>
+<span id="cb44-9"><a href="#cb44-9" tabindex="-1"></a>mat.d </span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5]
 ## [1,]    0    1    0    0    0
 ## [2,]    0    0    1    0    0
 ## [3,]    0    0    0    1    1
 ## [4,]    0    0    1    0    1
 ## [5,]    0    0    1    1    0</code></pre>
+<p><br></p>
 <p>Now, let’s coerce it to be an object of class network.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a>net.d <span class="ot">&lt;-</span> <span class="fu">as.network</span>( </span>
-<span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a>  mat.d,</span>
-<span id="cb45-3"><a href="#cb45-3" tabindex="-1"></a>  <span class="at">directed =</span> <span class="cn">TRUE</span> )</span>
-<span id="cb45-4"><a href="#cb45-4" tabindex="-1"></a></span>
-<span id="cb45-5"><a href="#cb45-5" tabindex="-1"></a><span class="co"># take a look</span></span>
-<span id="cb45-6"><a href="#cb45-6" tabindex="-1"></a><span class="fu">summary</span>( net.d )</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a>net.d <span class="ot">&lt;-</span> <span class="fu">as.network</span>( </span>
+<span id="cb46-2"><a href="#cb46-2" tabindex="-1"></a>  mat.d,</span>
+<span id="cb46-3"><a href="#cb46-3" tabindex="-1"></a>  <span class="at">directed =</span> <span class="cn">TRUE</span> )</span>
+<span id="cb46-4"><a href="#cb46-4" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" tabindex="-1"></a><span class="co"># take a look</span></span>
+<span id="cb46-6"><a href="#cb46-6" tabindex="-1"></a><span class="fu">summary</span>( net.d )</span></code></pre></div>
 <pre><code>## Network attributes:
 ##   vertices = 5
 ##   directed = TRUE
@@ -3334,25 +3365,26 @@ will create an object that is the adjacency matrix.</p>
 ## 3 0 0 0 1 1
 ## 4 0 0 1 0 1
 ## 5 0 0 1 1 0</code></pre>
+<p><br></p>
 <p>Just as before, we could also enter the data as an edgelist. Since we
 have directed relations, we have more edges. This is because
 reciprocated ties count twice. So, we have to tell the
 <code>matrix()</code> function that the matrix has 8 rows, instead of
 5.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="co"># create the edgelist</span></span>
-<span id="cb47-2"><a href="#cb47-2" tabindex="-1"></a>edge.d <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
-<span id="cb47-3"><a href="#cb47-3" tabindex="-1"></a>  <span class="fu">c</span>( <span class="st">&quot;Jen&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Jim&quot;</span>,</span>
-<span id="cb47-4"><a href="#cb47-4" tabindex="-1"></a>     <span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Jim&quot;</span>,<span class="st">&quot;Jim&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Jim&quot;</span>,<span class="st">&quot;Leaf&quot;</span> ),</span>
-<span id="cb47-5"><a href="#cb47-5" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">8</span>,</span>
-<span id="cb47-6"><a href="#cb47-6" tabindex="-1"></a>  <span class="at">byrow =</span> <span class="cn">TRUE</span> )</span>
-<span id="cb47-7"><a href="#cb47-7" tabindex="-1"></a></span>
-<span id="cb47-8"><a href="#cb47-8" tabindex="-1"></a><span class="co"># create the network object</span></span>
-<span id="cb47-9"><a href="#cb47-9" tabindex="-1"></a>edge.d.net <span class="ot">&lt;-</span> <span class="fu">as.network</span>( </span>
-<span id="cb47-10"><a href="#cb47-10" tabindex="-1"></a>  edge.d,<span class="at">directed =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb47-11"><a href="#cb47-11" tabindex="-1"></a>  <span class="at">matrix.type =</span> <span class="st">&quot;edgelist&quot;</span> )</span>
-<span id="cb47-12"><a href="#cb47-12" tabindex="-1"></a></span>
-<span id="cb47-13"><a href="#cb47-13" tabindex="-1"></a><span class="co"># take a look</span></span>
-<span id="cb47-14"><a href="#cb47-14" tabindex="-1"></a><span class="fu">summary</span>( edge.d.net )</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="co"># create the edgelist</span></span>
+<span id="cb48-2"><a href="#cb48-2" tabindex="-1"></a>edge.d <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb48-3"><a href="#cb48-3" tabindex="-1"></a>  <span class="fu">c</span>( <span class="st">&quot;Jen&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Tom&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Jim&quot;</span>,</span>
+<span id="cb48-4"><a href="#cb48-4" tabindex="-1"></a>     <span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Leaf&quot;</span>,<span class="st">&quot;Jim&quot;</span>,<span class="st">&quot;Jim&quot;</span>,<span class="st">&quot;Bob&quot;</span>,<span class="st">&quot;Jim&quot;</span>,<span class="st">&quot;Leaf&quot;</span> ),</span>
+<span id="cb48-5"><a href="#cb48-5" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">8</span>,</span>
+<span id="cb48-6"><a href="#cb48-6" tabindex="-1"></a>  <span class="at">byrow =</span> <span class="cn">TRUE</span> )</span>
+<span id="cb48-7"><a href="#cb48-7" tabindex="-1"></a></span>
+<span id="cb48-8"><a href="#cb48-8" tabindex="-1"></a><span class="co"># create the network object</span></span>
+<span id="cb48-9"><a href="#cb48-9" tabindex="-1"></a>edge.d.net <span class="ot">&lt;-</span> <span class="fu">as.network</span>( </span>
+<span id="cb48-10"><a href="#cb48-10" tabindex="-1"></a>  edge.d,<span class="at">directed =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb48-11"><a href="#cb48-11" tabindex="-1"></a>  <span class="at">matrix.type =</span> <span class="st">&quot;edgelist&quot;</span> )</span>
+<span id="cb48-12"><a href="#cb48-12" tabindex="-1"></a></span>
+<span id="cb48-13"><a href="#cb48-13" tabindex="-1"></a><span class="co"># take a look</span></span>
+<span id="cb48-14"><a href="#cb48-14" tabindex="-1"></a><span class="fu">summary</span>( edge.d.net )</span></code></pre></div>
 <pre><code>## Network attributes:
 ##   vertices = 5
 ##   directed = TRUE
@@ -3379,10 +3411,10 @@ reciprocated ties count twice. So, we have to tell the
 ## Jim    1   0   0    1   0
 ## Leaf   1   0   1    0   0
 ## Tom    1   0   0    0   0</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a><span class="co"># I have added the argument print.adj=FALSE</span></span>
-<span id="cb49-2"><a href="#cb49-2" tabindex="-1"></a><span class="co"># what is different?</span></span>
-<span id="cb49-3"><a href="#cb49-3" tabindex="-1"></a><span class="fu">summary</span>( edge.d.net,</span>
-<span id="cb49-4"><a href="#cb49-4" tabindex="-1"></a>         <span class="at">print.adj =</span> <span class="cn">FALSE</span> )</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" tabindex="-1"></a><span class="co"># I have added the argument print.adj=FALSE</span></span>
+<span id="cb50-2"><a href="#cb50-2" tabindex="-1"></a><span class="co"># what is different?</span></span>
+<span id="cb50-3"><a href="#cb50-3" tabindex="-1"></a><span class="fu">summary</span>( edge.d.net,</span>
+<span id="cb50-4"><a href="#cb50-4" tabindex="-1"></a>         <span class="at">print.adj =</span> <span class="cn">FALSE</span> )</span></code></pre></div>
 <pre><code>## Network attributes:
 ##   vertices = 5
 ##   directed = TRUE
@@ -3401,17 +3433,16 @@ reciprocated ties count twice. So, we have to tell the
 ##    5 valid vertex names
 ## 
 ## No edge attributes</code></pre>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a><span class="co"># it does not print the adjacency matrix</span></span></code></pre></div>
+<p><br></p>
 </div>
 <div id="importing-network-data" class="section level3">
 <h3><strong>Importing Network data</strong></h3>
 <p>If we had a large network, these routines (i.e. using the
 <code>matrix()</code> function) would be tedious. Most of the time, we
 have a file that is an adjacency matrix or an edgelist that we can
-import.<br />
-The <code>read.csv()</code> function can be used to read in .csv files
-that are arranged in this way. Let’s take a look at the help for this
-function: <code>?read.csv</code>.</p>
+import. The <code>read.csv()</code> function can be used to read in .csv
+files that are arranged in this way. Let’s take a look at the help for
+this function: <code>?read.csv</code>.</p>
 <p>We will use the <strong>lab-02-undirected-example.csv</strong> file
 from the <a href="https://jacobtnyoung.github.io/sna-textbook/">Social
 Network Analysis Textbook</a> website. To access the file, we can place
@@ -3428,6 +3459,7 @@ the url in the <code>read.csv()</code> function.</p>
 <span id="cb52-9"><a href="#cb52-9" tabindex="-1"></a></span>
 <span id="cb52-10"><a href="#cb52-10" tabindex="-1"></a><span class="co"># note that the read.csv function creates an object of class data.frame.</span></span>
 <span id="cb52-11"><a href="#cb52-11" tabindex="-1"></a><span class="fu">class</span>( mat.u )</span></code></pre></div>
+<p><br></p>
 <p>We need to adjust the arguments to read in the file how we want it.
 Specifically, we want to do the following:</p>
 <ul>
@@ -3451,6 +3483,7 @@ that the name of the rows are in the first column.</p></li>
 <span id="cb53-11"><a href="#cb53-11" tabindex="-1"></a><span class="co"># compare them</span></span>
 <span id="cb53-12"><a href="#cb53-12" tabindex="-1"></a>mat.u</span>
 <span id="cb53-13"><a href="#cb53-13" tabindex="-1"></a>mat.u2</span></code></pre></div>
+<p><br></p>
 <p>Now, make the object into one of <code>class</code> network:</p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a><span class="co"># we have to first coerce the object to a matrix</span></span>
 <span id="cb54-2"><a href="#cb54-2" tabindex="-1"></a>mat.u2 <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>( </span>
@@ -3499,11 +3532,14 @@ machine.</p>
 <span id="cb55-7"><a href="#cb55-7" tabindex="-1"></a>  <span class="at">row.names=</span><span class="dv">1</span></span>
 <span id="cb55-8"><a href="#cb55-8" tabindex="-1"></a>  )</span>
 <span id="cb55-9"><a href="#cb55-9" tabindex="-1"></a></span>
-<span id="cb55-10"><a href="#cb55-10" tabindex="-1"></a><span class="co"># Note: we don&#39;t need to tell it that the network is directed since this is the default, but a good habit to get into.</span></span>
-<span id="cb55-11"><a href="#cb55-11" tabindex="-1"></a>net.d <span class="ot">&lt;-</span> <span class="fu">as.network</span>(</span>
-<span id="cb55-12"><a href="#cb55-12" tabindex="-1"></a>  <span class="fu">as.matrix</span>( data.d ),</span>
-<span id="cb55-13"><a href="#cb55-13" tabindex="-1"></a>  <span class="at">directed=</span><span class="cn">TRUE</span></span>
-<span id="cb55-14"><a href="#cb55-14" tabindex="-1"></a>  )</span></code></pre></div>
+<span id="cb55-10"><a href="#cb55-10" tabindex="-1"></a><span class="co"># Note: we don&#39;t need to tell it that </span></span>
+<span id="cb55-11"><a href="#cb55-11" tabindex="-1"></a><span class="co"># the network is directed since </span></span>
+<span id="cb55-12"><a href="#cb55-12" tabindex="-1"></a><span class="co"># this is the default, </span></span>
+<span id="cb55-13"><a href="#cb55-13" tabindex="-1"></a><span class="co"># but a good habit to get into.</span></span>
+<span id="cb55-14"><a href="#cb55-14" tabindex="-1"></a>net.d <span class="ot">&lt;-</span> <span class="fu">as.network</span>(</span>
+<span id="cb55-15"><a href="#cb55-15" tabindex="-1"></a>  <span class="fu">as.matrix</span>( data.d ),</span>
+<span id="cb55-16"><a href="#cb55-16" tabindex="-1"></a>  <span class="at">directed=</span><span class="cn">TRUE</span></span>
+<span id="cb55-17"><a href="#cb55-17" tabindex="-1"></a>  )</span></code></pre></div>
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a><span class="co"># now, print the object.</span></span>
 <span id="cb56-2"><a href="#cb56-2" tabindex="-1"></a>net.d</span></code></pre></div>
 <pre><code>##  Network attributes:
@@ -3521,19 +3557,24 @@ machine.</p>
 ##     vertex.names 
 ## 
 ## No edge attributes</code></pre>
+<p><br></p>
+</div>
+<div id="whats-next" class="section level3">
+<h3>What’s next?</h3>
+<p>Nicely done! You now know how to get networks in R. We are rocking
+and rollin!</p>
+<p>So now what? The next step in the course is to start working with
+network visualization. This topic is explored further in the next
+tutorial, <a href="https://watts-college.github.io/crj-507-spring-2024/tutorials/tutorial-04-visualization.html">Basics
+of Network Visualization</a>. See you there!</p>
+<p><br></p>
 <hr />
-<div id="questions" class="section level4">
-<h4><strong><em>Questions?</em></strong></h4>
 <p><br></p>
 <div id="please-report-any-needed-corrections-to-the-issues-page.-thanks" class="section level5">
 <h5><strong><em>Please</em></strong> report any needed corrections to
-the <a href="https://github.com/Watts-College/crj-507-template/issues">Issues</a>
+the <a href="https://github.com/Watts-College/crj-507-spring-2024/issues/new">Issues</a>
 page. Thanks!</h5>
 <p><br> <br></p>
-<div id="last-updated-21-november-2023" class="section level6">
-<h6><strong><em>Last updated 21 November, 2023</em></strong></h6>
-</div>
-</div>
 </div>
 </div>
 
