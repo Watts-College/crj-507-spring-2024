@@ -175,6 +175,46 @@ Create an object of class `network`. Plot the network using the `gplot()` functi
 
 <br>
 
+----
+
+# Part II
+
+<br>
+
+## Second Network
+
+<br>
+
+### Step 2
+
+Import the network into *R* using the `read.csv()` function or create the network using the `matrix()` function.
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+### Step 3
+
+Create an object of class `network`. 
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+
+### Steps 4 & 5
+
+Create an object of class `network`. Plot the network using the `gplot()` function. Modify the plot using at least three arguments in the `gplot()` function.    
+
+<br>
+
 ```{r}
 
 # Your code here
