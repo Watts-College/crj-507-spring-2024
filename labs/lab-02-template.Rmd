@@ -98,7 +98,25 @@ mat.d
 
 <br>
 
-Finally, let's plot the networks using the `gplot()` function.
+Create an object of class `network` using the `as.network()` function. 
+
+```{r coerce-example, echo =  TRUE, eval = TRUE}
+
+# coerce the matrix object
+net.d <- as.network( 
+  mat.d,
+  directed = TRUE # set this to false for an directed network; FALSE for an undirected network
+  )
+
+# print the object to see the properties
+net.d
+
+```
+
+
+<br>
+
+Finally, let's plot the networks using the `gplot()` function. Note that we can use either the object `mat.u` which is of class `matrix` or the object `net.u` which is of class `network`.
 
 ```{r create-undirected-plot, echo = TRUE, eval = TRUE}
 
