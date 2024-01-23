@@ -34,7 +34,6 @@ A note on the tutorials. Each tutorial in this course will contain R code which 
 
 <br>
 
-
 ### **Working with matrices**    
 
 First, clear the workspace. To do so, we use the following statement:
@@ -395,7 +394,7 @@ rm( list = ls() )
 
 If we had a large network, these routines (i.e. using the `matrix()` function) would be tedious. Most of the time, we have a file that is an adjacency matrix or an edgelist that we can import. The `read.csv()` function can be used to read in .csv files that are arranged in this way. Let's take a look at the help for this function: `?read.csv`.  
 
-We will use the **lab-02-undirected-example.csv** file from the [Social Network Analysis Textbook](https://jacobtnyoung.github.io/sna-textbook/) website. To access the file, we can place the url in the `read.csv()` function. 
+We will use the **data-undirected-example.csv** file from the [Social Network Analysis Textbook](https://jacobtnyoung.github.io/sna-textbook/) website. To access the file, we can place the url in the `read.csv()` function. 
 
 Here is the url: [https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-undirected-example.csv](https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-undirected-example.csv).
 
