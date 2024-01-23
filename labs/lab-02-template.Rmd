@@ -153,6 +153,14 @@ gplot(
 
 These were some examples to help you get going. Feel free to use them to aid in working through the lab.
 
+```{r clear-workspace, echo = TRUE, eval = TRUE}
+
+# clear the workspace before you start working on your sections
+
+rm( list = ls() )
+
+```
+
 ----
 
 # Part I
