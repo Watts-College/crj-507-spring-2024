@@ -14,7 +14,7 @@ output:
 
 <style>
 body {
-text-align: justify}
+text-align: left}
 </style>
 
 ```{r, echo=FALSE}
@@ -34,13 +34,19 @@ library( network )
 
 ```
 
-<br>
-
-*This lab examines degree centrality and centralization using the `degree()` and `centralization()` functions in the `sna` package.*
+----
 
 <br>
 
-***
+How do we know whether a node is important in a network? As was discussed in [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html) of the textbook, one of the most popular concepts in network analysis is *centrality*. That is, important nodes are those who are central. Also, we can compare networks by examining how they differ (or are similar) based on the distribution of centrality scores. In this tutorial, we will examine how to calcuate degree centrality and centralization scores in R using the `degree()` and `centralization()` functions in the `sna` package.
+
+Why are you learning this? Centrality scores are a coming metric used in many network analysis projects. Being able to calculate these scores is an important tool for your skill set as a social network analyst!
+
+A note on the tutorials. Each tutorial in this course will contain R code which is in the “code chunks” you see below. There is also regular text. The R code chunks can be copied and pasted directly into R. As you work through this tutorial, follow along in R by coping and pasting the R code and seeing it work on your end.
+
+<br>
+
+----
 
 ### **Degree Centrality (Undirected Binary Graphs)**  
 
@@ -167,7 +173,7 @@ We can also examine the *average* degree of the graph using
 $$\frac{\sum_{i=1}^g d(n_i)}{g}$$
 or 
 
-$$\frac{2L}{g}$$, 
+$$\frac{2L}{g}$$ 
 
 where *L* is the number of edges in the graph:
 
@@ -209,7 +215,7 @@ group.deg.cent
  
 ```  
 
-***
+<br>
 
 ### **Degree Centrality (Directed Binary Graphs)**  
 
@@ -379,6 +385,8 @@ s.i.deg.u.mat <- ideg.d.mat / ( g-1 )
 s.o.deg.u.mat <- odeg.d.mat / ( g-1 )
 ```
 
+<br>
+
 We can also examine the *average* degree of the graph using $\frac{\sum_{i=1}^g C_I(n_i)}{g} = \frac{\sum_{i=1}^g C_O(n_i)}{g}$ or $\frac{L}{g}$, where *L* is the number of edges in the graph:
 
 ```{r,echo=TRUE,eval=TRUE,message=FALSE}
@@ -389,6 +397,8 @@ mean.i.deg
 mean.o.deg
 
 ```  
+
+<br>
 
 Again, following Wasserman & Faust (1994), an index of *group indegree/outdegree centralization* can be calculated as:  
 
@@ -421,10 +431,10 @@ group.ideg.cent
 group.odeg.cent
 ```
 
-
-***  
+<br>
 
 ### **Degree Centrality using the `sna` package**  
+
 Did that feel tedious? If no, go back and do it again :)  
 
 As you probably have guessed, there *are* functions in the `sna` package that calculate degree centrality and graph centralization! In the `sna` package, these are the `degree()` and `centralization()` functions, respectively. Let's take a look at how these work.
@@ -497,11 +507,6 @@ o.cent.d <- centralization( d.mat, degree, mode="digraph", cmode="outdegree" )
 *Now, wasn't that easier?*
 
 <br>
-
-***  
-
-<br>
-
 
 ____
 

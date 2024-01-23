@@ -599,13 +599,14 @@ This lab has a template. Click to download the lab template. Modify the template
 
 ## Description
 
-This week we will start to think about how we describe networks. One of the most popular concepts in network analysis is *centrality*. This section introduces the concept of centrality. 
+How do we know whether a node is important in a network? How can we compare the structure of different networks? These are key questions in network analysis and this week we will start to think about how we describe networks. One of the most popular concepts in network analysis is *centrality*. That is, important nodes are those who are central. Also, we can compare networks by examining how they differ (or are similar) based on the distribution of centrality scores. This section introduces the concept of centrality, focusing specifically on **degree centrality**. Next week we will shift to two alternative measures of centrality, **closeness** and **betweenness**. 
 
 ## Learning Objectives
 
 Once you have completed this section you will be able to:
 * Understand the conceptualization of centrality
-* Calculate degree centrality 
+* Calculate degree centrality scores for nodes in a network
+* Calculate degree centralization for a network
 
 ## Assigned Reading
 
@@ -616,7 +617,12 @@ Required:
 
 ## Lab Assignment
 
-Lab-03 provides an opportunity to familiarize yourself with calculating degree centrality and degree centralization scores for undirected and directed networks in R.     
+Lab 3 provides an opportunity to familiarize yourself with calculating degree centrality and degree centralization scores for undirected and directed networks in R. 
+
+You will use data from two sources:
+
+  * [Thomas Grund and James Densley's study](https://journals.sagepub.com/doi/full/10.1177/1043986214553377) of ties among members of an inner-city gang in London, England.
+  * [Mangia Natarajan's study](https://link.springer.com/article/10.1007/s10940-006-9007-x) of a large cocaine trafficking organization in New York City.
 
 <br>
 <br>

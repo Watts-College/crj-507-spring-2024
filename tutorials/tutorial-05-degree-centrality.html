@@ -2927,12 +2927,28 @@ Centralization in R</h1>
 
 <style>
 body {
-text-align: justify}
+text-align: left}
 </style>
+<hr />
 <p><br></p>
-<p><em>This lab examines degree centrality and centralization using the
+<p>How do we know whether a node is important in a network? As was
+discussed in <a href="https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html">Chapter
+5: Degree Centrality</a> of the textbook, one of the most popular
+concepts in network analysis is <em>centrality</em>. That is, important
+nodes are those who are central. Also, we can compare networks by
+examining how they differ (or are similar) based on the distribution of
+centrality scores. In this tutorial, we will examine how to calcuate
+degree centrality and centralization scores in R using the
 <code>degree()</code> and <code>centralization()</code> functions in the
-<code>sna</code> package.</em></p>
+<code>sna</code> package.</p>
+<p>Why are you learning this? Centrality scores are a coming metric used
+in many network analysis projects. Being able to calculate these scores
+is an important tool for your skill set as a social network analyst!</p>
+<p>A note on the tutorials. Each tutorial in this course will contain R
+code which is in the “code chunks” you see below. There is also regular
+text. The R code chunks can be copied and pasted directly into R. As you
+work through this tutorial, follow along in R by coping and pasting the
+R code and seeing it work on your end.</p>
 <p><br></p>
 <hr />
 <div id="degree-centrality-undirected-binary-graphs" class="section level3">
@@ -3064,7 +3080,7 @@ graph:</p>
 using</p>
 <p><span class="math display">\[\frac{\sum_{i=1}^g d(n_i)}{g}\]</span>
 or</p>
-<p><span class="math display">\[\frac{2L}{g}\]</span>,</p>
+<p><span class="math display">\[\frac{2L}{g}\]</span></p>
 <p>where <em>L</em> is the number of edges in the graph:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>mean.deg <span class="ot">&lt;-</span> <span class="fu">sum</span>( deg.u.mat ) <span class="sc">/</span> <span class="fu">dim</span>( u.mat )[<span class="dv">1</span>] </span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
@@ -3099,7 +3115,7 @@ graph. We can write out the components of the equation using the
 <span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a></span>
 <span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a>group.deg.cent</span></code></pre></div>
 <pre><code>## [1] 0.4166667</code></pre>
-<hr />
+<p><br></p>
 </div>
 </div>
 <div id="degree-centrality-directed-binary-graphs" class="section level3">
@@ -3261,6 +3277,7 @@ graph:</p>
 <span id="cb27-9"><a href="#cb27-9" tabindex="-1"></a><span class="co"># now, divide by g-1</span></span>
 <span id="cb27-10"><a href="#cb27-10" tabindex="-1"></a>s.i.deg.u.mat <span class="ot">&lt;-</span> ideg.d.mat <span class="sc">/</span> ( g<span class="dv">-1</span> )</span>
 <span id="cb27-11"><a href="#cb27-11" tabindex="-1"></a>s.o.deg.u.mat <span class="ot">&lt;-</span> odeg.d.mat <span class="sc">/</span> ( g<span class="dv">-1</span> )</span></code></pre></div>
+<p><br></p>
 <p>We can also examine the <em>average</em> degree of the graph using
 <span class="math inline">\(\frac{\sum_{i=1}^g C_I(n_i)}{g} =
 \frac{\sum_{i=1}^g C_O(n_i)}{g}\)</span> or <span class="math inline">\(\frac{L}{g}\)</span>, where <em>L</em> is the
@@ -3271,6 +3288,7 @@ number of edges in the graph:</p>
 <pre><code>## [1] 1.6</code></pre>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>mean.o.deg</span></code></pre></div>
 <pre><code>## [1] 1.6</code></pre>
+<p><br></p>
 <p>Again, following Wasserman &amp; Faust (1994), an index of <em>group
 indegree/outdegree centralization</em> can be calculated as:</p>
 <p><span class="math display">\[ C_D = \frac{\sum\limits_{i=1}^g
@@ -3300,7 +3318,7 @@ equation using the <code>max()</code> function:</p>
 <pre><code>## [1] 0.4375</code></pre>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a>group.odeg.cent</span></code></pre></div>
 <pre><code>## [1] 0.125</code></pre>
-<hr />
+<p><br></p>
 </div>
 </div>
 <div id="degree-centrality-using-the-sna-package" class="section level3">
@@ -3377,12 +3395,9 @@ respectively. Let’s take a look at how these work.</p>
 <p><br></p>
 <div id="please-report-any-needed-corrections-to-the-issues-page.-thanks" class="section level5">
 <h5><strong><em>Please</em></strong> report any needed corrections to
-the <a href="https://github.com/Watts-College/crj-507-template/issues">Issues</a>
+the <a href="https://github.com/Watts-College/crj-507-spring-2024/issues/new">Issues</a>
 page. Thanks!</h5>
 <p><br> <br></p>
-<div id="last-updated-21-november-2023" class="section level6">
-<h6><strong><em>Last updated 21 November, 2023</em></strong></h6>
-</div>
 </div>
 </div>
 
