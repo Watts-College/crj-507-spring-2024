@@ -25,7 +25,15 @@ knitr::opts_chunk$set( eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE )
 
 ```
 
-*This tutorial examines betweenness centrality and centralization using the `betweenness()` and `centralization()` functions in the `sna` package.*
+<br>
+
+How do we know whether a node is important in a network? As we saw in [Chapter 5: Degree Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-05-centrality-degree.html) of the textbook, *degree* centrality, or the count of edges incident on a node, is a frequently used operationalization. Also, in [Chapter 6: Closeness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-06-centrality-closeness.html) we reviewed an alternative conceptualization, *closeness*, where important nodes are those who are "close" to other nodes in the network. Finally, in [Chapter 7: Betweenness Centrality](https://jacobtnyoung.github.io/sna-textbook/ch-07-centrality-betweenness.html) we reviewed an alternative conceptualization, *betweenness*, where important nodes are those who are "between" other nodes such that nodes have to go "between" them to reach other nodes. In this tutorial, we will examine how to calculate betweenness centrality and centralization scores in R using the `betweenness()` and `centralization()` functions in the `sna` package.
+
+Why are you learning this? Centrality scores are a common metric used in many network analysis projects. Being able to calculate these scores is an important tool for your skill set as a social network analyst!
+
+A note on the tutorials. Each tutorial in this course will contain R code which is in the “code chunks” you see below. There is also regular text. The R code chunks can be copied and pasted directly into R. As you work through this tutorial, follow along in R by coping and pasting the R code and seeing it work on your end.
+
+<br>
 
 ```{r, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE}
 
@@ -52,7 +60,7 @@ The *standardized* betweenness centrality score is calculated by:
 
 $$C'_B(n_i) = \frac{\sum\limits_{j<k} g_{jk}(n_i) / g_{jk}}{[(g-1)(g-2)/2]}$$
 
-The difference here is that we are dividing by $g_{jk}}{[(g-1)(g-2)/2$ which is the number of pairs of actors not including *i*.  
+The difference here is that we are dividing by $(g-1)(g-2)/2$ which is the number of pairs of actors not including *i*.  
 
 <br>
 
@@ -129,7 +137,7 @@ gplot(
 
 <br>
 
-In this plot, we see that **Tom** and *Bob* both have scores of 3 and 4, respectively, whereas *Jen*, *Leaf*, and *Jim* have scores of 0. 
+In this plot, we see that **Tom** and *Bob* both have scores of 3 and 4, respectively, whereas *Jen*, *Leaf*, and *Jim* have scores of 0. Why do *Jen*, *Leaf*, and *Jim* have scores of 0? Because nobody has to go "between" them to reach other nodes. 
 
 <br>
 
@@ -300,8 +308,6 @@ gaMatU <- symmetrize( gaMat, rule = "strong" )
 
 Now, let's calculate our betweenness scores:
 
-<br>
-
 ```{r,echo=TRUE, eval=TRUE, message=FALSE}
 
 # define the number of nodes in the graph for our calculation
@@ -347,8 +353,6 @@ The largest betweenness centrality score is `r max ( betweenness( gaMatU, gmode=
 
 Let's write a function, that we will call `rescale()` that rescales a set of values to be within a range that we descire. Then, we can use that in our plot:
 
-<br>
-
 ```{r,echo=TRUE, eval=TRUE, message=FALSE}
 
 rescale <- function( nchar, low, high ){
@@ -380,7 +384,26 @@ gplot(
 
 <br>
 
-Much better. Now we can examine the centralization score for the network:
+Much better. Yet, it is still a bit difficult to see the differences due to the number of isolates (i.e. nodes without any edges). Let's remove them using the `displayisolates =` arguement. We will set it to `FALSE` to not display nodes that are isolates.
+
+```{r}
+
+gplot( 
+  gaMatU, 
+  gmode = "graph",
+  edge.col="grey40", 
+  vertex.col="#ba491c",
+  vertex.cex = rescale( betweenness( gaMatU, gmode="graph" ), 0.5, 1.5 ),
+  main = "Get\n Along With Network (Undirected)",
+  sub = "node sized by betweenness centrality",
+  displayisolates = FALSE # here we set it to FALSE, TRUE is the default
+  )
+
+```
+
+<br>
+
+Now we can examine the centralization score for the network:
 
 ```{r}
 
@@ -451,6 +474,26 @@ gplot(
 
 <br>
 
+Again, let's remove the isolates:
+
+```{r}
+
+gplot( 
+  piMat, 
+  gmode = "digraph",
+  edge.col="grey40", 
+  vertex.col="#0b7344",
+  vertex.cex = rescale( betweenness( piMat, gmode="digraph" ), 0.5, 1.5 ),
+  arrowhead.cex = 0.5,
+  main = "Power/Influence Network (Directed)",
+  sub = "node sized by betweenness centrality",
+  displayisolates = FALSE
+  )
+
+```
+
+<br>
+
 Examine the centralization score for the network:
 
 ```{r}
@@ -465,6 +508,11 @@ centralization( piMat, betweenness, mode="digraph" )
 
 <br>
 
+### What's next?
+
+Your ready for [Lab 4: Closeness/Betweenness Centrality](https://watts-college.github.io/crj-507-spring-2024/labs/lab-04-instructions.html)!
+
+<br>
 
 ____
 

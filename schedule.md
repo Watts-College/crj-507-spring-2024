@@ -715,14 +715,14 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-This week we will continue to think about how we describe networks. We will revisit the concept of centrality. However, we will focus on two different ways of conceptualizing what it means to be *central* in a network. We will examine *closeness* and *betweenness* centrality.
+In Week 3, you were introduced to the concept of *centrality* and asked to think about the following questions: "how do we know whether a node is important in a network?" and "how can we compare the structure of different networks?" And, we focused on **degree** as an indicator of whether a node is central. This week, we will continue to think about how we describe nodes and networks through the lens of centrality. However, we will now focus on two different ways of conceptualizing what it means to be central in a network. We will examine *closeness* and *betweenness* centrality and contrast it with *degree* centrality.
 
 ## Learning Objectives
 
 Once you have completed this section you will be able to:
-* Understand the conceptualization of centrality as expressed as distance or betweenness
-* Calculate closeness centrality  
-* Calculate betweenness centrality
+* Understand the conceptualization of centrality as expressed as distance (the opposite of closeness) or betweenness
+* Calculate closeness and betweenness centrality scores for a set of nodes in a network
+* Calculate closeness and betweenness centralization for a network
 
 ## Assigned Reading
 
