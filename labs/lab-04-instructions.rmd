@@ -32,7 +32,7 @@ For this lab, we will revisit the networks we used in [Lab 3 - Degree Centrality
 
 ## Part I: Working with an Undirected Network
 
-For this part of the lab you will again use data from [Thomas Grund and James Densley's study](https://journals.sagepub.com/doi/full/10.1177/1043986214553377) of ties among members of an inner-city gang in London, England. The network is undirected, binary ties collected from anonymized arrests data. We will refer to this network as the `LondonGangNet`.
+For this part of the lab you will again use data from [Thomas Grund and James Densley's study](https://journals.sagepub.com/doi/full/10.1177/1043986214553377) of ties among members of an inner-city gang in London, England. The network is undirected, binary ties collected from anonymized arrests data. We will refer to this network as the `LondonGangNet`. Note that the object is of class `network`. To coerce the object to be an object of class `matrix`, use the `as.matrix()` function.
 
 <br>
 
@@ -53,7 +53,7 @@ For the `LondonGangNet` network, do the following:
 
 ## Part II: Working with a Directed Network
 
-For this part of the lab you will again use data from [Mangia Natarajan's study](https://link.springer.com/article/10.1007/s10940-006-9007-x) of a large cocaine trafficking organization in New York City. The network is directed, binary ties of communication between individuals collected from police wiretaps of 151 telephone conversations. We will refer to this network as the `CocaineDealingNet`.
+For this part of the lab you will again use data from [Mangia Natarajan's study](https://link.springer.com/article/10.1007/s10940-006-9007-x) of a large cocaine trafficking organization in New York City. The network is directed, binary ties of communication between individuals collected from police wiretaps of 151 telephone conversations. We will refer to this network as the `CocaineDealingNet`. Note that the object is of class `network`. To coerce the object to be an object of class `matrix`, use the `as.matrix()` function.
 
 <br>
 
