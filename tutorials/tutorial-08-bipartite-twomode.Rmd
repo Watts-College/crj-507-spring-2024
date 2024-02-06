@@ -24,11 +24,7 @@ knitr::opts_chunk$set( eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE )
 
 ```
 
-*This lab examines bipartite graphs and two-mode networks*
-
 <br>
-
-### **Bipartite Graphs/Two-Mode Networks**  
 
 As discussed in [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html), bipartite graphs are useful for operationalizing contexts where nodes come from *two* separate classes. Examples:  
 
@@ -45,6 +41,16 @@ As discussed in [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtn
 In contrast to one-mode networks, or unipartite graphs, where edges can be incident *within* a particular node/vertex set, in two-mode or bipartite graphs there are two partitions of nodes (called modes), and edges only occur *between* these partitions (i.e. not within).  
 
 For example, if two individuals co-offend together, it is their joint participation in that event which creates a tie between them. In this example, there is a set of nodes represented by individuals and a set of nodes represented by the events.
+
+This tutorial examines bipartite graphs and two-mode networks in R.
+
+Why are you learning this? Bipartite graphs are a common network structure used in many network analysis projects. Being able to work with these objects and summarize their structure is an important tool for your skill set as a social network analyst!
+
+A note on the tutorials. Each tutorial in this course will contain R code which is in the “code chunks” you see below. There is also regular text. The R code chunks can be copied and pasted directly into R. As you work through this tutorial, follow along in R by coping and pasting the R code and seeing it work on your end.
+
+<br>
+
+### **Bipartite Graphs/Two-Mode Networks**  
 
 Let's build the example bipartite graph from [Chapter 10: Bipartite Graphs/Two-Mode Networks](https://jacobtnyoung.github.io/sna-textbook/ch-10-bipartite-graphs.html) of the [SNA Textbook](https://jacobtnyoung.github.io/sna-textbook/index.html):
 
@@ -159,7 +165,7 @@ gplot(
 
 <br>
 
-As we saw in the [Visualization]() tutorial, there are a lot of options that help us convey important information about a network. When we are working with a two mode network object, we need to make sure that whatever information we pass to the nodes matches the order of the nodes in the network. For example, we saw above that the network first labels the actor nodes and then labels the event nodes. If we wanted to choose a different set of colors, for example, using the `vertex.col=` argument, then we would want a set of colors for the actors and a set of colors for the events. Then, we would want these combined into a single object. Let's do that here to demonstrate:
+As we saw in [Tutorial 04 - Basics of Network Visualization](../tutorials/tutorial-04-visualization.html), there are a lot of options that help us convey important information about a network. When we are working with a two mode network object, we need to make sure that whatever information we pass to the nodes matches the order of the nodes in the network. For example, we saw above that the network first labels the actor nodes and then labels the event nodes. If we wanted to choose a different set of colors, for example, using the `vertex.col=` argument, then we would want a set of colors for the actors and a set of colors for the events. Then, we would want these combined into a single object. Let's do that here to demonstrate:
 
 <br>
 
@@ -512,6 +518,13 @@ mean.incident.deg
 
 *What is the interpretation of the mean degree for each node set?*
 
+<br>
+
+### What's next?
+
+Your ready for [Lab 5: Bipartite Graphs and Two-Mode Networks](../labs/lab-05-instructions.html)!
+
+<br>
 
 ____
 
