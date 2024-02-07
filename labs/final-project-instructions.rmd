@@ -94,7 +94,7 @@ ____
 
 # How to Submit
 
-Download the [template for this final project] prior to beginning the final project. 
+Download the [template for this final project](../labs/templates/final-project-LastName.zip?raw=true) prior to beginning the final project. 
 
 <br>
 
@@ -135,7 +135,7 @@ See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for
 
 <br>
 
----
+----
 
 <br>
 
@@ -143,5 +143,3 @@ See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for
 
 <br>
 <br>
-
-###### ***Last updated `r format(Sys.time(), '%d %B, %Y')`***
