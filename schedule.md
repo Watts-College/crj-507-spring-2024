@@ -827,7 +827,7 @@ Click to download the lab template.
 
 ## Description
 
-So far, we have worked with networks that have one set of nodes and one set of edges. But, not all of the networks we want to examine have a single node set. More complex relational structures have multiple partitions of node sets. Bipartite graphs allow us to represent networks that have two partitions of nodes. This section of the course will introduce bipartite graphs and get you started worked with two-mode networks.
+So far, we have worked with networks that have one set of nodes and one set of edges. But, not all of the networks we want to examine have a single node set. More complex relational structures have multiple partitions of node sets. Bipartite graphs allow us to represent networks that have two partitions of nodes. This section of the course will introduce bipartite graphs and get you started working with two-mode networks.
 
 ## Learning Objectives
 
