@@ -308,29 +308,77 @@ centralization( u.mat, closeness, mode="graph" )
 ### **Closeness Centrality for Directed Graphs**  
 
 ```{r,echo=TRUE,eval=TRUE,message=FALSE}
-# Build the objects.
-d.mat <- rbind(c(0,1,0,0,0),c(0,0,1,0,0),c(0,0,0,1,1),c(0,0,1,0,1),c(0,0,1,1,0))
-rownames(d.mat) <- c("Jen","Tom","Bob","Leaf","Jim")
-colnames(d.mat) <- c("Jen","Tom","Bob","Leaf","Jim")
-d.net <- network(d.mat, matrix.type = "adjacency", directed = TRUE)
 
+# Build the object
+d.mat <- rbind(
+  c( 0,1,0,0,0 ),
+  c( 0,0,1,0,0 ),
+  c( 0,0,0,1,1 ),
+  c( 0,0,1,0,1 ),
+  c( 0,0,1,1,0 )
+  )
 
-### Closeness Centrality.
+# name the rows and columns
+rownames( d.mat ) <- c( "Jen","Tom","Bob","Leaf","Jim" )
+colnames( d.mat ) <- c( "Jen","Tom","Bob","Leaf","Jim" )
 
-# Manually.
-distances <- geodist(d.mat)
+# define g
+g <- dim( d.mat )[1]
+
+```
+
+```{r}
+
+# calculate distances
+distances <- geodist( d.mat )
+
+# get the geodesics
 geodesics <- distances$gdist
-geodesics[geodesics == Inf] <- 0 # code Inf values as zero.
-1/rowSums(geodesics) #unstandardized closeness.
-(1/rowSums(geodesics))*4 #standardized closeness.
 
-# Or, using the closeness() function.
-closeness(d.mat, gmode="digraph") #standardized closeness.
-closeness(d.mat, gmode="digraph")/4 #unstandardized closeness.
+# take a look
+geodesics
+
+```
+
+Something look different?
+
+Let's recode those `Inf` values to be zero and chug on.
+
+```{r}
+
+# code Inf values as zero
+geodesics[geodesics == Inf] <- 0 
+
+# take a look now
+geodesics
+
+```
+
+```{r}
+
+# unstandardized closeness
+1/rowSums( geodesics ) 
+
+# standardized closeness.
+( 1/rowSums( geodesics ) ) * ( g - 1 )
+
+```
+
+<br>
+
+Alternatively, we could (again) just use the `closeness()` function in the `sna` package. Remember that the standardized closeness centrality is reported by default. If we want the unstandardized closeness, we can just divide the result returned by `closeness()` by *g-1*.
+
+```{r}
+
+# standardized closeness
+closeness( d.mat, gmode="digraph" )
+
+# unstandardized closeness
+closeness( d.mat, gmode="digraph" ) / ( g-1 )
 
 # Group Closeness Centralization.
-centralization(d.net,closeness,mode="digraph")
-centralization(d.net,closeness,mode="digraph")
+centralization( d.mat, closeness, mode="digraph" )
+centralization( d.mat, closeness, mode="digraph" )
 
 ```
 
@@ -457,7 +505,7 @@ Now, let's calculate our closeness scores:
 n.nodes <- dim( as.matrix( gaNetUcomp ) )[1]
 
 #unstandardized closeness.
-closeness( gaNetUcomp, gmode="graph" ) / n.nodes 
+closeness( gaNetUcomp, gmode="graph" ) / ( n.nodes - 1 )
 
 #standardized closeness.
 closeness( gaNetUcomp, gmode="graph" ) 
@@ -584,7 +632,7 @@ Now, let's calculate our closeness scores. Note a slight change though. In the `
 n.nodes <- dim( as.matrix( piNetDcomp ) )[1]
 
 #unstandardized closeness.
-closeness( piNetDcomp, gmode="graph" ) / n.nodes 
+closeness( piNetDcomp, gmode="graph" ) / ( n.nodes - 1 ) 
 
 #standardized closeness.
 closeness( piNetDcomp, gmode="graph" ) 
