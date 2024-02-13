@@ -944,14 +944,14 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ## Description
 
-As we saw in the last section, networks with complex node sets can be represented using an adjacency matrix and analyzed in various ways. However, a common approach in research is to reduce a bipartite graph to a unipartite graph so as to use the tools developed for networks with a single set of nodes. Projection is the process by which we map the connectivity between modes to a single mode. This week will focus on network projection.
+As we saw in the last section, networks with complex node sets can be represented using bipartite graphs. A common approach in research is to reduce a bipartite graph to a unipartite graph so as to use the tools developed for networks with a single set of nodes. Projection is the process by which we map the connectivity between modes to a single mode. This week will focus on network projection.
 
 ## Learning Objectives
 
 By the end of this unit you will be able to:
 
- * Understand the logic of projection of bipartite graphs to unipartite graphs.
- * Understand how matrix algebra is used to project networks.
+ * Explain the logic of projection of bipartite graphs to unipartite graphs.
+ * Use matrix algebra to create projections of a network.
  * Know the consequences of projecting bipartite graphs to unipartite graphs.
 
 ## Assigned Reading
@@ -989,7 +989,7 @@ The following checklist will help you stay organized in your sixth week.
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
 - [ ] Complete & Submit [Lab 6](../labs/lab-06-instructions.html) (See Below)
 - [ ] [Sign-Up for the Lab Review Sessions](https://calendly.com/jacobtnyoung/crj-507-lab-review-session)
-- [ ] (Recommended) Begin [Final Project](../labs/final-project-instructions.html)
+- [ ] Begin [Final Project](../labs/final-project-instructions.html)
 
 <br>
 
@@ -1052,7 +1052,7 @@ Click to download the lab template. Modify and submit using the instructions.
 The following checklist will help you stay organized for your final week.
 
 - [ ] Finalize & Submit Your [Final Project](../labs/final-project-instructions.html)
-- [ ] Submit a Course Evaluation
+- [ ] Submit a Course Evaluation through [MyASU](https://webapp4.asu.edu/myasu/)
 
 <br>
 <br>
