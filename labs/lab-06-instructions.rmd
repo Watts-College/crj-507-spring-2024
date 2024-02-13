@@ -105,5 +105,3 @@ See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for
 
 <br>
 <br>
-
-###### ***Last updated `r format(Sys.time(), '%d %B, %Y')`***
