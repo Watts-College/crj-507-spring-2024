@@ -57,9 +57,11 @@ PhxArrestNet2022 <- readRDS( url( loc ) )
 
 *What can you tell me about this network?* 
 
+YOUR ANSWER TO THIS QUESTION HERE (THEN DELETE THIS LINE)
+
 ```{r, echo=FALSE}
 
-# your code here
+# your code here for creating objects here
 
 ```
 
@@ -69,9 +71,11 @@ PhxArrestNet2022 <- readRDS( url( loc ) )
 
 *Who are the central actors in this network?* 
 
+YOUR ANSWER TO THIS QUESTION HERE (THEN DELETE THIS LINE)
+
 ```{r, echo=FALSE}
 
-# your code here
+# your code here for creating objects here
 
 ```
 
@@ -81,9 +85,11 @@ PhxArrestNet2022 <- readRDS( url( loc ) )
 
 *How has the co-offending network changed from 2022 to 2023?* 
 
+YOUR ANSWER TO THIS QUESTION HERE (THEN DELETE THIS LINE)
+
 ```{r, echo=FALSE}
 
-# your code here
+# your code here for creating objects here
 
 ```
 

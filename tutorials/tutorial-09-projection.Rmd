@@ -44,7 +44,7 @@ In this tutorial, we will review how a unipartite or one-mode network can be cre
 
 *How do we do this?*
 
-Following [Breiger (1974)](https://www.jstor.org/stable/2576011), we can build the adjacency matrix for each projected network through matrix algebra. Specifically, multiplying an adjacency matrix by it’s **transpose**. The transpose of a matrix *A* simply reverses the columns and rows: $\sf{AT_{ij}}$ =  $\sf{A_{ji}}$.
+Following [Breiger (1974)](https://www.jstor.org/stable/2576011), we can build the adjacency matrix for each projected network through matrix algebra. Specifically, multiplying an adjacency matrix by it’s **transpose**. The transpose of a matrix *A* simply reverses the columns and rows: $\sf{A^T_{ij}}$ =  $\sf{A_{ji}}$.
 
 The two-mode, *NxM*, adjacency matrix, when multiplied by it’s transpose, produces either:  
 

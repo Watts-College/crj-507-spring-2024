@@ -65,6 +65,8 @@ PhxArrestNet2022 <- readRDS( url( loc ) )
 
 As with the labs, There is a template for the final project. The template is set up as a report in that the code chunks include the option `echo = FALSE`. What this does is hides the code in the final report. When you render your report, the code will be hidden so that it reads cleanly.
 
+**IMPORTANT**: Do you report entire matrices or objects. These print out very long and are cumbersome to look through.
+
 <br>
 
 # Your Task
