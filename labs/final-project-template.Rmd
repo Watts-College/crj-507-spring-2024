@@ -26,7 +26,7 @@ knitr::opts_chunk$set( echo = FALSE,
 
 <br>
 
-```{r, eval=FALSE, message=FALSE, warning=FALSE}
+```{r, eval=TRUE, message=FALSE, warning=FALSE}
 
 # clear the workspace
 rm( list = ls() )
@@ -47,7 +47,7 @@ PhxArrestNet2023 <- readRDS( url( loc ) )
 # set the url
 loc <- "https://github.com/jacobtnyoung/sna-textbook/raw/main/data/data-PHX-arrest-2022-net.rds"
 
-# for the 2023
+# for the 2022
 PhxArrestNet2022 <- readRDS( url( loc ) )
 
 ```
