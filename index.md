@@ -150,7 +150,8 @@ The final project will use all of the information you have learned in this cours
 
 The following criteria, description, and corresponding points are used to evaluate the project (30 points total):
 
-  - **Answering Prompts:** Providing responses and code for all prompts **(25 pts)**
+  - **Answering Prompts:** Providing responses for each of the prompts and code for all prompts **(15 pts)**
+  - **Following Report Format Instructions:** Following instructions for report content (i.e. not having extraneous code or output in the report) **(10 pts)**
   - **Proofreading and Style:** Responses are free of grammatical errors; content exceeds expectations in functionality, design, layout, analysis, or insights **(5 pts)**
 
 ## D. General Grading Rubric for Written Work
